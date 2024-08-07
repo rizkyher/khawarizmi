@@ -460,7 +460,8 @@ input[type="checkbox"] {
   background-color: #f1f9fc;
   transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out,
+    -webkit-transform 0.3s ease-in-out;
 }
 
 .offcanvas-collapse.open {
@@ -769,7 +770,8 @@ input[type="checkbox"] {
 .cards-2 {
   position: relative;
   padding-top: 8rem;
-  background: linear-gradient(rgba(50, 60, 70, 0.9), rgba(50, 60, 70, 0.9)), url("../images/pricing-background.jpg") center center no-repeat;
+  background: linear-gradient(rgba(50, 60, 70, 0.9), rgba(50, 60, 70, 0.9)),
+    url("../images/pricing-background.jpg") center center no-repeat;
   background-size: cover;
   text-align: center;
 }
