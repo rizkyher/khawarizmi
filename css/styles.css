@@ -502,7 +502,7 @@ input[type="checkbox"] {
 .dropdown.show > a,
 .nav-link:hover,
 .nav-link.active {
-  color: #ff6e84;
+  color: #eda130;
   text-decoration: none;
 }
 
@@ -558,7 +558,7 @@ input[type="checkbox"] {
 .dropdown-item:focus {
   text-decoration: none;
   background-color: #f1f9fc;
-  color: #ff6e84;
+  color: #eda130;
 }
 
 .dropdown-divider {
