@@ -16,18 +16,17 @@
 
     <!-- OG Meta Tags -->
     <meta property="og:site_name" content="Khwarizmi" />
-    <meta property="og:site" content="https://yourwebsite.com" />
-    <meta property="og:title" content="Khwarizmi - Innovate Your Future" />
+    <meta property="og:site" content="http://khwarizmi.co.id/" />
+    <meta property="og:title" content="Khwarizmi Kreatif Produktif" />
     <meta
       property="og:description"
       content="Khwarizmi provides innovative software solutions."
     />
     <meta property="og:image" content="img/logo-khwarizmi.png" />
     <meta property="og:url" content="https://yourwebsite.com" />
-    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Webpage Title -->
-    <title>PT. Khwarizmi Kreatif Produktif</title>
+    <title>Khwarizmi</title>
 
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -43,6 +42,10 @@
     <link href="css/swiper.css" rel="stylesheet" />
     <link href="css/magnific-popup.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
     <!-- Favicon  -->
     <link rel="icon" href="img/logo-khwarizmi.png" />
@@ -83,7 +86,7 @@
                 class="nav-link page-scroll text-yellow-500 hover:text-yellow-600 active"
                 href="#header"
               >
-                Home <span class="sr-only">(current)</span>
+                Beranda <span class="sr-only">(current)</span>
               </a>
             </li>
             <li>
@@ -91,7 +94,7 @@
                 class="nav-link page-scroll text-yellow-500 hover:text-yellow-600"
                 href="#about"
               >
-                About
+                Tentang
               </a>
             </li>
             <li>
@@ -99,7 +102,7 @@
                 class="nav-link page-scroll text-yellow-500 hover:text-yellow-600"
                 href="#services"
               >
-                Services
+                Layanan
               </a>
             </li>
             <li>
@@ -107,7 +110,7 @@
                 class="nav-link page-scroll text-yellow-500 hover:text-yellow-600"
                 href="#products"
               >
-                Products
+                Produk
               </a>
             </li>
             <li>
@@ -145,7 +148,7 @@
               href="https://wa.me/6285161231559?text=Assalamu'alaikum%20warahmatullahi%20wabarakatuh...%20saya%20ingin%20bertanya%20tentang%20PT.%20Khwarizmi"
               target="_blank"
             >
-              <i class="fab fa-whatsapp mr-2"></i>Contact Us
+              <i class="fab fa-whatsapp mr-2"></i>Hubungi kami
             </a>
           </div>
         </div>
@@ -159,6 +162,10 @@
 
     <!-- About -->
     <section id="about" class="py-24">
+      <h1 class="text-3xl font-bold text-center mb-8">
+        Tentang <span class="text-yellow-500">Kami</span>
+      </h1>
+
       <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
         <div class="lg:col-span-7">
           <div class="mb-12 lg:mb-0 xl:mr-14 flex justify-center lg:block">
@@ -172,7 +179,9 @@
         <!-- end of col -->
         <div class="lg:col-span-5">
           <div class="xl:mt-12">
-            <h2 class="mb-6">PT. Khwarizmi Kreatif Produktif!</h2>
+            <h1 class="text-2xl font-bold text-center mb-6">
+              PT. Khwarizmi Kreatif Produktif!
+            </h1>
             <p class="mb-4">
               Kami adalah Islamic Software Developer. Kami memiliki Tim yang
               ahli di bidang pendidikan Al-Quran dan Teknologi. Oleh karena
@@ -190,7 +199,9 @@
     <!-- Services -->
     <section id="services" class="py-12 bg-gray-100">
       <div class="container mx-auto px-4 sm:px-8 xl:px-4">
-        <h1 class="text-3xl font-bold text-center mb-8">Our Services</h1>
+        <h1 class="text-3xl font-bold text-center mb-8">
+          Layanan <span class="text-yellow-500">Kami</span>
+        </h1>
         <div
           class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center"
         >
@@ -264,7 +275,7 @@
     <section id="products" class="py-12 bg-gray-100">
       <div class="container mx-auto px-4 sm:px-8 xl:px-4 relative">
         <h1 class="text-3xl font-bold text-center mb-8">
-          Koleksi Buku Karya Khwarizmi
+          Koleksi Buku <span class="text-yellow-500">Karya Khwarizmi</span>
         </h1>
         <div
           class="text-center sm:absolute sm:top-6 sm:right-4 sm:text-right mb-4 sm:mb-0"
@@ -276,72 +287,439 @@
             Lihat Selengkapnya
           </a>
         </div>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center"
-        >
-          <!-- Card -->
-          <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md">
-            <div class="card-image p-6 flex justify-center">
-              <img src="img/bookitmi.png" alt="ITMI" class="h-32 w-auto" />
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/itmi-f.png"
+                    alt="ITMI"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Islamic Technology Mindset Installation (ITMI)
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      ITMI adalah strategi belajar mengajar mata pelajaran TIK
+                      yang bertujuan untuk membentuk murid menjadi seorang ahli
+                      IT yang di dalam dirinya juga terinstal mindset islami.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
             </div>
-            <div class="card-body p-6">
-              <h5 class="text-xl font-semibold mb-2">
-                Islamic Technology Mindset Installation (ITMI)
-              </h5>
-              <p class="text-gray-600">
-                ITMI adalah strategi belajar mengajar mata pelajaran TIK yang
-                bertujuan untuk membentuk murid menjadi seorang ahli IT yang di
-                dalam dirinya juga terinstal mindset islami.
-              </p>
-            </div>
-          </div>
-          <!-- end of card -->
+            <!-- end of card -->
 
-          <!-- Card -->
-          <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md">
-            <div class="card-image p-6 flex justify-center">
-              <img src="img/ST.png" alt="ST" class="h-32 w-auto" />
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/st-f.png"
+                    alt="ST"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Sejarah Teknologi
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Peradaban bukanlah hasil dari satu RAS saja. Melainkan
+                      gabungan dari berbagai bangsa, suku, budaya, dan peradaban
+                      yang berbeda.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
             </div>
-            <div class="card-body p-6">
-              <h5 class="text-xl font-semibold mb-2">Sejarah Teknologi</h5>
-              <p class="text-gray-600">
-                Peradaban bukanlah hasil dari satu RAS saja. Melainkan gabungan
-                dari berbagai bangsa, suku, budaya, dan peradaban yang berbeda.
-              </p>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/how-f.png"
+                    alt="how"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Bagaimana Cara Mengajar Mapel IT ?
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Teknologi telah melingkupi setiap lini kehidupan kita.
+                      Dengan begitu banyak manfaat yang dimiliki, tak ayal
+                      teknologi juga adalah pisau bermata ganda yang apabila tak
+                      digunakan dengan baik dapat menjadi bencana.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
             </div>
-          </div>
-          <!-- end of card -->
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/lc-f.png"
+                    alt="lc"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Liquid Curiculum
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Vero ea culpa nesciunt optio tempore porro quo sint cum
+                      dolorum quas.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/komik-qcb-f.png"
+                    alt="qcb"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Komik QCB
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Asperiores similique necessitatibus doloribus voluptatibus
+                      id odio eligendi impedit debitis perferendis libero!
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/young-f.png"
+                    alt="young"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Young, Moslem & Succesfull
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Buku ini mendefiniskan sukses dengan cara yang berbeda.
+                      Cara yang begitu sesuai, asik, dan mudah dipahami oleh
+                      generasi muda. Karena sukses adalah takdir yang harus kita
+                      pilih dan perjuangkan untuk masa depan
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/artificial-f.png"
+                    alt="artificial"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Artificial
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Memberikan gambaran betapa hebatnya teknologi di masa yang
+                      akan datang. Namun dibalik itu semua, akankan kita mampu
+                      untuk menghadapinya. Satu kata untuk Artificial:
+                      Berprinsip. Satu-satunya jalan agar kita tidak terlena
+                      oleh kemajuan zaman. Karena teknologi tidak akan pernah
+                      sama dengan manusia.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/sesal-f.png"
+                    alt="sesal"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Sesal
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Kebebasan telah membuat anganku menjadi terkubur terlalu
+                      dalam. Akan tetapi semua kata demi kata, kejadian demi
+                      kejadian, telah menumbuhkan rasa sesal yang begitu subur.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/meraih-mimpi-f.png"
+                    alt="mimpi"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Rahasia Meraih Mimpi
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Dikemas dengan ilustrasi dan diksi yang yang apik, buku
+                      Rahasia Meraih Mimpi adalah sebuah buku yang menyajikan
+                      berbagai tips dan trik rumus sukses dengan semangat niat
+                      jihad dan sabar serta dilengkapi oleh kiat-kiat
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/letters-to-myself-f.png"
+                    alt="letters-to-myself"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Letters To Myself
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Buku ini adalah buku yang membahas berbagai masalah yang
+                      seringkali dihadapi oleh muda-mudi generasi kini. Mulai
+                      dari insecure sampai inconsistent dibahas tuntas.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/sahabat-f.png"
+                    alt="sahabat"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Sahabat Itu ...
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Sint corrupti qui, modi magni nisi quas repudiandae
+                      adipisci veritatis sed optio.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/alquran-itu-f.png"
+                    alt="al-quran"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Al-Quran Itu ...
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Amet eveniet quis suscipit laborum inventore, facere
+                      minima! Nulla qui eum quidem.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
 
-          <!-- Card -->
-          <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md">
-            <div class="card-image p-6 flex justify-center">
-              <img src="img/how.png" alt="HOW" class="h-32 w-auto" />
-            </div>
-            <div class="card-body p-6">
-              <h5 class="text-xl font-semibold mb-2">
-                Bagaimana Cara Mengajar Mapel IT
-              </h5>
-              <p class="text-gray-600">
-                Teknologi telah melingkupi setiap lini kehidupan kita. Dengan
-                begitu banyak manfaat yang dimiliki, tak ayal teknologi juga
-                adalah pisau bermata ganda yang apabila tak digunakan dengan
-                baik dapat menjadi bencana.
-              </p>
-            </div>
+            <!-- Tambahkan lebih banyak kartu sesuai kebutuhan -->
           </div>
-          <!-- end of card -->
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-        <!-- end of grid -->
       </div>
-      <!-- end of container -->
     </section>
+    <!-- end of Products Section -->
+
+    <!-- Add Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        spaceBetween: 25,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          // Ketika layar lebih kecil dari 640px (mobile)
+          640: {
+            slidesPerView: 1,
+          },
+          // Ketika layar lebih besar dari 640px
+          768: {
+            slidesPerView: 2,
+          },
+          // Ketika layar lebih besar dari 1024px
+          1024: {
+            slidesPerView: 4,
+          },
+        },
+      });
+    </script>
     <!-- end of Products Section -->
 
     <!-- GSI Section -->
     <section id="gsi" class="py-12 bg-gray-100">
       <div class="container mx-auto px-4 sm:px-8 xl:px-4">
         <h1 class="text-3xl font-bold text-center mb-8">
-          Mengenal Gerakan Sekolah Impian
+          Mengenal Gerakan <span class="text-yellow-500">Sekolah Impian</span>
         </h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Video Card -->
