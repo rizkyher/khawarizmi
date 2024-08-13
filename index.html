@@ -232,7 +232,7 @@
             <div class="swiper-slide">
               <div class="bg-white rounded-lg shadow-lg p-4">
                 <img
-                  src="img/tim/UD.png"
+                  src="img/tim/UDim.png"
                   alt="Team Member 2"
                   class="w-full h-full object-cover rounded-t-lg"
                 />
@@ -485,72 +485,79 @@
         <h1 class="text-3xl font-bold text-center mb-8">
           Layanan <span class="text-yellow-500">Kami</span>
         </h1>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center"
-        >
-          <!-- Card -->
-          <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md">
-            <div class="card-image p-6 flex justify-center">
-              <i class="fas fa-paint-brush text-yellow-500 text-6xl"></i>
+        <div class="overflow-x-auto sm:overflow-x-visible">
+          <div class="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card -->
+            <div
+              class="w-full max-w-[300px] bg-white rounded-lg shadow-md flex-shrink-0"
+            >
+              <div class="p-6 flex justify-center">
+                <i class="fas fa-paint-brush text-yellow-500 text-6xl"></i>
+              </div>
+              <div class="p-6">
+                <h5 class="text-xl font-semibold mb-2">Web Designer</h5>
+                <p class="text-gray-600">
+                  Kami melayani pembuatan website berbagai bentuk, seperti blog,
+                  website berita, website portfolio, dan website resmi
+                  pemerintah.
+                </p>
+              </div>
             </div>
-            <div class="card-body p-6">
-              <h5 class="text-xl font-semibold mb-2">Web Designer</h5>
-              <p class="text-gray-600">
-                Kami melayani pembuatan website berbagai bentuk, seperti blog,
-                website berita, website portfolio, dan website resmi pemerintah.
-              </p>
-            </div>
-          </div>
-          <!-- end of card -->
+            <!-- end of card -->
 
-          <!-- Card -->
-          <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md">
-            <div class="card-image p-6 flex justify-center">
-              <i class="fas fa-laptop-code text-yellow-500 text-6xl"></i>
+            <!-- Card -->
+            <div
+              class="w-full max-w-[300px] bg-white rounded-lg shadow-md flex-shrink-0"
+            >
+              <div class="p-6 flex justify-center">
+                <i class="fas fa-laptop-code text-yellow-500 text-6xl"></i>
+              </div>
+              <div class="p-6">
+                <h5 class="text-xl font-semibold mb-2">Software Developer</h5>
+                <p class="text-gray-600">
+                  Kami melayani pembuatan aplikasi berbasis web, desktop, atau
+                  mobile.
+                </p>
+              </div>
             </div>
-            <div class="card-body p-6">
-              <h5 class="text-xl font-semibold mb-2">Software Developer</h5>
-              <p class="text-gray-600">
-                Kami melayani pembuatan aplikasi berbasis web, desktop, atau
-                mobile.
-              </p>
-            </div>
-          </div>
-          <!-- end of card -->
+            <!-- end of card -->
 
-          <!-- Card -->
-          <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md">
-            <div class="card-image p-6 flex justify-center">
-              <i class="fas fa-video text-yellow-500 text-6xl"></i>
+            <!-- Card -->
+            <div
+              class="w-full max-w-[300px] bg-white rounded-lg shadow-md flex-shrink-0"
+            >
+              <div class="p-6 flex justify-center">
+                <i class="fas fa-video text-yellow-500 text-6xl"></i>
+              </div>
+              <div class="p-6">
+                <h5 class="text-xl font-semibold mb-2">Production House</h5>
+                <p class="text-gray-600">
+                  Kami melayani pembuatan video iklan, film dokumenter, video
+                  liputan, dan lainnya.
+                </p>
+              </div>
             </div>
-            <div class="card-body p-6">
-              <h5 class="text-xl font-semibold mb-2">Production House</h5>
-              <p class="text-gray-600">
-                Kami melayani pembuatan video iklan, film dokumenter, video
-                liputan, dan lainnya.
-              </p>
-            </div>
-          </div>
-          <!-- end of card -->
+            <!-- end of card -->
 
-          <!-- Card -->
-          <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md">
-            <div class="card-image p-6 flex justify-center">
-              <i class="fas fa-pencil-ruler text-yellow-500 text-6xl"></i>
+            <!-- Card -->
+            <div
+              class="w-full max-w-[300px] bg-white rounded-lg shadow-md flex-shrink-0"
+            >
+              <div class="p-6 flex justify-center">
+                <i class="fas fa-pencil-ruler text-yellow-500 text-6xl"></i>
+              </div>
+              <div class="p-6">
+                <h5 class="text-xl font-semibold mb-2">Graphic Designer</h5>
+                <p class="text-gray-600">
+                  Kami melayani pembuatan desain logo, maskot, company profile,
+                  poster, brosur, banner, dan desain kemasan.
+                </p>
+              </div>
             </div>
-            <div class="card-body p-6">
-              <h5 class="text-xl font-semibold mb-2">Graphic Designer</h5>
-              <p class="text-gray-600">
-                Kami melayani pembuatan desain logo, maskot, company profile,
-                poster, brosur, banner, dan desain kemasan.
-              </p>
-            </div>
+            <!-- end of card -->
           </div>
-          <!-- end of card -->
         </div>
-        <!-- end of grid -->
       </div>
-      <!-- end of container -->
     </section>
     <!-- end of Services -->
 
@@ -971,123 +978,110 @@
     </section>
     <!-- end of Products Section -->
 
-    <!-- Add Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".swiper-container", {
-        spaceBetween: 25,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          // Ketika layar lebih kecil dari 640px (mobile)
-          640: {
-            slidesPerView: 1,
-          },
-          // Ketika layar lebih besar dari 640px
-          768: {
-            slidesPerView: 2,
-          },
-          // Ketika layar lebih besar dari 1024px
-          1024: {
-            slidesPerView: 4,
-          },
-        },
-      });
-    </script>
-    <!-- end of Products Section -->
-
     <!-- GSI Section -->
     <section id="gsi" class="py-12">
       <div class="container mx-auto px-4 sm:px-8 xl:px-4">
         <h1 class="text-3xl font-bold text-center mb-8">
           Mengenal Gerakan <span class="text-yellow-500">Sekolah Impian</span>
         </h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Video Card -->
-          <div class="max-w-sm rounded overflow-hidden shadow-lg h-64">
-            <iframe
-              class="w-full h-full"
-              src="https://www.youtube.com/embed/-plMLDUNNus?si=JIOktsFguNEm_SWZ"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <!-- end of Video Card -->
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Video Card -->
+            <div
+              class="swiper-slide max-w-sm rounded overflow-hidden shadow-lg h-64"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/-plMLDUNNus?si=JIOktsFguNEm_SWZ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of Video Card -->
 
-          <!-- Video Card -->
-          <div class="max-w-sm rounded overflow-hidden shadow-lg h-64">
-            <iframe
-              class="w-full h-full"
-              src="https://www.youtube.com/embed/ghWiI9MUQzI?si=gHO8eZyR2sc3f0m3"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <!-- end of Video Card -->
+            <!-- Video Card -->
+            <div
+              class="swiper-slide max-w-sm rounded overflow-hidden shadow-lg h-64"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/ghWiI9MUQzI?si=gHO8eZyR2sc3f0m3"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of Video Card -->
 
-          <!-- Video Card -->
-          <div class="max-w-sm rounded overflow-hidden shadow-lg h-64">
-            <iframe
-              class="w-full h-full"
-              src="https://www.youtube.com/embed/CwMciPR8D0I?si=LhA7RMd1UiG7zb_i"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <!-- end of Video Card -->
+            <!-- Video Card -->
+            <div
+              class="swiper-slide max-w-sm rounded overflow-hidden shadow-lg h-64"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/CwMciPR8D0I?si=LhA7RMd1UiG7zb_i"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of Video Card -->
 
-          <!-- Video Card -->
-          <div class="max-w-sm rounded overflow-hidden shadow-lg h-64">
-            <iframe
-              class="w-full h-full"
-              src="https://www.youtube.com/embed/a-1OCi7uufI?si=kQLFhTIeMjIxK45u"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <!-- end of Video Card -->
+            <!-- Video Card -->
+            <div
+              class="swiper-slide max-w-sm rounded overflow-hidden shadow-lg h-64"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/a-1OCi7uufI?si=kQLFhTIeMjIxK45u"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of Video Card -->
 
-          <!-- Video Card -->
-          <div class="max-w-sm rounded overflow-hidden shadow-lg h-64">
-            <iframe
-              class="w-full h-full"
-              src="https://www.youtube.com/embed/CLVZtOY_Gs8?si=EL8EiOi0-tZYNa1C"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <!-- end of Video Card -->
+            <!-- Video Card -->
+            <div
+              class="swiper-slide max-w-sm rounded overflow-hidden shadow-lg h-64"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/CLVZtOY_Gs8?si=EL8EiOi0-tZYNa1C"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of Video Card -->
 
-          <!-- Video Card -->
-          <div class="max-w-sm rounded overflow-hidden shadow-lg h-64">
-            <iframe
-              class="w-full h-full"
-              src="https://www.youtube.com/embed/ebMuyKdzav4?si=B3I4Hbu5McoECrgC"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <!-- Video Card -->
+            <div
+              class="swiper-slide max-w-sm rounded overflow-hidden shadow-lg h-64"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/ebMuyKdzav4?si=B3I4Hbu5McoECrgC"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of Video Card -->
           </div>
-          <!-- end of Video Card -->
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </section>
@@ -1148,6 +1142,39 @@
     <!-- end of Footer -->
 
     <!-- Scripts -->
+    <!-- Add Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        spaceBetween: 25,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          // Ketika layar lebih kecil dari 640px (mobile)
+          640: {
+            slidesPerView: 1,
+          },
+          // Ketika layar lebih besar dari 640px
+          768: {
+            slidesPerView: 2,
+          },
+          // Ketika layar lebih besar dari 1024px
+          1024: {
+            slidesPerView: 4,
+          },
+        },
+      });
+    </script>
+    <!-- end of Products Section -->
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
