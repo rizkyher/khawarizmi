@@ -10,25 +10,20 @@
     <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Pavo is a mobile app Tailwind CSS HTML template created to help you present benefits, features and information about mobile apps in order to convince visitors to download them"
+      content="Pavo is a mobile app Tailwind CSS HTML template created to help you present benefits, features, and information about mobile apps in order to convince visitors to download them"
     />
     <meta name="author" content="Your name" />
 
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-    <meta property="og:site_name" content="" />
-    <!-- website name -->
-    <meta property="og:site" content="" />
-    <!-- website link -->
-    <meta property="og:title" content="" />
-    <!-- title shown in the actual shared post -->
-    <meta property="og:description" content="" />
-    <!-- description shown in the actual shared post -->
-    <meta property="og:image" content="" />
-    <!-- image link, make sure it's jpg -->
-    <meta property="og:url" content="" />
-    <!-- where do you want your post to link to -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <!-- to have large image post format in Twitter -->
+    <!-- OG Meta Tags -->
+    <meta property="og:site_name" content="Khwarizmi" />
+    <meta property="og:site" content="http://khwarizmi.co.id/" />
+    <meta property="og:title" content="Khwarizmi Kreatif Produktif" />
+    <meta
+      property="og:description"
+      content="Khwarizmi provides innovative software solutions."
+    />
+    <meta property="og:image" content="img/logo-khwarizmi.png" />
+    <meta property="og:url" content="https://yourwebsite.com" />
 
     <!-- Webpage Title -->
     <title>Khwarizmi</title>
@@ -47,6 +42,10 @@
     <link href="css/swiper.css" rel="stylesheet" />
     <link href="css/magnific-popup.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
     <!-- Favicon  -->
     <link rel="icon" href="img/logo-khwarizmi.png" />
@@ -57,15 +56,12 @@
       <div
         class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap"
       >
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="text-gray-800 font-semibold text-3xl leading-4 no-underline page-scroll" href="index.html">Pavo</a> -->
-
         <!-- Image Logo -->
         <a
           class="inline-block mr-4 py-0.5 text-xl whitespace-nowrap hover:no-underline focus:no-underline"
-          href="index.html"
+          href="#header"
         >
-          <img src="img/logo-khwarizmi.png" alt="alternative" class="h-8" />
+          <img src="img/logo-khwarizmi.png" alt="Khwarizmi Logo" class="h-8" />
         </a>
 
         <button
@@ -86,21 +82,52 @@
             class="pl-0 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row"
           >
             <li>
-              <a class="nav-link page-scroll active" href="#header"
-                >Home <span class="sr-only">(current)</span></a
+              <a
+                class="nav-link page-scroll text-yellow-500 hover:text-yellow-600 active"
+                href="#header"
               >
+                Beranda <span class="sr-only">(current)</span>
+              </a>
             </li>
             <li>
-              <a class="nav-link page-scroll" href="#about">About</a>
+              <a
+                class="nav-link page-scroll text-yellow-500 hover:text-yellow-600"
+                href="#about"
+              >
+                Tentang
+              </a>
             </li>
             <li>
-              <a class="nav-link page-scroll" href="#services">Services</a>
+              <a
+                class="nav-link page-scroll text-yellow-500 hover:text-yellow-600"
+                href="#team"
+              >
+                Tim
+              </a>
             </li>
             <li>
-              <a class="nav-link page-scroll" href="#products">GSI</a>
+              <a
+                class="nav-link page-scroll text-yellow-500 hover:text-yellow-600"
+                href="#services"
+              >
+                Layanan
+              </a>
             </li>
             <li>
-              <a class="nav-link page-scroll" href="#products">Products</a>
+              <a
+                class="nav-link page-scroll text-yellow-500 hover:text-yellow-600"
+                href="#products"
+              >
+                Produk
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-link page-scroll text-yellow-500 hover:text-yellow-600"
+                href="#gsi"
+              >
+                GSI
+              </a>
             </li>
           </ul>
         </div>
@@ -108,274 +135,1052 @@
       </div>
       <!-- end of container -->
     </nav>
-    <!-- end of navbar -->
     <!-- end of navigation -->
 
     <!-- Header -->
     <header
       id="header"
-      class="header py-28 text-center md:pt-36 lg:text-left xl:pt-44 xl:pb-32"
+      class="header text-left pt-16 md:pt-18 lg:text-left xl:pt-26 xl:pb-28"
     >
-      <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
-        <div class="mb-16 lg:mt-32 xl:mt-40 xl:mr-12">
-          <h1 class="h1-large mb-5">
-            Kami Hadir untuk Menciptakan, Memelihara, Mengembangkan dan
-            Mempercepat Inovasi Anda
-          </h1>
-          <a class="btn-solid-lg" href="#your-link"
-            ><i class="fab fa-whatsapp"></i>Contact Us</a
+      <div
+        class="container px-4 sm:px-8 lg:flex lg:justify-between lg:items-center"
+      >
+        <div class="mb-12 lg:mt-24 xl:mt-28 xl:mr-8">
+          <h1
+            class="text-base sm:text-sm md:text-xl lg:text-2xl xl:text-3xl h1-large mb-5"
           >
+            Kami hadir untuk membantu anda membuat produk yang canggih, indah,
+            bermanfaat dan Islami
+          </h1>
+          <div class="container p-0">
+            <a
+              class="btn btn-lg inline-flex items-center justify-start bg-yellow-500 text-white py-2 px-4 rounded transition-colors duration-300 hover:bg-yellow-600"
+              href="https://wa.me/6285161231559?text=Assalamu'alaikum%20warahmatullahi%20wabarakatuh...%20saya%20ingin%20bertanya%20tentang%20PT.%20Khwarizmi"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp mr-2"></i>Hubungi kami
+            </a>
+          </div>
         </div>
-        <div class="xl:text-right">
-          <img class="inline" src="img/santri.png" alt="alternative" />
+        <div class="hidden lg:block xl:text-right">
+          <img class="inline" src="img/banner-web.png" alt="Santri" />
         </div>
       </div>
       <!-- end of container -->
     </header>
     <!-- end of header -->
 
-    <!-- Details 2 -->
-    <div class="py-24">
+    <!-- About -->
+    <section id="about" class="py-24">
+      <h1 class="text-3xl font-bold text-center mb-8">
+        Tentang <span class="text-yellow-500">Kami</span>
+      </h1>
+
       <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
         <div class="lg:col-span-7">
-          <div class="mb-12 lg:mb-0 xl:mr-14">
-            <img class="inline" src="images/details-2.jpg" alt="alternative" />
+          <div class="mb-12 lg:mb-0 xl:mr-14 flex justify-center lg:block">
+            <img
+              class="inline w-1/3 mx-auto"
+              src="img/logo-khwarizmi.png"
+              alt="About Khwarizmi"
+            />
           </div>
         </div>
         <!-- end of col -->
         <div class="lg:col-span-5">
           <div class="xl:mt-12">
-            <h2 class="mb-6">PT. Khwarizmi Kreatif Produktif !</h2>
-            <p class="mb-4">
-              Kami adalah Islamic Software developer, Kami memiliki Team yang
-              ahli di bidang pendidikan alQuran dan teknologi. oleh karena
-              itulah onsesi kami adl membuat produk2 yang islami dan bermanfaat.
-              .
+            <p class="text-2xl mb-4">
+              Khwarizmi adalah Islamic Software Developer. Kami memiliki Tim
+              yang ahli di bidang pendidikan Al-Quran dan Teknologi. Oleh karena
+              itulah misi kami adalah membuat produk-produk yang islami dan
+              bermanfaat.
             </p>
           </div>
         </div>
         <!-- end of col -->
       </div>
       <!-- end of container -->
-    </div>
-    <!-- end of details 2 -->
+    </section>
+    <!-- end of About -->
 
-    <!-- Testimonials -->
-    <div class="slider-1 py-32 bg-gray">
-      <div class="container px-4 sm:px-8">
-        <h2 class="mb-12 text-center lg:max-w-xl lg:mx-auto">Products</h2>
-
-        <!-- Card Slider -->
-        <div class="slider-container">
-          <div class="swiper-container card-slider">
-            <div class="swiper-wrapper">
-              <!-- Slide -->
-              <div class="swiper-slide">
-                <div class="card">
-                  <img
-                    class="card-image"
-                    src="img/bookitmi.png"
-                    alt="alternative"
-                  />
-                  <div class="card-body">
-                    <p class="italic mb-3">
-                      It's been so fun to work with Pavo, I've managed to
-                      integrate it properly into my business flow and it's great
-                    </p>
-                    <p class="testimonial-author">Jude Thorn - Designer</p>
-                  </div>
+    <!-- Team -->
+    <section id="team" class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h1 class="text-3xl font-bold text-center mb-8">
+          Tim <span class="text-yellow-500">Kami</span>
+        </h1>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Team Member 1 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/UP.png"
+                  alt="Team Member 1"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-xl font-semibold">Purwanto Abdul Ghoffar</h3>
+                  <p class="text-gray-600">CEO</p>
                 </div>
               </div>
-              <!-- end of swiper-slide -->
-              <!-- end of slide -->
-
-              <!-- Slide -->
-              <div class="swiper-slide">
-                <div class="card">
-                  <img class="card-image" src="img/how.png" alt="alternative" />
-                  <div class="card-body">
-                    <p class="italic mb-3">
-                      We were so focused on launching as many campaigns as
-                      possible that we've forgotten to target our loyal
-                      customers
-                    </p>
-                    <p class="testimonial-author">Roy Smith - Developer</p>
-                  </div>
-                </div>
-              </div>
-              <!-- end of swiper-slide -->
-              <!-- end of slide -->
-
-              <!-- Slide -->
-              <div class="swiper-slide">
-                <div class="card">
-                  <img class="card-image" src="img/ST.png" alt="alternative" />
-                  <div class="card-body">
-                    <p class="italic mb-3">
-                      I've been searching for a tool like Pavo for so long. I
-                      love the reports it generates and the amazing high
-                      accuracy
-                    </p>
-                    <p class="testimonial-author">Marsha Singer - Marketer</p>
-                  </div>
-                </div>
-              </div>
-              <!-- end of swiper-slide -->
-              <!-- end of slide -->
-
-              <!-- Slide -->
-              <div class="swiper-slide">
-                <div class="card">
-                  <img
-                    class="card-image"
-                    src="images/testimonial-4.jpg"
-                    alt="alternative"
-                  />
-                  <div class="card-body">
-                    <p class="italic mb-3">
-                      We've been waiting for a powerful piece of software that
-                      can help businesses manage their marketing projects
-                    </p>
-                    <p class="testimonial-author">Tim Shaw - Designer</p>
-                  </div>
-                </div>
-              </div>
-              <!-- end of swiper-slide -->
-              <!-- end of slide -->
-
-              <!-- Slide -->
-              <div class="swiper-slide">
-                <div class="card">
-                  <img
-                    class="card-image"
-                    src="images/testimonial-5.jpg"
-                    alt="alternative"
-                  />
-                  <div class="card-body">
-                    <p class="italic mb-3">
-                      Searching for a great prototyping and layout design app
-                      was difficult but thankfully I found app suite quickly
-                    </p>
-                    <p class="testimonial-author">Lindsay Spice - Marketer</p>
-                  </div>
-                </div>
-              </div>
-              <!-- end of swiper-slide -->
-              <!-- end of slide -->
-
-              <!-- Slide -->
-              <div class="swiper-slide">
-                <div class="card">
-                  <img
-                    class="card-image"
-                    src="images/testimonial-6.jpg"
-                    alt="alternative"
-                  />
-                  <div class="card-body">
-                    <p class="italic mb-3">
-                      The app support team is amazing. They've helped me with
-                      some issues and I am so grateful to the entire team
-                    </p>
-                    <p class="testimonial-author">Ann Blake - Developer</p>
-                  </div>
-                </div>
-              </div>
-              <!-- end of swiper-slide -->
-              <!-- end of slide -->
             </div>
-            <!-- end of swiper-wrapper -->
+            <!-- end of team member 1 -->
 
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- end of add arrows -->
+            <!-- Team Member 2 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/UDim.png"
+                  alt="Team Member 2"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-xl font-semibold">Dimas Tekad Santosa</h3>
+                  <p class="text-gray-600">CTO</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 2 -->
+
+            <!-- Team Member 3 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/UW.png"
+                  alt="Team Member 3"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-xl font-semibold">Doni Setiawan</h3>
+                  <p class="text-gray-600">COO</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 3 -->
+
+            <!-- Team Member 4 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/bunda-yaumi.png"
+                  alt="Team Member 4"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-xl font-semibold">Yaumi Kusuma Dewi</h3>
+                  <p class="text-gray-600">CFO</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 4 -->
+
+            <!-- Team Member 5 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/rizky-tim.png"
+                  alt="Team Member 5"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-lg font-semibold">Rizky Herdiansyah</h3>
+                  <p class="text-gray-600">Developer</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 5 -->
+
+            <!-- Team Member 6 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/uwan-tim.png"
+                  alt="Team Member 6"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-xl font-semibold">Uwan Maharaya</h3>
+                  <p class="text-gray-600">Developer</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 6 -->
+
+            <!-- Team Member 7 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/auvia-tim.png"
+                  alt="Team Member 7"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-lg font-semibold">Auvia Azzahra Al Sofwa</h3>
+                  <p class="text-gray-600">Marketing Communication</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 7 -->
+
+            <!-- Team Member 8 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/khansa-tim.png"
+                  alt="Team Member 8"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-lg font-semibold">Khansa Syahidah</h3>
+                  <p class="text-gray-600">Marketing Communication</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 8 -->
+
+            <!-- Team Member 9 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/najwa-tim.png"
+                  alt="Team Member 9"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-lg font-semibold">
+                    Najwa Millati Aprilia R.F
+                  </h3>
+                  <p class="text-gray-600">Marketing Communication</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 9 -->
+
+            <!-- Team Member 10 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/illiy-tim.png"
+                  alt="Team Member 10"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-lg font-semibold">Illiyyina Maria Azzahra</h3>
+                  <p class="text-gray-600">Marketing Communication</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 10 -->
+
+            <!-- Team Member 11 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/ismah-tim.png"
+                  alt="Team Member 11"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-lg font-semibold">Ismah Mujahidah</h3>
+                  <p class="text-gray-600">Marketing Communication</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 11 -->
+
+            <!-- Team Member 12 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/fajari-tim.png"
+                  alt="Team Member 12"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-lg font-semibold">M. Saepul Fajari</h3>
+                  <p class="text-gray-600">Design Assets</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 12 -->
+
+            <!-- Team Member 13 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/albab-tim.png"
+                  alt="Team Member 13"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-lg font-semibold">Albab Ghozari</h3>
+                  <p class="text-gray-600">Videographer</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 13 -->
+
+            <!-- Team Member 14 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/aziz-tim.png"
+                  alt="Team Member 14"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-lg font-semibold">Abdul Aziz</h3>
+                  <p class="text-gray-600">Video Editor</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 14 -->
+
+            <!-- Team Member 15 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/hady-tim.png"
+                  alt="Team Member 15"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-lg font-semibold">Hady Satria Pamungkas</h3>
+                  <p class="text-gray-600">Video Editor</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 15 -->
+
+            <!-- Team Member 16 -->
+            <div class="swiper-slide">
+              <div class="bg-white rounded-lg shadow-lg p-4">
+                <img
+                  src="img/tim/haydar-tim.png"
+                  alt="Team Member 16"
+                  class="w-full h-full object-cover rounded-t-lg"
+                />
+                <div class="mt-2 text-center">
+                  <h3 class="text-lg font-semibold">Ahmad Haydar</h3>
+                  <p class="text-gray-600">Production Team</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of team member 16 -->
           </div>
-          <!-- end of swiper-container -->
+          <!-- Swiper Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
         </div>
-        <!-- end of slider-container -->
-        <!-- end of card slider -->
       </div>
-      <!-- end of container -->
-    </div>
-    <!-- end of slider-1 -->
-    <!-- end of testimonials -->
+    </section>
+    <!-- end of Team -->
+
+    <!-- Services -->
+    <section id="services" class="py-12">
+      <div class="container mx-auto px-4 sm:px-8 xl:px-4">
+        <h1 class="text-3xl font-bold text-center mb-8">
+          Layanan <span class="text-yellow-500">Kami</span>
+        </h1>
+        <div class="overflow-x-auto sm:overflow-x-visible">
+          <div class="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card -->
+            <div
+              class="w-full max-w-[300px] bg-white rounded-lg shadow-md flex-shrink-0"
+            >
+              <div class="p-6 flex justify-center">
+                <i class="fas fa-paint-brush text-yellow-500 text-6xl"></i>
+              </div>
+              <div class="p-6">
+                <h5 class="text-xl font-semibold mb-2">Web Designer</h5>
+                <p class="text-gray-600">
+                  Kami melayani pembuatan website berbagai bentuk, seperti blog,
+                  website berita, website portfolio, dan website resmi
+                  pemerintah.
+                </p>
+              </div>
+            </div>
+            <!-- end of card -->
+
+            <!-- Card -->
+            <div
+              class="w-full max-w-[300px] bg-white rounded-lg shadow-md flex-shrink-0"
+            >
+              <div class="p-6 flex justify-center">
+                <i class="fas fa-laptop-code text-yellow-500 text-6xl"></i>
+              </div>
+              <div class="p-6">
+                <h5 class="text-xl font-semibold mb-2">Software Developer</h5>
+                <p class="text-gray-600">
+                  Kami melayani pembuatan aplikasi berbasis web, desktop, atau
+                  mobile.
+                </p>
+              </div>
+            </div>
+            <!-- end of card -->
+
+            <!-- Card -->
+            <div
+              class="w-full max-w-[300px] bg-white rounded-lg shadow-md flex-shrink-0"
+            >
+              <div class="p-6 flex justify-center">
+                <i class="fas fa-video text-yellow-500 text-6xl"></i>
+              </div>
+              <div class="p-6">
+                <h5 class="text-xl font-semibold mb-2">Production House</h5>
+                <p class="text-gray-600">
+                  Kami melayani pembuatan video iklan, film dokumenter, video
+                  liputan, dan lainnya.
+                </p>
+              </div>
+            </div>
+            <!-- end of card -->
+
+            <!-- Card -->
+            <div
+              class="w-full max-w-[300px] bg-white rounded-lg shadow-md flex-shrink-0"
+            >
+              <div class="p-6 flex justify-center">
+                <i class="fas fa-pencil-ruler text-yellow-500 text-6xl"></i>
+              </div>
+              <div class="p-6">
+                <h5 class="text-xl font-semibold mb-2">Graphic Designer</h5>
+                <p class="text-gray-600">
+                  Kami melayani pembuatan desain logo, maskot, company profile,
+                  poster, brosur, banner, dan desain kemasan.
+                </p>
+              </div>
+            </div>
+            <!-- end of card -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of Services -->
+
+    <!-- Products Section -->
+    <section id="products" class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4 sm:px-8 xl:px-4 relative">
+        <h1 class="text-3xl font-bold text-center mb-8">
+          Buku Terbitan <span class="text-yellow-500">Khwarizmi</span>
+        </h1>
+        <div
+          class="text-center sm:absolute sm:top-6 sm:right-4 sm:text-right mb-4 sm:mb-0"
+        >
+          <a
+            href="https://lynk.id/gsiofficial/page/product-buku"
+            class="text-blue-500 hover:underline text-md font-medium"
+          >
+            Lihat Selengkapnya
+          </a>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/itmi-f.png"
+                    alt="ITMI"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Islamic Technology Mindset Installation (ITMI)
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      ITMI adalah strategi belajar mengajar mata pelajaran TIK
+                      yang bertujuan untuk membentuk murid menjadi seorang ahli
+                      IT yang di dalam dirinya juga terinstal mindset islami.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/st-f.png"
+                    alt="ST"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Sejarah Teknologi
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Peradaban bukanlah hasil dari satu RAS saja. Melainkan
+                      gabungan dari berbagai bangsa, suku, budaya, dan peradaban
+                      yang berbeda.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/how-f.png"
+                    alt="how"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Bagaimana Cara Mengajar Mapel IT ?
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Teknologi telah melingkupi setiap lini kehidupan kita.
+                      Dengan begitu banyak manfaat yang dimiliki, tak ayal
+                      teknologi juga adalah pisau bermata ganda yang apabila tak
+                      digunakan dengan baik dapat menjadi bencana.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/lc-f.png"
+                    alt="lc"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Liquid Curiculum
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Kurikulum terbaik adalah kurikulum yang memiliki orientasi
+                      seimbang antara dunia dan akhirat. Tidak hanya fokus pada
+                      aspek kognitif, namun juga psikomotorik, afektif, dan
+                      spiritual. Bukan hanya membangun kecerdasan, namun juga
+                      mental belajar. Maka begitulah Liquid Curriculum hadir
+                      menjadi mesin utama Sekolah Impian.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/komik-qcb-f.png"
+                    alt="qcb"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Komik QCB
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Qur’an Character Building yang dikemas dalam bentuk komik.
+                      Dengan gambar yang menarik serta banyak sekali hikmah yang
+                      dapat dipetik mampu membuat para pembacanya lebih memahami
+                      materi QCB dengan cara yang berbeda
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/young-f.png"
+                    alt="young"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Young, Moslem & Succesfull
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Buku ini mendefiniskan sukses dengan cara yang berbeda.
+                      Cara yang begitu sesuai, asik, dan mudah dipahami oleh
+                      generasi muda. Karena sukses adalah takdir yang harus kita
+                      pilih dan perjuangkan untuk masa depan
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/artificial-f.png"
+                    alt="artificial"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Artificial
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Memberikan gambaran betapa hebatnya teknologi di masa yang
+                      akan datang. Namun dibalik itu semua, akankan kita mampu
+                      untuk menghadapinya. Satu kata untuk Artificial:
+                      Berprinsip. Satu-satunya jalan agar kita tidak terlena
+                      oleh kemajuan zaman. Karena teknologi tidak akan pernah
+                      sama dengan manusia.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/sesal-f.png"
+                    alt="sesal"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Sesal
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Kebebasan telah membuat anganku menjadi terkubur terlalu
+                      dalam. Akan tetapi semua kata demi kata, kejadian demi
+                      kejadian, telah menumbuhkan rasa sesal yang begitu subur.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/meraih-mimpi-f.png"
+                    alt="mimpi"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Rahasia Meraih Mimpi
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Dikemas dengan ilustrasi dan diksi yang yang apik, buku
+                      Rahasia Meraih Mimpi adalah sebuah buku yang menyajikan
+                      berbagai tips dan trik rumus sukses dengan semangat niat
+                      jihad dan sabar serta dilengkapi oleh kiat-kiat
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/letters-to-myself-f.png"
+                    alt="letters-to-myself"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Letters To Myself
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Buku ini adalah buku yang membahas berbagai masalah yang
+                      seringkali dihadapi oleh muda-mudi generasi kini. Mulai
+                      dari insecure sampai inconsistent dibahas tuntas.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/sahabat-f.png"
+                    alt="sahabat"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Sahabat Itu ...
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Buku ini mendefinisikan bagaimana hubungan persahabatan
+                      dengan kalimat yang begitu mengasyikkan. Dilengkapi dengan
+                      ilustrasi- ilustrasi yang begitu menarik. Begitu cocok
+                      untuk menjadi bacaan ringan sehari-hari.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+            <!-- Card -->
+            <div class="swiper-slide">
+              <div
+                class="card w-full max-w-[300px] bg-white rounded-lg shadow-md"
+                style="min-height: 450px"
+              >
+                <!-- Ruang tambahan jika teks pendek -->
+                <div class="card-image p-0">
+                  <img
+                    src="img/produk/alquran-itu-f.png"
+                    alt="al-quran"
+                    class="w-full h-full object-cover rounded-t-lg"
+                  />
+                </div>
+                <div class="card-body p-6 flex flex-col justify-between">
+                  <div>
+                    <h5 class="text-xl font-semibold mb-2 leading-snug">
+                      Al-Quran Itu ...
+                    </h5>
+                    <p class="text-gray-600 text-sm leading-tight">
+                      Buku Al-Qur’an Itu … adalah sebuah buku yang mengupas
+                      dengan begitu indah macam-macam hal terkait Al-Qur’an.
+                      Dengan ilustrasi yang begitu apik dan narasi yang ringan
+                      menjadikan buku ini memiliki daya tarik yang tersendiri.
+                    </p>
+                  </div>
+                  <div class="mt-auto"></div>
+                  <!-- Ruang tambahan jika teks pendek -->
+                </div>
+              </div>
+            </div>
+            <!-- end of card -->
+
+            <!-- Tambahkan lebih banyak kartu sesuai kebutuhan -->
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+    <!-- end of Products Section -->
+
+    <!-- GSI Section -->
+    <section id="gsi" class="py-12">
+      <div class="container mx-auto px-4 sm:px-8 xl:px-4">
+        <h1 class="text-3xl font-bold text-center mb-8">
+          Mengenal Gerakan <span class="text-yellow-500">Sekolah Impian</span>
+        </h1>
+        <!-- Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Video Card -->
+            <div
+              class="swiper-slide max-w-sm rounded overflow-hidden shadow-lg h-64"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/-plMLDUNNus?si=JIOktsFguNEm_SWZ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of Video Card -->
+
+            <!-- Video Card -->
+            <div
+              class="swiper-slide max-w-sm rounded overflow-hidden shadow-lg h-64"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/ghWiI9MUQzI?si=gHO8eZyR2sc3f0m3"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of Video Card -->
+
+            <!-- Video Card -->
+            <div
+              class="swiper-slide max-w-sm rounded overflow-hidden shadow-lg h-64"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/CwMciPR8D0I?si=LhA7RMd1UiG7zb_i"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of Video Card -->
+
+            <!-- Video Card -->
+            <div
+              class="swiper-slide max-w-sm rounded overflow-hidden shadow-lg h-64"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/a-1OCi7uufI?si=kQLFhTIeMjIxK45u"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of Video Card -->
+
+            <!-- Video Card -->
+            <div
+              class="swiper-slide max-w-sm rounded overflow-hidden shadow-lg h-64"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/CLVZtOY_Gs8?si=EL8EiOi0-tZYNa1C"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of Video Card -->
+
+            <!-- Video Card -->
+            <div
+              class="swiper-slide max-w-sm rounded overflow-hidden shadow-lg h-64"
+            >
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/ebMuyKdzav4?si=B3I4Hbu5McoECrgC"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- end of Video Card -->
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+    <!-- end of GSI Section -->
 
     <!-- Footer -->
-    <div class="footer">
-      <div class="container px-4 sm:px-8">
-        <div class="social-container">
-          <span class="fa-stack">
-            <a href="#your-link">
-              <i class="fas fa-circle fa-stack-2x"></i>
-              <i class="fab fa-facebook-f fa-stack-1x"></i>
-            </a>
-          </span>
-          <span class="fa-stack">
-            <a href="#your-link">
-              <i class="fas fa-circle fa-stack-2x"></i>
-              <i class="fab fa-twitter fa-stack-1x"></i>
-            </a>
-          </span>
-          <span class="fa-stack">
-            <a href="#your-link">
-              <i class="fas fa-circle fa-stack-2x"></i>
-              <i class="fab fa-pinterest-p fa-stack-1x"></i>
-            </a>
-          </span>
-          <span class="fa-stack">
-            <a href="#your-link">
-              <i class="fas fa-circle fa-stack-2x"></i>
-              <i class="fab fa-instagram fa-stack-1x"></i>
-            </a>
-          </span>
-          <span class="fa-stack">
-            <a href="#your-link">
-              <i class="fas fa-circle fa-stack-2x"></i>
-              <i class="fab fa-youtube fa-stack-1x"></i>
-            </a>
-          </span>
+    <footer class="py-6 bg-gray-800 text-gray-400">
+      <div class="container mx-auto px-4 sm:px-8">
+        <div class="flex flex-wrap justify-between">
+          <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h5 class="font-semibold mb-4">About Us</h5>
+            <p>
+              PT. Khwarizmi Kreatif Produktif adalah perusahaan yang bergerak di
+              bidang pengembangan perangkat lunak islami dan teknologi
+              pendidikan.
+            </p>
+          </div>
+          <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <h5 class="font-semibold mb-4">Contact Us</h5>
+            <ul class="list-none">
+              <li class="mb-2">
+                <i class="fas fa-envelope mr-2"></i
+                >info@khwarizmikreatifproduktif.com
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-phone mr-2"></i>+62 851-6123-1559
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt mr-2"></i>Kampung Ciangsana,
+                RT.02/RW.04, Tapos I, Kec. Tenjolaya, Kabupaten Bogor, Jawa
+                Barat 16371
+              </li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/3">
+            <h5 class="font-semibold mb-4">Follow Us</h5>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.instagram.com/sekolahimpianofficial/"
+                class="text-gray-400 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sekolahimpianofficial/"
+                class="text-gray-400 hover:text-white"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
         </div>
-        <!-- end of social-container -->
+        <div class="text-center mt-6">
+          <p>
+            &copy; 2024 PT. Khwarizmi Kreatif Produktif. All rights reserved.
+          </p>
+        </div>
       </div>
-      <!-- end of container -->
-    </div>
-    <!-- end of footer -->
-    <!-- end of footer -->
-
-    <!-- Copyright -->
-    <div class="copyright">
-      <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-3">
-        <ul class="mb-4 list-unstyled p-small">
-          <li class="mb-2"><a href="article.html">Article Details</a></li>
-          <li class="mb-2"><a href="terms.html">Terms & Conditions</a></li>
-          <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-        <p class="pb-2 p-small statement">
-          Copyright © <a href="#your-link" class="no-underline">Your name</a>
-        </p>
-
-        <p class="pb-2 p-small statement">
-          Distributed by :<a href="https://themewagon.com/" class="no-underline"
-            >Themewagon</a
-          >
-        </p>
-      </div>
-
-      <!-- end of container -->
-    </div>
-    <!-- end of copyright -->
-    <!-- end of copyright -->
+    </footer>
+    <!-- end of Footer -->
 
     <!-- Scripts -->
+    <!-- Add Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        spaceBetween: 25,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          // Ketika layar lebih kecil dari 640px (mobile)
+          640: {
+            slidesPerView: 1,
+          },
+          // Ketika layar lebih besar dari 640px
+          768: {
+            slidesPerView: 2,
+          },
+          // Ketika layar lebih besar dari 1024px
+          1024: {
+            slidesPerView: 4,
+          },
+        },
+      });
+    </script>
+    <!-- end of Products Section -->
+
     <script src="js/jquery.min.js"></script>
-    <!-- jQuery for JavaScript plugins -->
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
-    <!-- jQuery Easing for smooth scrolling between anchors -->
     <script src="js/swiper.min.js"></script>
-    <!-- Swiper for image and text sliders -->
     <script src="js/jquery.magnific-popup.js"></script>
-    <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script>
+    <script src="js/validator.min.js"></script>
     <script src="js/scripts.js"></script>
-    <!-- Custom scripts -->
   </body>
 </html>
