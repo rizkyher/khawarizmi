@@ -953,10 +953,10 @@ a.back-to-top {
   position: fixed;
   z-index: 999;
   right: 12px;
-  bottom: 12px;
+  bottom: 62px;
   display: none;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 30px;
   background: #343e48 url("../images/up-arrow.png") no-repeat center 47%;
   background-size: 18px 18px;
