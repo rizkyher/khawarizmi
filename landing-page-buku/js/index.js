@@ -101,9 +101,9 @@
 
     slide.innerHTML = `
       <div class="md:w-1/2 mb-8 md:mb-0" id="book-info">
-        <span class="text-white font-semibold text-xl">${book.seri}</span>
+        <span class="text-gray-700 font-semibold text-xl">${book.seri}</span>
         <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">${book.judul}</h1>
-        <p class="text-lg mb-8 text-white">${book.deskripsi}</p>
+        <p class="text-lg mb-8 text-gray-700">${book.deskripsi}</p>
         <div class="flex flex-wrap gap-4">
          <button
             class="get-btn bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-md transition duration-300"
