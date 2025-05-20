@@ -1,0 +1,409 @@
+{
+  "author": {
+    "name": "Purwanto Abdul Ghafar",
+    "bio": "Purwanto Abdul Ghafar adalah seorang pakar teknologi dengan perspektif Islami yang telah menulis beberapa buku tentang penerapan teknologi dalam konteks nilai-nilai Islam. Karyanya fokus pada bagaimana teknologi dapat dimanfaatkan secara produktif dan monetatif dengan tetap berpegang pada prinsip-prinsip Islam.",
+    "credentials": {
+      "education": "Doktor Ilmu Komputer",
+      "experience": "20 tahun di bidang teknologi informasi",
+      "specialization": "Integrasi Teknologi dan Nilai-nilai Islam"
+    },
+    "imageUrl": "/assets/images/purwanto-abdul-ghafar.jpg",
+    "contact": {
+      "email": "purwanto.ag@example.com",
+      "website": "www.purwantoag.id",
+      "social": {
+        "twitter": "@purwantoag",
+        "instagram": "@purwanto.abdul.ghafar",
+        "linkedin": "purwanto-abdul-ghafar"
+      }
+    }
+  },
+  "seriInfo": {
+    "name": "Seri Teknologi Islami",
+    "deskripsi": "Seri buku yang mengeksplorasi perpaduan antara teknologi modern dan nilai-nilai Islam, membantu pembaca memahami bagaimana menerapkan teknologi secara produktif dan etis sesuai dengan prinsip-prinsip Islam."
+  },
+  "books": [
+    {
+      "id": "book-1",
+      "judul": "IT BERORIENTASI MONETITATIF",
+      "seri": "Seri Teknologi Islami",
+      "deskripsi": "Buku ini membahas bagaimana memanfaatkan teknologi informasi untuk menghasilkan nilai ekonomi dengan cara yang sesuai dengan prinsip-prinsip Islam. Pembaca akan mempelajari model bisnis digital, strategi monetisasi online, dan pendekatan halal dalam menghasilkan pendapatan dari teknologi.",
+      "longdeskripsi": "Dalam era digital yang terus berkembang, banyak peluang monetisasi muncul melalui teknologi informasi. Buku ini membahas secara mendalam bagaimana seorang Muslim dapat memanfaatkan peluang tersebut dengan tetap menjaga nilai-nilai Islam. Dari e-commerce hingga konten kreator, dari pengembangan aplikasi hingga layanan konsultasi online, penulis menguraikan berbagai model bisnis digital yang dapat dikembangkan dengan perspektif Islam yang kuat. Pembaca akan dipandu untuk memahami batasan-batasan syariah dalam monetisasi digital, serta diberikan contoh praktis tentang bagaimana menghasilkan pendapatan halal melalui teknologi.",
+      "gambar": "/assets/covers/it-monetitatif.jpg",
+      "publishYear": 2022,
+      "jumlah_halaman": 256,
+      "bahasa": "Bahasa Indonesia",
+      "isbn": "978-623-xxxx-01-2",
+      "price": {
+        "normal": 125000,
+        "discount": 99000
+      },
+      "features": [
+        "Strategi monetisasi website dan aplikasi",
+        "Model bisnis digital sesuai syariah",
+        "Studi kasus sukses monetisasi halal",
+        "Panduan praktis memulai bisnis digital"
+      ],
+      "testimonials": [
+        {
+          "name": "Dr. Ahmad Syafii",
+          "judul": "Pakar Ekonomi Syariah",
+          "text": "Buku yang sangat relevan untuk era digital, memadukan prinsip ekonomi Islam dengan peluang teknologi masa kini."
+        }
+      ],
+      "tableOfContents": [
+        "Pendahuluan",
+        "Prinsip Dasar Ekonomi Islam",
+        "Peluang Monetisasi di Era Digital",
+        "Model Bisnis Digital yang Halal",
+        "Strategi Pemasaran Online sesuai Syariah",
+        "Studi Kasus Sukses",
+        "Memulai Bisnis Digital Anda",
+        "Penutup"
+      ]
+    },
+    {
+      "id": "book-2",
+      "judul": "IT BERORIENTASI PRODUKTIF",
+      "seri": "Seri Teknologi Islami",
+      "deskripsi": "Buku ini mengajak pembaca untuk memaksimalkan produktivitas melalui teknologi informasi dengan tetap berpegang pada nilai-nilai Islam. Berbagai tools, metodologi, dan pendekatan dibahas untuk membantu meningkatkan efisiensi dan efektivitas dalam pekerjaan dan kehidupan sehari-hari.",
+      "longdeskripsi": "Produktivitas adalah kunci kesuksesan di era modern, namun bagaimana memastikan bahwa upaya meningkatkan produktivitas tetap sejalan dengan nilai-nilai Islam? Buku ini menyajikan pandangan komprehensif tentang bagaimana teknologi dapat menjadi alat untuk meningkatkan produktivitas seorang Muslim. Mulai dari manajemen waktu digital, aplikasi dan software yang berguna, hingga metodologi kerja yang efisien, penulis menawarkan pendekatan praktis yang dapat langsung diterapkan. Buku ini juga membahas keseimbangan antara produktivitas dan ibadah, serta bagaimana menjadikan produktivitas sebagai bagian dari ibadah itu sendiri.",
+      "gambar": "/assets/covers/it-produktif.jpg",
+      "publishYear": 2022,
+      "jumlah_halaman": 284,
+      "bahasa": "Bahasa Indonesia",
+      "isbn": "978-623-xxxx-02-9",
+      "price": {
+        "normal": 135000,
+        "discount": 108000
+      },
+      "features": [
+        "Panduan tools dan aplikasi produktivitas",
+        "Metode kerja efektif dengan bantuan teknologi",
+        "Teknik manajemen waktu Islami di era digital",
+        "Tips mengoptimalkan workflow harian"
+      ],
+      "testimonials": [
+        {
+          "name": "Ir. Hasan Basri",
+          "judul": "CEO Startup Teknologi",
+          "text": "Pendekatan produktivitas yang dibahas dalam buku ini berhasil mengintegrasikan teknologi modern dengan nilai-nilai Islam secara sempurna."
+        }
+      ],
+      "tableOfContents": [
+        "Pengantar",
+        "Konsep Produktivitas dalam Islam",
+        "Tools dan Aplikasi untuk Produktivitas",
+        "Manajemen Waktu di Era Digital",
+        "Workflow dan Sistem Kerja Efisien",
+        "Kolaborasi dan Komunikasi",
+        "Keseimbangan Produktivitas dan Ibadah",
+        "Kesimpulan"
+      ]
+    },
+    {
+      "id": "book-3",
+      "judul": "IT DENGAN PROYEK FESTIVAL",
+      "seri": "Seri Teknologi Islami",
+      "deskripsi": "Buku ini membahas bagaimana teknologi informasi dapat dimanfaatkan dalam mengelola dan mengembangkan proyek festival dan acara berbasis komunitas yang sesuai dengan nilai-nilai Islam, dari perencanaan hingga evaluasi.",
+      "longdeskripsi": "Festival dan acara komunitas adalah sarana luar biasa untuk menyebarkan nilai-nilai positif dan membangun koneksi sosial. Dalam buku ini, penulis mengulas secara detail bagaimana teknologi informasi dapat dimanfaatkan untuk mengoptimalkan penyelenggaraan festival dan acara dengan perspektif Islam. Mulai dari sistem pendaftaran online, manajemen acara digital, live streaming, hingga analisis pasca acara, buku ini memberikan panduan komprehensif bagi penyelenggara acara. Pembaca akan mempelajari cara mengintegrasikan teknologi dalam setiap tahap festival sambil tetap menjaga esensi nilai-nilai Islam dalam pelaksanaannya.",
+      "gambar": "/assets/covers/it-festival.jpg",
+      "publishYear": 2023,
+      "jumlah_halaman": 230,
+      "bahasa": "Bahasa Indonesia",
+      "isbn": "978-623-xxxx-03-6",
+      "price": {
+        "normal": 120000,
+        "discount": 95000
+      },
+      "features": [
+        "Panduan pengelolaan acara dengan teknologi",
+        "Sistem manajemen peserta festival",
+        "Strategi promosi digital untuk acara",
+        "Tools evaluasi dan analisis pasca acara"
+      ],
+      "testimonials": [
+        {
+          "name": "Dra. Siti Rahmah",
+          "judul": "Event Organizer Islami",
+          "text": "Buku ini telah menjadi referensi utama kami dalam menyelenggarakan festival-festival Islam yang memanfaatkan teknologi secara optimal."
+        }
+      ],
+      "tableOfContents": [
+        "Pengantar tentang Festival Islami",
+        "Perencanaan Acara dengan Teknologi",
+        "Sistem Pendaftaran dan Ticketing",
+        "Promosi Digital untuk Festival",
+        "Teknologi untuk Pengalaman Peserta",
+        "Dokumentasi dan Live Streaming",
+        "Evaluasi dan Analisis Data",
+        "Penutup"
+      ]
+    },
+    {
+      "id": "book-4",
+      "judul": "ISLAMIC TECHNOLOGY MINDSET INSTALLATION (ITMI)",
+      "seri": "Seri Teknologi Islami",
+      "deskripsi": "Buku ini fokus pada pembentukan pola pikir (mindset) tentang teknologi yang selaras dengan nilai-nilai Islam. Pembaca akan dibimbing untuk mengembangkan cara pandang yang tepat terhadap teknologi sebagai alat untuk kebaikan dan ibadah.",
+      "longdeskripsi": "Mindset adalah fondasi dari segala tindakan kita berkaitan dengan teknologi. Buku ini mengulas secara mendalam bagaimana membangun dan menginstall pola pikir yang tepat dalam memandang dan menggunakan teknologi dari perspektif Islam. Penulis mengajak pembaca untuk merefleksikan hubungan mereka dengan teknologi, mengenali potensi dan tantangannya, serta mengembangkan kerangka berpikir yang memungkinkan penggunaan teknologi sebagai sarana untuk mendekatkan diri kepada Allah SWT. Dari konsep khalifah di bumi hingga amanah dalam penggunaan sumber daya, buku ini menyajikan landasan filosofis yang kuat untuk hubungan seorang Muslim dengan teknologi.",
+      "gambar": "/assets/covers/itmi.jpg",
+      "publishYear": 2023,
+      "jumlah_halaman": 245,
+      "bahasa": "Bahasa Indonesia",
+      "isbn": "978-623-xxxx-04-3",
+      "price": {
+        "normal": 130000,
+        "discount": 104000
+      },
+      "features": [
+        "Konsep dasar pola pikir Islami tentang teknologi",
+        "Refleksi hubungan manusia dan teknologi",
+        "Framework pengembangan mindset teknologi Islami",
+        "Latihan praktis untuk transformasi pola pikir"
+      ],
+      "testimonials": [
+        {
+          "name": "Prof. Dr. Ridwan Kamil",
+          "judul": "Ahli Filsafat Teknologi",
+          "text": "Pendekatan penulis dalam membahas mindset teknologi Islami sangat mendalam dan transformatif, membuka perspektif baru tentang hubungan Islam dan teknologi."
+        }
+      ],
+      "tableOfContents": [
+        "Pendahuluan",
+        "Teknologi dalam Perspektif Islam",
+        "Mengenali Mindset Kita tentang Teknologi",
+        "Membentuk Pola Pikir Teknologi Islami",
+        "Teknologi sebagai Ibadah dan Amanah",
+        "Mengatasi Tantangan Digitalisasi",
+        "Praktik Penggunaan Teknologi yang Seimbang",
+        "Penutup"
+      ]
+    },
+    {
+      "id": "book-5",
+      "judul": "LC (Licuid Curriculum)",
+      "seri": "Karya Independen",
+      "deskripsi": "Buku ini memperkenalkan konsep kurikulum cair (liquid curriculum) yang adaptif dan fleksibel dalam pendidikan, khususnya dalam pembelajaran teknologi. Pendekatan ini memungkinkan adaptasi cepat terhadap perubahan dalam dunia teknologi.",
+      "longdeskripsi": "Di era disrupsi teknologi yang cepat, pendekatan kurikulum tradisional seringkali tidak mampu mengikuti laju perkembangan. Buku ini memperkenalkan konsep revolusioner bernama Liquid Curriculum (LC), sebuah pendekatan kurikulum yang cair, adaptif, dan responsif terhadap perubahan. Penulis menjelaskan secara detail bagaimana merancang, mengimplementasikan, dan mengevaluasi kurikulum yang mampu berevolusi sesuai kebutuhan zaman, khususnya dalam pembelajaran teknologi. Dari prinsip dasar fleksibilitas hingga studi kasus implementasi, buku ini menjadi panduan lengkap bagi pendidik, institusi pendidikan, dan pemangku kebijakan yang ingin merevolusi pendekatan pembelajaran mereka.",
+      "gambar": "/assets/covers/lc-curriculum.jpg",
+      "publishYear": 2024,
+      "jumlah_halaman": 310,
+      "bahasa": "Bahasa Indonesia",
+      "isbn": "978-623-xxxx-05-0",
+      "price": {
+        "normal": 150000,
+        "discount": 120000
+      },
+      "features": [
+        "Konsep dasar Liquid Curriculum",
+        "Panduan implementasi kurikulum adaptif",
+        "Studi kasus keberhasilan",
+        "Tools evaluasi dan pengembangan kurikulum"
+      ],
+      "testimonials": [
+        {
+          "name": "Dr. Nurul Fadhilah",
+          "judul": "Peneliti Pendidikan Teknologi",
+          "text": "LC (Liquid Curriculum) adalah jawaban atas tantangan pendidikan di era disrupsi teknologi. Buku ini wajib dibaca oleh setiap pendidik yang serius menghadapi masa depan."
+        }
+      ],
+      "tableOfContents": [
+        "Pengantar tentang Krisis Kurikulum",
+        "Konsep Liquid Curriculum",
+        "Prinsip Dasar Fleksibilitas dan Adaptabilitas",
+        "Merancang Kurikulum Cair",
+        "Implementasi dalam Konteks Pendidikan Teknologi",
+        "Evaluasi dan Evolusi Berkelanjutan",
+        "Studi Kasus dan Pembelajaran",
+        "Masa Depan Pendidikan"
+      ]
+    },
+    {
+      "id": "book-6",
+      "judul": "SEJARAH TEKNOLOGI DARI PERSPEKTIF KAUM MUSLIMIN",
+      "seri": "Seri Teknologi Islami",
+      "deskripsi": "Buku ini menelusuri sejarah perkembangan teknologi dari perspektif peradaban Islam, menampilkan kontribusi ilmuwan Muslim dalam berbagai bidang teknologi dan sains sepanjang sejarah hingga era modern.",
+      "longdeskripsi": "Kontribusi dunia Islam terhadap perkembangan teknologi dan sains sering terlupakan dalam narasi sejarah mainstream. Buku ini hadir untuk mengungkap dan mendokumentasikan secara komprehensif bagaimana ilmuwan dan peradaban Muslim telah membentuk fondasi teknologi yang kita nikmati saat ini. Mulai dari matematika Al-Khawarizmi, optik Ibnu Al-Haytham, hingga kedokteran Ibnu Sina, penulis menggambarkan jejak inovasi yang telah ditinggalkan oleh para pemikir Muslim. Buku ini juga menganalisis bagaimana prinsip-prinsip Islam mendorong spirit penemuan dan inovasi, serta bagaimana warisan tersebut dapat menginspirasi generasi Muslim saat ini dalam mengembangkan teknologi.",
+      "gambar": "/assets/covers/sejarah-teknologi.jpg",
+      "publishYear": 2023,
+      "jumlah_halaman": 420,
+      "bahasa": "Bahasa Indonesia",
+      "isbn": "978-623-xxxx-06-7",
+      "price": {
+        "normal": 175000,
+        "discount": 140000
+      },
+      "features": [
+        "Dokumentasi kontribusi ilmuwan Muslim",
+        "Analisis perkembangan teknologi Islam abad pertengahan",
+        "Hubungan antara Islam dan spirit inovasi",
+        "Refleksi untuk kebangkitan teknologi Islam masa kini"
+      ],
+      "testimonials": [
+        {
+          "name": "Prof. Dr. Muhammad Iqbal",
+          "judul": "Sejarawan Sains dan Teknologi",
+          "text": "Sebuah karya yang luar biasa dalam mendokumentasikan kontribusi kaum Muslimin terhadap perkembangan teknologi dunia, sangat penting untuk mengembalikan narasi yang telah lama hilang."
+        }
+      ],
+      "tableOfContents": [
+        "Pendahuluan",
+        "Islam dan Semangat Mencari Ilmu",
+        "Era Keemasan Islam dan Teknologi",
+        "Kontribusi Muslim dalam Matematika dan Komputasi",
+        "Inovasi dalam Arsitektur dan Rekayasa",
+        "Kedokteran dan Farmasi",
+        "Astronomi dan Navigasi",
+        "Optik dan Fisika",
+        "Kimia dan Material",
+        "Transmisi Pengetahuan ke Eropa",
+        "Kejatuhan dan Stagnasi",
+        "Kebangkitan Teknologi Islam Kontemporer",
+        "Refleksi dan Masa Depan"
+      ]
+    },
+    {
+      "id": "book-7",
+      "judul": "MENTAL BELAJAR TEKNOLOGI",
+      "seri": "Seri Teknologi Islami",
+      "deskripsi": "Buku ini mengulas aspek psikologis dan mental dalam proses belajar teknologi, dengan pendekatan yang didasarkan pada nilai-nilai Islam. Pembaca akan dipandu untuk mengembangkan mindset yang tepat dalam menghadapi tantangan belajar teknologi baru.",
+      "longdeskripsi": "Belajar teknologi bukan hanya tentang kemampuan teknis, tetapi juga tentang kesiapan mental dan pola pikir yang tepat. Dalam buku ini, penulis mengeksplorasi berbagai aspek psikologis yang mempengaruhi proses belajar teknologi, dari mengatasi 'tech anxiety' hingga membangun ketekunan dalam menghadapi kompleksitas. Dengan landasan nilai-nilai Islam seperti sabar, tawakkal, dan istiqomah, buku ini menawarkan pendekatan holistik untuk mengembangkan mental yang tangguh dalam perjalanan menguasai teknologi. Berbagai teknik praktis, refleksi, dan latihan disajikan untuk membantu pembaca mentransformasi hambatan mental menjadi batu loncatan menuju penguasaan teknologi.",
+      "gambar": "/assets/covers/mental-teknologi.jpg",
+      "publishYear": 2024,
+      "jumlah_halaman": 268,
+      "bahasa": "Bahasa Indonesia",
+      "isbn": "978-623-xxxx-07-4",
+      "price": {
+        "normal": 140000,
+        "discount": 112000
+      },
+      "features": [
+        "Panduan mengatasi mental block dalam belajar teknologi",
+        "Teknik membangun ketahanan belajar",
+        "Pendekatan Islami dalam menghadapi frustrasi dan kegagalan",
+        "Strategi pembentukan kebiasaan belajar yang konsisten"
+      ],
+      "testimonials": [
+        {
+          "name": "Dr. Aisyah Putri",
+          "judul": "Psikolog Pendidikan",
+          "text": "Pendekatan unik yang menggabungkan psikologi modern dan nilai-nilai Islam dalam membangun ketahanan mental untuk belajar teknologi. Sangat direkomendasikan untuk siapa saja yang merasa terintimidasi oleh perkembangan teknologi."
+        }
+      ],
+      "tableOfContents": [
+        "Pengantar",
+        "Memahami Tantangan Mental dalam Belajar Teknologi",
+        "Nilai-nilai Islam sebagai Fondasi Mental",
+        "Mengatasi Anxiety dan Frustrasi",
+        "Membangun Growth Mindset",
+        "Teknik Belajar Efektif untuk Teknologi",
+        "Komunitas dan Dukungan Pembelajaran",
+        "Mindfulness dan Fokus di Era Digital",
+        "Menjaga Keseimbangan dan Menghindari Burnout",
+        "Refleksi dan Praktik"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "id": "package-1",
+      "name": "Paket Dasar",
+      "deskripsi": "Paket untuk pemula yang ingin mulai mengenal perspektif Islam dalam teknologi",
+      "books": ["book-1", "book-7"],
+      "price": {
+        "normal": 265000,
+        "discount": 225000
+      },
+      "bonusItems": [
+        "E-book rangkuman konsep utama",
+        "Akses webinar pengenalan"
+      ]
+    },
+    {
+      "id": "package-2",
+      "name": "Paket Pengembang",
+      "deskripsi": "Paket lengkap untuk pengembang teknologi yang ingin mengintegrasikan nilai Islam dalam karya",
+      "books": ["book-1", "book-2", "book-4", "book-7"],
+      "price": {
+        "normal": 530000,
+        "discount": 425000
+      },
+      "bonusItems": [
+        "E-book eksklusif studi kasus",
+        "Template perencanaan proyek",
+        "Konsultasi online 30 menit"
+      ]
+    },
+    {
+      "id": "package-3",
+      "name": "Paket Koleksi Lengkap",
+      "deskripsi": "Koleksi lengkap semua buku Purwanto Abdul Ghafar tentang Teknologi Islami",
+      "books": ["book-1", "book-2", "book-3", "book-4", "book-5", "book-6", "book-7"],
+      "price": {
+        "normal": 975000,
+        "discount": 778000
+      },
+      "bonusItems": [
+        "Kotak koleksi eksklusif",
+        "Akses seumur hidup ke update konten digital",
+        "Webinar eksklusif dengan penulis",
+        "Sertifikat Kelas Masterclass"
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Prof. Dr. Hamid Fahmy Zarkasyi",
+      "judul": "Rektor Universitas Darussalam Gontor",
+      "text": "Karya Purwanto Abdul Ghafar berhasil menjembatani kesenjangan antara teknologi modern dan nilai-nilai keislaman dengan cara yang aplikatif dan mendalam."
+    },
+    {
+      "name": "Ir. Yusuf Mansur",
+      "judul": "Pendiri Paytren",
+      "text": "Buku-buku ini adalah panduan praktis bagaimana teknologi dapat menjadi sarana ibadah dan kebaikan. Sangat direkomendasikan untuk umat Islam di era digital."
+    },
+    {
+      "name": "Dr. Hj. Siti Nur Azizah",
+      "judul": "Ketua Departemen IT Universitas Islam Indonesia",
+      "text": "Pendekatan yang diambil dalam seri buku ini membuka paradigma baru dalam memandang teknologi dari kacamata Islam yang komprehensif."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Apakah buku-buku ini cocok untuk pemula di bidang teknologi?",
+      "answer": "Ya, buku-buku ini dirancang untuk berbagai tingkat pemahaman teknologi. Khususnya buku 'Mental Belajar Teknologi' sangat cocok untuk pemula yang ingin membangun fondasi mental yang kuat dalam mempelajari teknologi."
+    },
+    {
+      "question": "Bagaimana cara mendapatkan buku-buku ini?",
+      "answer": "Buku-buku ini tersedia dalam format cetak dan digital di berbagai platform seperti Tokopedia, Bukalapak, Gramedia, dan website resmi penulis. Untuk pembelian dalam jumlah besar, silakan hubungi kontak yang tersedia di website."
+    },
+    {
+      "question": "Apakah ada diskon untuk pembelian paket?",
+      "answer": "Ya, kami menyediakan beberapa paket dengan harga khusus yang lebih ekonomis dibandingkan pembelian per buku. Lihat bagian 'Paket Buku' untuk informasi lebih lanjut."
+    },
+    {
+      "question": "Apakah tersedia dalam bahasa lain selain Bahasa Indonesia?",
+      "answer": "Saat ini, buku-buku ini hanya tersedia dalam Bahasa Indonesia. Namun, terjemahan dalam Bahasa Inggris dan Bahasa Arab sedang dalam proses dan diharapkan terbit tahun depan."
+    },
+    {
+      "question": "Apakah cocok untuk dijadikan referensi akademis?",
+      "answer": "Tentu saja. Buku-buku ini ditulis dengan pendekatan ilmiah dan dilengkapi dengan referensi yang komprehensif, sehingga cocok untuk dijadikan referensi dalam penelitian akademis tentang teknologi dan Islam."
+    }
+  ],
+  "events": [
+    {
+      "judul": "Bedah Buku: ITMI",
+      "date": "15 Juni 2025",
+      "location": "Online via Zoom",
+      "deskripsi": "Diskusi mendalam tentang konsep Islamic Technology Mindset Installation bersama penulis dan praktisi teknologi Muslim.",
+      "registrationLink": "https://example.com/register-bedah-buku-itmi"
+    },
+    {
+      "judul": "Workshop: Teknologi Produktif untuk Muslim",
+      "date": "22-23 Juli 2025",
+      "location": "Islamic Center Jakarta",
+      "deskripsi": "Workshop 2 hari yang akan mengajarkan berbagai teknik dan tools untuk meningkatkan produktivitas dengan pendekatan Islam.",
+      "registrationLink": "https://example.com/register-workshop-produktif"
+    }
+  ]
+}

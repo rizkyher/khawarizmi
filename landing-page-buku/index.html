@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Your Brain Works</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .book-cover {
+            transition: transform 0.3s ease;
+        }
+        .book-cover:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+<header class="bg-blue-900 text-white py-16">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2 mb-8 md:mb-0" id="book-info">
+      <!-- Info buku akan diinject ke sini -->
+    </div>
+    <div class="md:w-1/2 flex flex-col items-center">
+      <img id="book-cover" src="" alt="Book Cover" class="book-cover h-64 shadow-2xl rounded mb-6" />
+      <div>
+        <button id="prev-btn" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-md mr-2">Previous</button>
+        <button id="next-btn" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-md">Next</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <!-- Trusted By Section -->
+    <section class="py-10 border-b">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-gray-500 mb-6 font-medium">Trusted By The Best</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="text-center">
+                    <img src="/api/placeholder/100/40" alt="Amazon" class="h-8 mx-auto">
+                    <p class="text-xs text-gray-500 mt-2">Bestseller on Amazon</p>
+                </div>
+                <div class="text-center">
+                    <img src="/api/placeholder/100/40" alt="iTunes" class="h-8 mx-auto">
+                    <p class="text-xs text-gray-500 mt-2">iTunes Top Charts</p>
+                </div>
+                <div class="text-center">
+                    <img src="/api/placeholder/100/40" alt="Audible" class="h-8 mx-auto">
+                    <p class="text-xs text-gray-500 mt-2">Audible Editor's Choice</p>
+                </div>
+                <div class="text-center">
+                    <img src="/api/placeholder/100/40" alt="Google Play Books" class="h-8 mx-auto">
+                    <p class="text-xs text-gray-500 mt-2">Google Play Featured</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About The Author Section - First Author -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">About The Author</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/3">
+                    <img src="/api/placeholder/400/400" alt="Author" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-gray-700 mb-8">
+                        Dr. Michael Reynolds is a renowned neuroscientist with over 15 years of experience in cognitive research. 
+                        His passion for making complex brain science accessible to everyone has led him to write this 
+                        groundbreaking book that bridges the gap between academic research and practical applications.
+                    </p>
+                    <div class="flex flex-wrap gap-8">
+                        <div class="text-center">
+                            <div class="text-blue-600 font-bold text-2xl">01</div>
+                            <div class="text-gray-500">Years Research</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-blue-600 font-bold text-2xl">4.9</div>
+                            <div class="text-gray-500">Rating</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-blue-600 font-bold text-2xl">03</div>
+                            <div class="text-gray-500">Publications</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About The Author Section - Second Author -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                <div class="md:w-1/3">
+                    <img src="/api/placeholder/400/400" alt="Second Author" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-gray-700 mb-8">
+                        Dr. Sarah Chen specializes in neuroplasticity and brain development. With a background in both neuroscience 
+                        and psychology, she brings a unique perspective on how understanding our brain can improve everyday life, 
+                        learning, and mental wellbeing. Her contributions to this book focus on practical applications.
+                    </p>
+                    <div class="flex flex-wrap gap-8">
+                        <div class="text-center">
+                            <div class="text-blue-600 font-bold text-2xl">01</div>
+                            <div class="text-gray-500">Years Teaching</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-blue-600 font-bold text-2xl">4.8</div>
+                            <div class="text-gray-500">Rating</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-blue-600 font-bold text-2xl">05</div>
+                            <div class="text-gray-500">Publications</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Packages Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">The Author's Book</h2>
+            <div class="flex flex-col md:flex-row gap-8 justify-center">
+                <!-- Package 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg flex-1 max-w-md">
+                    <h3 class="text-xl font-bold mb-4">Package 1 <span class="text-blue-500 font-normal">(Recommended)</span></h3>
+                    <div class="flex items-center gap-6 mb-6">
+                        <img src="/api/placeholder/150/200" alt="Book Cover" class="w-24">
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li>Hardcover Book</li>
+                            <li>Digital Edition</li>
+                            <li>Audio Commentary</li>
+                            <li>Exercise Worksheets</li>
+                        </ul>
+                    </div>
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 w-full rounded-md transition duration-300">Order Now</button>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg flex-1 max-w-md">
+                    <h3 class="text-xl font-bold mb-4">Package 2 <span class="text-blue-500 font-normal">(Standard)</span></h3>
+                    <div class="flex items-center gap-6 mb-6">
+                        <img src="/api/placeholder/150/200" alt="Book Cover" class="w-24">
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li>Paperback Book</li>
+                            <li>Digital Edition</li>
+                            <li>Quick Start Guide</li>
+                            <li>30-day Access to Online Course</li>
+                        </ul>
+                    </div>
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 w-full rounded-md transition duration-300">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="bg-blue-900 py-10 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Get Book How Your Brain Works Now!</h2>
+            <p class="mb-6">The first 500 orders get a free digital workbook and access to exclusive online materials.</p>
+            <button class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-md transition duration-300">Order Now</button>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">You will gain the benefits of</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-2/3">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <p class="text-gray-700">Understanding how your brain processes information and makes decisions, leading to improved critical thinking</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <p class="text-gray-700">Learning practical techniques to enhance memory, focus, and cognitive performance</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <p class="text-gray-700">Discovering how sleep, nutrition, and exercise affect your brain function and how to optimize each</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <p class="text-gray-700">Gaining insights into emotional intelligence and how to manage stress through neuroscience-backed approaches</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/3 flex flex-col gap-4 items-center">
+                    <div class="bg-white p-4 rounded-lg shadow-md w-full">
+                        <div class="flex items-center gap-4">
+                            <img src="/api/placeholder/80/80" alt="Brain Icon" class="h-16 w-16">
+                            <p class="font-medium">YOUR BRAIN ON MEDITATION</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md w-full">
+                        <div class="flex items-center gap-4">
+                            <img src="/api/placeholder/80/80" alt="Brain Icon" class="h-16 w-16">
+                            <p class="font-medium">ENHANCE YOUR MEMORIES</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md w-full">
+                        <div class="flex items-center gap-4">
+                            <img src="/api/placeholder/80/80" alt="Brain Icon" class="h-16 w-16">
+                            <p class="font-medium">IMPROVE SLEEP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                <p class="text-gray-700 text-lg italic mb-6">
+                    "What a wonderful inversion of typical science communication! Rather than bringing 
+                    the reader to the neuroscientist's lab, it brings the lab to the reader. Check full of 
+                    fun ways to see exactly how your brain works—in you!"
+                </p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                    <div>
+                        <p class="font-bold">— Dr. Robert J. Samuels</p>
+                        <p class="text-gray-600">Princeton Neuroscience Professor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preview Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-6 text-center">Take a Peek Inside</h2>
+            <div class="max-w-4xl mx-auto overflow-hidden">
+                <div class="flex justify-center">
+                    <img src="/api/placeholder/800/400" alt="Book Preview" class="rounded-lg shadow-lg">
+                </div>
+                <div class="flex justify-center mt-6">
+                    <div class="flex space-x-2">
+                        <button class="w-3 h-3 rounded-full bg-blue-600"></button>
+                        <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+                        <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+                        <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+                        <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">FAQ</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold text-lg mb-2">How fast do signals travel down a neuron?</h3>
+                    <p class="text-gray-700">Signals can travel down neurons at speeds ranging from 0.5 meters/second up to 120 meters/second, depending on the type of neuron and whether it's myelinated.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold text-lg mb-2">Can we really enhance our memories during sleep?</h3>
+                    <p class="text-gray-700">Yes, research shows that proper sleep is essential for memory consolidation. The book details specific techniques to optimize this natural process.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold text-lg mb-2">How long does it take the brain to decide?</h3>
+                    <p class="text-gray-700">Simple decisions can take as little as 200 milliseconds, while complex decisions may take several seconds or longer. The book explores factors that influence decision speed and quality.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-bold text-lg mb-2">Using big data to talk to the brain</h3>
+                    <p class="text-gray-700">Modern neuroscience increasingly uses machine learning and big data to decode brain activity patterns. The book explains how these technologies are advancing our understanding of the brain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/3">
+                    <img src="/api/placeholder/300/400" alt="Book Cover" class="book-cover w-full rounded shadow-lg">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl font-bold mb-4">Get Book How Your Brain Works Now!</h2>
+                    <p class="text-gray-700 mb-6">
+                        Limited time offer: Order now and get exclusive access to the author's online workshop 
+                        series on practical neuroscience applications for everyday life.
+                    </p>
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-md transition duration-300">Get Your Copy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">About the Book</h3>
+                    <p class="text-blue-200">An enlightening journey through the complex world of neuroscience, made accessible for everyone.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contact</h3>
+                    <p class="text-blue-200">info@brainsciencebook.com</p>
+                    <p class="text-blue-200">+1 (555) 123-4567</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-blue-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-blue-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-blue-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-blue-300"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 pt-6 text-center text-blue-300">
+                <p>&copy; 2025 How Your Brain Works. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    alert('Thank you for your interest! This is a demo landing page.');
+                });
+            });
+        });
+    </script>
+
+    <script>
+  // Data JSON (contoh disingkat)
+  const data = {
+    seriInfo: {
+      name: "Seri Teknologi Islami"
+    },
+    books: [
+      {
+        id: "book-1",
+        judul: "IT BERORIENTASI MONETITATIF",
+        seri: "Seri Teknologi Islami",
+        deskripsi: "Buku ini membahas bagaimana memanfaatkan teknologi informasi...",
+        publishYear: 2022,
+        price: {
+          normal: 125000,
+          discount: 99000
+        },
+        coverUrl: "https://via.placeholder.com/400x500?text=IT+Berorientasi+Monetitatif"
+      },
+      {
+      id: "book-2",
+      judul: "IT BERORIENTASI PRODUKTIF",
+      seri: "Seri Teknologi Islami",
+      deskripsi: "Buku ini mengajak pembaca untuk memaksimalkan produktivitas melalui teknologi informasi dengan tetap berpegang pada nilai-nilai Islam. Berbagai tools, metodologi, dan pendekatan dibahas untuk membantu meningkatkan efisiensi dan efektivitas dalam pekerjaan dan kehidupan sehari-hari.",
+      publishYear: 2022,
+      price: {
+        normal: 135000,
+        discount: 108000
+      },
+      coverUrl: "/assets/covers/it-produktif.jpg",
+    },
+    {
+      id: "book-3",
+      judul: "IT DENGAN PROYEK FESTIVAL",
+      seri: "Seri Teknologi Islami",
+      deskripsi: "Buku ini membahas bagaimana teknologi informasi dapat dimanfaatkan dalam mengelola dan mengembangkan proyek festival dan acara berbasis komunitas yang sesuai dengan nilai-nilai Islam, dari perencanaan hingga evaluasi.",
+      publishYear: 2023,
+      price: {
+        normal: 120000,
+        discount: 95000
+      },
+      coverUrl: "/assets/covers/it-festival.jpg",
+    },
+     {
+      id: "book-4",
+      judul: "ISLAMIC TECHNOLOGY MINDSET INSTALLATION (ITMI)",
+      seri: "Seri Teknologi Islami",
+      deskripsi: "Buku ini fokus pada pembentukan pola pikir (mindset) tentang teknologi yang selaras dengan nilai-nilai Islam. Pembaca akan dibimbing untuk mengembangkan cara pandang yang tepat terhadap teknologi sebagai alat untuk kebaikan dan ibadah.",
+      publishYear: 2023,
+      price: {
+        normal: 130000,
+        discount: 104000
+      },
+      coverUrl: "/assets/covers/itmi.jpg",
+    },
+    {
+      id: "book-5",
+      judul: "LC (Licuid Curriculum)",
+      seri: "Karya Independen",
+      deskripsi: "Buku ini memperkenalkan konsep kurikulum cair (liquid curriculum) yang adaptif dan fleksibel dalam pendidikan, khususnya dalam pembelajaran teknologi. Pendekatan ini memungkinkan adaptasi cepat terhadap perubahan dalam dunia teknologi.",
+      publishYear: 2024,
+      price: {
+        normal: 150000,
+        discount: 120000
+      },
+      coverUrl: "/assets/covers/lc-curriculum.jpg",
+    },
+    {
+      id: "book-6",
+      judul: "SEJARAH TEKNOLOGI DARI PERSPEKTIF KAUM MUSLIMIN",
+      seri: "Seri Teknologi Islami",
+      deskripsi: "Buku ini menelusuri sejarah perkembangan teknologi dari perspektif peradaban Islam, menampilkan kontribusi ilmuwan Muslim dalam berbagai bidang teknologi dan sains sepanjang sejarah hingga era modern.",
+      publishYear: 2023,
+      price: {
+        normal: 175000,
+        discount: 140000
+      },
+      coverUrl: "/assets/covers/sejarah-teknologi.jpg",
+    },
+    {
+      id: "book-7",
+      judul: "MENTAL BELAJAR TEKNOLOGI",
+      seri: "Seri Teknologi Islami",
+      deskripsi: "Buku ini mengulas aspek psikologis dan mental dalam proses belajar teknologi, dengan pendekatan yang didasarkan pada nilai-nilai Islam. Pembaca akan dipandu untuk mengembangkan mindset yang tepat dalam menghadapi tantangan belajar teknologi baru.",
+      publishYear: 2024,
+      price: {
+        normal: 140000,
+        discount: 112000
+      },
+      coverUrl: "/assets/covers/mental-teknologi.jpg",
+    },
+
+      // buku lain...
+    ]
+  };
+
+  // Ambil buku pertama dari seri Teknologi Islami
+   const books = data.books.filter(b => b.seri === data.seriInfo.name);
+  let currentIndex = 0;
+
+  const bookInfoDiv = document.getElementById('book-info');
+  const bookCoverImg = document.getElementById('book-cover');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+
+  function renderBook(index) {
+    const book = books[index];
+    bookInfoDiv.innerHTML = `
+      <span class="text-blue-300 font-semibold">Seri: ${data.seriInfo.name}</span>
+      <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">${book.judul}</h1>
+      <p class="text-lg mb-8 text-blue-100">${book.deskripsi}</p>
+      <button 
+        class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-md transition duration-300"
+        onclick="window.location.href='/books/${book.id}'"
+      >
+        Get Your Copy - Rp ${book.price.discount.toLocaleString('id-ID')}
+      </button>
+      <div class="mt-8 flex space-x-4">
+        <span class="flex items-center"><i class="fas fa-file-alt mr-2"></i> ${book.publishYear}</span>
+        <span class="flex items-center"><i class="fas fa-language mr-2"></i> Indonesian</span>
+        <span class="flex items-center"><i class="fas fa-star mr-2"></i> ★★★★☆</span>
+      </div>
+    `;
+    bookCoverImg.src = book.coverUrl;
+    bookCoverImg.alt = book.judul + " Book Cover";
+
+    // Disable prev/next button if at edges
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === books.length - 1;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      renderBook(currentIndex);
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < books.length - 1) {
+      currentIndex++;
+      renderBook(currentIndex);
+    }
+  });
+
+  // Initial render
+  renderBook(currentIndex);
+</script>
+</body>
+</html>
