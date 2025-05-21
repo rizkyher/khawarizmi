@@ -112,10 +112,10 @@
         </section>
         <!-- Book Packages Section -->
         <section class="py-16 bg-gray-100" id="paket">
-        <div class="container mx-auto px-6">
+            <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold mb-14 text-center">Paket Buku</h2>
 
-            <div id="package-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center max-w-5xl mx-auto">
+            <div id="package-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center ">
                 <!-- Paket akan di-render di sini -->
             </div>
             </div>
@@ -123,8 +123,8 @@
 
         <section class="py-16 bg-gray-50">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold mb-6 text-center text-orange-800">Paket 3</h2>
-                <p class="text-xl text-center mb-12 text-gray-700">Premium IT Learning Package</p>
+                <h2 class="text-4xl font-bold mb-6 text-center text-orange-800">Full Lesson Plan</h2>
+                <!-- <p class="text-xl text-center mb-12 text-gray-700">Premium IT Learning Package</p> -->
                 
                 <div class="flex flex-col md:flex-row gap-8">
                     <div class="md:w-2/3">
@@ -230,10 +230,10 @@
                 
                 <!-- Activity Photos Section -->
                 <div class="mt-16">
-                    <h3 class="text-2xl font-semibold mb-8 text-center text-orange-700">Kegiatan Pembelajaran Paket 3</h3>
+                    <h3 class="text-2xl font-semibold mb-8 text-center text-orange-700">Dokumentasi Pembelajaran </h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="relative overflow-hidden rounded-lg shadow-lg group">
-                            <img src="/api/placeholder/480/320" alt="Kegiatan Webinar IT" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                            <img src="img/webinar.JPG" alt="Kegiatan Webinar IT" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
                             <div class="absolute inset-0 bg-gradient-to-t from-orange-900/70 to-transparent flex items-end">
                                 <div class="p-4 text-white">
                                     <h4 class="font-semibold text-lg">Webinar IT Bersertifikat</h4>
@@ -242,7 +242,7 @@
                             </div>
                         </div>
                         <div class="relative overflow-hidden rounded-lg shadow-lg group">
-                            <img src="/api/placeholder/480/320" alt="Bedah Buku IT" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                            <img src="img/BedahBuku.JPG" alt="Bedah Buku IT" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
                             <div class="absolute inset-0 bg-gradient-to-t from-orange-900/70 to-transparent flex items-end">
                                 <div class="p-4 text-white">
                                     <h4 class="font-semibold text-lg">Sesi Bedah Buku</h4>
@@ -251,7 +251,7 @@
                             </div>
                         </div>
                         <div class="relative overflow-hidden rounded-lg shadow-lg group">
-                            <img src="/api/placeholder/480/320" alt="Praktek Lab IT" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                            <img src="img/praktekIt.JPG" alt="Praktek Lab IT" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
                             <div class="absolute inset-0 bg-gradient-to-t from-orange-900/70 to-transparent flex items-end">
                                 <div class="p-4 text-white">
                                     <h4 class="font-semibold text-lg">Praktek Lab IT</h4>
@@ -262,7 +262,7 @@
                     </div>
                     
                     <!-- Testimonial -->
-                    <div class="mt-12 bg-white p-6 rounded-lg shadow-md">
+                    <!-- <div class="mt-12 bg-white p-6 rounded-lg shadow-md">
                         <div class="flex flex-col md:flex-row gap-6 items-center">
                             <img src="/api/placeholder/160/160" alt="Peserta Program" class="w-32 h-32 rounded-full object-cover border-4 border-orange-200">
                             <div>
@@ -278,11 +278,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <div class="mt-12 flex justify-center">
-                    <a href="#" class="px-8 py-3 bg-orange-700 text-white font-semibold rounded-lg hover:bg-orange-800 transition duration-300 shadow-lg">Dapatkan Paket 3 Sekarang</a>
+                    <a href="#" class="px-8 py-3 bg-orange-700 text-white font-semibold rounded-lg hover:bg-orange-800 transition duration-300 shadow-lg">Dapatkan  Sekarang</a>
                 </div>
             </div>
         </section>
@@ -404,7 +404,7 @@
         const dataPackage = [
             {
             id: "paket-1",
-            name: "Paket 1",
+            name: "Regular Lesson Plan",
             price: "Rp 799.000",
             recommended: false,
             benefits: [
@@ -414,28 +414,28 @@
             },
             {
             id: "paket-2",
-            name: "Paket 2",
+            name: "Premium Lesson Plan",
             price: "Rp 1.299.000",
-            recommended: true,
+            recommended: false,
             benefits: [
                 "Buku paket seri IT (7 buku)",
                 "Mendapatkan akses video tutorial mapel IT",
                 "Mendapatkan ticket free webinar 2 minggu sekali"
             ]
             },
-            // {
-            // id: "paket-3",
-            // name: "Paket 3",
-            // price: "Rp 1.999.000",
-            // recommended: false,
-            // benefits: [
-            //     "Buku paket seri IT (7 buku)",
-            //     "Mendapatkan akses video tutorial mapel IT",
-            //     "Mendapatkan ticket free webinar 2 minggu sekali",
-            //     "Mendapatkan event bedah buku sebanyak 7x @ durasi 120 mnt secara online",
-            //     "Opsi offline tersedia (biaya transportasi & akomodasi terpisah)"
-            // ]
-            // }
+            {
+            id: "paket-3",
+            name: "Full Lesson Plan",
+            price: "Rp 1.999.000",
+            recommended: true,
+            benefits: [
+                "Buku paket seri IT (7 buku)",
+                "Mendapatkan akses video tutorial mapel IT",
+                "Mendapatkan ticket free webinar 2 minggu sekali",
+                "Mendapatkan event bedah buku sebanyak 7x @ durasi 120 mnt secara online",
+                "Opsi offline tersedia (biaya transportasi & akomodasi terpisah)"
+            ]
+            }
         ];
 
         const packageList = document.getElementById("package-list");
