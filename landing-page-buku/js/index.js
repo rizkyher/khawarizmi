@@ -3,56 +3,9 @@
       name: "Seri Teknologi Islami"
     },
     books: [
-      {
-        id: "book-1",
-        judul: "IT BERORIENTASI MONETITATIF",
-        seri: "Seri Teknologi Islami",
-        deskripsi: "Keahlian teknologi menjadi salah satu kunci utama untuk meraih kesuksesan finansial. Monetisasi harus menjadi target pembelajaran, sehingga pelajar di bidang IT selalu berpikir tentang bagaimana cara menghasilkan pendapatan dari teknologi. Buku ini mengarahkan anak dan siswa kita untuk bercita-cita menjadi seorang technopreneur, yaitu wirausaha berbasis teknologi, dengan cara mencipta dan membuat suatu produk dan berlatih untuk memonetisasinya",
-        publishYear: 2025,
-        price: {
-          normal: 125000,
-          discount: 99000
-        },
-        coverUrl: "img/IT-BM/cover.jpg",
-      },
-      {
-      id: "book-2",
-      judul: "IT BERORIENTASI PRODUKTIF",
-      seri: "Seri Teknologi Islami",
-      deskripsi: "Jaman sudah berubah, portofolio menjadi lebih penting daripada ijazah.Perusahaan zaman sekarang lebih sering bertanya, \"Berapa perangkat lunak yang pernah Anda buat?\", \"Anda sudah terlibat dalam berapa proyek?\" Oleh karena itu, mari kita dorong anak dan siswa kita untuk mencari ide, untuk mengerjakan proyek dan menciptakan atau membuat produk.Buku ini memandu guru dan orangtua untuk menuntun tahap demi tahap agar anak dan siswa kita belajar IT secara produktif.",
-      publishYear: 2025,
-      price: {
-        normal: 135000,
-        discount: 108000
-      },
-      coverUrl: "img/IT-BP/cover.jpg",
-    },
+       
     {
-      id: "book-3",
-      judul: "IT DENGAN PROYEK FESTIVAL",
-      seri: "Seri Teknologi Islami",
-      deskripsi: "Efektivitas pembelajaran IT tidak akan sempurna tanpa jam dan strategi praktik yang baik.Pembelajaran yang disertai dengan praktik lebih efektif dengan persentase keberhasilan yang lebih tinggi (85%) dibandingkan dengan pembelajaran melalui teori saja (55%). Buku ini membahas tentang bagaimana menjalankan strategi pembelajaran berbasis project.Buku ini juga membahas tentang peningkatan kualitas guru agar mampu menciptakan dan mengawal proyek-proyek di mapel IT",
-      publishYear: 2025,
-      price: {
-        normal: 120000,
-        discount: 95000
-      },
-      coverUrl: "img/IT-PF/cover.jpg",
-    },
-     {
-      id: "book-4",
-      judul: "ISLAMIC TECHNOLOGY MINDSET INSTALLATION (ITMI)",
-      seri: "Seri Teknologi Islami",
-      deskripsi: "Di buku ini dijabarkan apa itu ITMI secara detail. ITMI adalah bagian dari Liquid Curriculum yang memiliki dua fungsi utama.Fungsi ITMI yang pertama adalah sebagai metode preventif & kuratif untuk mudhorotnya teknologi, seperti nomophobia, narkolema, game addiction, dsb. Fungsi kedua dari ITMI adalah sebagai metode belajar mapel IT yang efektif, lebih cepat, sebab menggunakan strategi ajar yang unik",
-      publishYear: 2025,
-      price: {
-        normal: 130000,
-        discount: 104000
-      },
-      coverUrl: "img/ITMI/cover.jpg",
-    },
-    {
-      id: "book-5",
+      id: "book-1",
       judul: "LC (Licuid Curriculum)",
       seri: "Karya Independen",
       deskripsi: "Tujuan pendidikan dari liquid curriculum adalah mencapai stabilisasi moral, mental, dan produktifitas lebih cepat.Siapapun yang mendambakan lahirnya generasi impian, baik anda adalah seorang guru maupun orang tua, Liquid Curriculum adalah jawabannya. Insyaallah.",
@@ -64,7 +17,19 @@
       coverUrl: "img/LC/cover.jpg",
     },
     {
-      id: "book-6",
+      id: "book-2",
+      judul: "ISLAMIC TECHNOLOGY MINDSET INSTALLATION (ITMI)",
+      seri: "Seri Teknologi Islami",
+      deskripsi: "Di buku ini dijabarkan apa itu ITMI secara detail. ITMI adalah bagian dari Liquid Curriculum yang memiliki dua fungsi utama.Fungsi ITMI yang pertama adalah sebagai metode preventif & kuratif untuk mudhorotnya teknologi, seperti nomophobia, narkolema, game addiction, dsb. Fungsi kedua dari ITMI adalah sebagai metode belajar mapel IT yang efektif, lebih cepat, sebab menggunakan strategi ajar yang unik",
+      publishYear: 2025,
+      price: {
+        normal: 130000,
+        discount: 104000
+      },
+      coverUrl: "img/ITMI/cover.jpg",
+    },
+    {
+      id: "book-3",
       judul: "SEJARAH TEKNOLOGI DARI PERSPEKTIF KAUM MUSLIMIN",
       seri: "Seri Teknologi Islami",
       deskripsi: "Buku ini adalah buku tentang sejarah teknologi yang jujur, di dalam buku ini dijabarkan tentang keterlibatan kaum muslimin dalam mempelopori kebangkitan teknologi.Bagaimana ilmuwan muslim menjaga dan memelihara khazanah keilmuan peradaban-peradaban hebat di masa lalu, seperti Yunani, Persia, bahkan China.Bagaimana ilmuwan muslim meneruskan penelitian mereka dengan berpandu dengan Al-Quran yang hasilnya adalah penemuan-penemuan yang orisinil. Buku ini juga menjelaskan bagaimana peradaban keilmuan itu bisa runtuh dan berpindah ke barat.Semua isi buku ini insya Allah akan membangkitkan semangat dan gairah pemuda muslim untuk kembali bangkit dan kembali mendekati teknolog.",
@@ -76,7 +41,7 @@
       coverUrl: "img/ST/cover.jpg",
     },
     {
-      id: "book-7",
+      id: "book-4",
       judul: "MENTAL BELAJAR TEKNOLOGI",
       seri: "Seri Teknologi Islami",
       deskripsi: "Teknologi bagaikan kotak pandora, di dalamnya terdapat keburukan dan manfaat.Menghindari teknologi sudah tak mungkin! yang logis adalah menyiapkan anak dan siswa kita agar dia punya mental yang tangguh untuk mampu menjauhi keburukan teknologi dan punya mental yang tangguh untuk hanya fokus kepada manfaatnya serta punya mental yang produktif bahkan monetitatif dalam berteknologi.Buku ini menjadi penting bagi pendidik (orang tua dan guru) karena di dalamnya terdapat langkah demi langkah untukmembangun \"mental-mental berteknologi\" tersebut.",
@@ -87,6 +52,43 @@
       },
       coverUrl: "img/BT/cover.jpg",
     },
+      {
+      id: "book-5",
+      judul: "IT DENGAN PROYEK FESTIVAL",
+      seri: "Seri Teknologi Islami",
+      deskripsi: "Efektivitas pembelajaran IT tidak akan sempurna tanpa jam dan strategi praktik yang baik.Pembelajaran yang disertai dengan praktik lebih efektif dengan persentase keberhasilan yang lebih tinggi (85%) dibandingkan dengan pembelajaran melalui teori saja (55%). Buku ini membahas tentang bagaimana menjalankan strategi pembelajaran berbasis project.Buku ini juga membahas tentang peningkatan kualitas guru agar mampu menciptakan dan mengawal proyek-proyek di mapel IT",
+      publishYear: 2025,
+      price: {
+        normal: 120000,
+        discount: 95000
+      },
+      coverUrl: "img/IT-PF/cover.jpg",
+    },
+      {
+      id: "book-6",
+      judul: "IT BERORIENTASI PRODUKTIF",
+      seri: "Seri Teknologi Islami",
+      deskripsi: "Jaman sudah berubah, portofolio menjadi lebih penting daripada ijazah.Perusahaan zaman sekarang lebih sering bertanya, \"Berapa perangkat lunak yang pernah Anda buat?\", \"Anda sudah terlibat dalam berapa proyek?\" Oleh karena itu, mari kita dorong anak dan siswa kita untuk mencari ide, untuk mengerjakan proyek dan menciptakan atau membuat produk.Buku ini memandu guru dan orangtua untuk menuntun tahap demi tahap agar anak dan siswa kita belajar IT secara produktif.",
+      publishYear: 2025,
+      price: {
+        normal: 135000,
+        discount: 108000
+      },
+      coverUrl: "img/IT-BP/cover.jpg",
+    },
+    {
+        id: "book-7",
+        judul: "IT BERORIENTASI MONETITATIF",
+        seri: "Seri Teknologi Islami",
+        deskripsi: "Keahlian teknologi menjadi salah satu kunci utama untuk meraih kesuksesan finansial. Monetisasi harus menjadi target pembelajaran, sehingga pelajar di bidang IT selalu berpikir tentang bagaimana cara menghasilkan pendapatan dari teknologi. Buku ini mengarahkan anak dan siswa kita untuk bercita-cita menjadi seorang technopreneur, yaitu wirausaha berbasis teknologi, dengan cara mencipta dan membuat suatu produk dan berlatih untuk memonetisasinya",
+        publishYear: 2025,
+        price: {
+          normal: 125000,
+          discount: 99000
+        },
+        coverUrl: "img/IT-BM/cover.jpg",
+      },
+    
 
       // buku lain...
     ]
@@ -95,46 +97,68 @@
    // Ambil buku pertama
   const wrapper = document.getElementById('book-swiper-wrapper');
 
-  data.books.forEach(book => {
-    const slide = document.createElement('div');
-    slide.className = 'swiper-slide flex flex-col md:flex-row items-center';
+data.books.forEach(book => {
+  const slide = document.createElement('div');
+  slide.className = 'swiper-slide flex flex-col md:flex-row items-center';
 
-    slide.innerHTML = `
-      <div class="md:w-1/2 mb-8 md:mb-0" id="book-info">
-        <span class="text-gray-700 font-semibold text-xl">${book.seri}</span>
-        <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">${book.judul}</h1>
-        <p class="hidden md:block text-lg mb-8 text-gray-700">${book.deskripsi}</p>
+  slide.innerHTML = `
+    <div class="md:w-1/2 mb-8 md:mb-0" id="book-info">
+      <span class="text-gray-700 font-semibold text-xl">${book.seri}</span>
+      <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4">${book.judul}</h1>
+      <p class="hidden md:block text-lg mb-8 text-gray-700">${book.deskripsi}</p>
 
-        <div class="flex flex-wrap gap-4">
-         <button
-            class="get-btn bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-md transition duration-300"
-            data-judul="${book.judul}"
-          >
-            Pesan Sekarang - Rp${book.price.discount.toLocaleString('id-ID')}
-          </button>
-          
-        </div>
-        <div class="mt-8 flex space-x-4 text-blue">
-          <span class="flex items-center"><i class="fas fa-calendar mr-2"></i> ${book.publishYear}</span>
-          <span class="flex items-center"><i class="fas fa-tag mr-2"></i> ${book.seri}</span>
-        </div>
+      <div class="flex flex-wrap gap-4">
+        <button
+          class="get-btn bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-md transition duration-300"
+          data-type="pesan"
+          data-judul="${book.judul}"
+        >
+          Pesan Sekarang - Rp${book.price.discount.toLocaleString('id-ID')}
+        </button>
+        <button
+          class="get-btn bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-md transition duration-300"
+          data-type="detail"
+          data-id="${book.id}"
+        >
+          Detail Buku
+        </button>
       </div>
-      <div class="md:w-1/2 flex justify-center">
-        <div class="relative">
-          <div class="absolute -inset-4 rounded-full bg-blue-500 opacity-30 blur-lg"></div>
-          <img src="${book.coverUrl}" alt="${book.judul}" class="book-cover h-80 md:h-96 relative z-10 shadow-2xl rounded-lg" />
-        </div>
-      </div>
-    `;
-    wrapper.appendChild(slide)
-    slide.querySelector(".get-btn").addEventListener("click", () => {
-  const pesan = `Halo, saya tertarik untuk membeli buku *${book.judul}* (${book.publishYear}) dari seri "${book.seri}" seharga Rp ${book.price.discount.toLocaleString("id-ID")}.`;
-  const nomor = "6285161231559";
-  const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
-  window.open(url, "_blank");
-});
 
+      <div class="mt-8 flex space-x-4 text-blue">
+        <span class="flex items-center"><i class="fas fa-calendar mr-2"></i> ${book.publishYear}</span>
+        <span class="flex items-center"><i class="fas fa-tag mr-2"></i> ${book.seri}</span>
+      </div>
+    </div>
+    <div class="md:w-1/2 flex justify-center">
+      <div class="relative">
+        <div class="absolute -inset-4 rounded-full bg-blue-500 opacity-30 blur-lg"></div>
+        <img src="${book.coverUrl}" alt="${book.judul}" class="book-cover h-80 md:h-96 relative z-10 shadow-2xl rounded-lg" />
+      </div>
+    </div>
+  `;
+
+  wrapper.appendChild(slide);
+
+  // Handler untuk semua tombol
+  const buttons = slide.querySelectorAll(".get-btn");
+  buttons.forEach(btn => {
+    const type = btn.dataset.type;
+
+    if (type === "pesan") {
+      btn.addEventListener("click", () => {
+        const pesan = `Halo, saya tertarik untuk membeli buku *${book.judul}* (${book.publishYear}) dari seri "${book.seri}" seharga Rp ${book.price.discount.toLocaleString("id-ID")}.`;
+        const nomor = "6285161231559";
+        const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+        window.open(url, "_blank");
+      });
+    } else if (type === "detail") {
+      btn.addEventListener("click", () => {
+        // Redirect ke halaman detail dengan ID
+        window.location.href = `detailbuku.html?id=${book.id}`;
+      });
+    }
   });
+});
 
   // <button class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-3 px-8 rounded-md transition duration-300">
   //           Coba Gratis
