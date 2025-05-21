@@ -7,7 +7,7 @@
         id: "book-1",
         judul: "IT BERORIENTASI MONETITATIF",
         seri: "Seri Teknologi Islami",
-        deskripsi: "Buku ini membahas bagaimana memanfaatkan teknologi informasi...",
+        deskripsi: "Keahlian teknologi menjadi salah satu kunci utama untuk meraih kesuksesan finansial. Monetisasi harus menjadi target pembelajaran, sehingga pelajar di bidang IT selalu berpikir tentang bagaimana cara menghasilkan pendapatan dari teknologi. Buku ini mengarahkan anak dan siswa kita untuk bercita-cita menjadi seorang technopreneur, yaitu wirausaha berbasis teknologi, dengan cara mencipta dan membuat suatu produk dan berlatih untuk memonetisasinya",
         publishYear: 2025,
         price: {
           normal: 125000,
@@ -19,7 +19,7 @@
       id: "book-2",
       judul: "IT BERORIENTASI PRODUKTIF",
       seri: "Seri Teknologi Islami",
-      deskripsi: "Buku ini mengajak pembaca untuk memaksimalkan produktivitas melalui teknologi informasi dengan tetap berpegang pada nilai-nilai Islam. Berbagai tools, metodologi, dan pendekatan dibahas untuk membantu meningkatkan efisiensi dan efektivitas dalam pekerjaan dan kehidupan sehari-hari.",
+      deskripsi: "Jaman sudah berubah, portofolio menjadi lebih penting daripada ijazah.Perusahaan zaman sekarang lebih sering bertanya, \"Berapa perangkat lunak yang pernah Anda buat?\", \"Anda sudah terlibat dalam berapa proyek?\" Oleh karena itu, mari kita dorong anak dan siswa kita untuk mencari ide, untuk mengerjakan proyek dan menciptakan atau membuat produk.Buku ini memandu guru dan orangtua untuk menuntun tahap demi tahap agar anak dan siswa kita belajar IT secara produktif.",
       publishYear: 2025,
       price: {
         normal: 135000,
@@ -31,7 +31,7 @@
       id: "book-3",
       judul: "IT DENGAN PROYEK FESTIVAL",
       seri: "Seri Teknologi Islami",
-      deskripsi: "Buku ini membahas bagaimana teknologi informasi dapat dimanfaatkan dalam mengelola dan mengembangkan proyek festival dan acara berbasis komunitas yang sesuai dengan nilai-nilai Islam, dari perencanaan hingga evaluasi.",
+      deskripsi: "Efektivitas pembelajaran IT tidak akan sempurna tanpa jam dan strategi praktik yang baik.Pembelajaran yang disertai dengan praktik lebih efektif dengan persentase keberhasilan yang lebih tinggi (85%) dibandingkan dengan pembelajaran melalui teori saja (55%). Buku ini membahas tentang bagaimana menjalankan strategi pembelajaran berbasis project.Buku ini juga membahas tentang peningkatan kualitas guru agar mampu menciptakan dan mengawal proyek-proyek di mapel IT",
       publishYear: 2025,
       price: {
         normal: 120000,
@@ -43,7 +43,7 @@
       id: "book-4",
       judul: "ISLAMIC TECHNOLOGY MINDSET INSTALLATION (ITMI)",
       seri: "Seri Teknologi Islami",
-      deskripsi: "Buku ini fokus pada pembentukan pola pikir (mindset) tentang teknologi yang selaras dengan nilai-nilai Islam. Pembaca akan dibimbing untuk mengembangkan cara pandang yang tepat terhadap teknologi sebagai alat untuk kebaikan dan ibadah.",
+      deskripsi: "Di buku ini dijabarkan apa itu ITMI secara detail. ITMI adalah bagian dari Liquid Curriculum yang memiliki dua fungsi utama.Fungsi ITMI yang pertama adalah sebagai metode preventif & kuratif untuk mudhorotnya teknologi, seperti nomophobia, narkolema, game addiction, dsb. Fungsi kedua dari ITMI adalah sebagai metode belajar mapel IT yang efektif, lebih cepat, sebab menggunakan strategi ajar yang unik",
       publishYear: 2025,
       price: {
         normal: 130000,
@@ -55,7 +55,7 @@
       id: "book-5",
       judul: "LC (Licuid Curriculum)",
       seri: "Karya Independen",
-      deskripsi: "Buku ini memperkenalkan konsep kurikulum cair (liquid curriculum) yang adaptif dan fleksibel dalam pendidikan, khususnya dalam pembelajaran teknologi. Pendekatan ini memungkinkan adaptasi cepat terhadap perubahan dalam dunia teknologi.",
+      deskripsi: "Tujuan pendidikan dari liquid curriculum adalah mencapai stabilisasi moral, mental, dan produktifitas lebih cepat.Siapapun yang mendambakan lahirnya generasi impian, baik anda adalah seorang guru maupun orang tua, Liquid Curriculum adalah jawabannya. Insyaallah.",
       publishYear: 2025,
       price: {
         normal: 150000,
@@ -67,7 +67,7 @@
       id: "book-6",
       judul: "SEJARAH TEKNOLOGI DARI PERSPEKTIF KAUM MUSLIMIN",
       seri: "Seri Teknologi Islami",
-      deskripsi: "Buku ini menelusuri sejarah perkembangan teknologi dari perspektif peradaban Islam, menampilkan kontribusi ilmuwan Muslim dalam berbagai bidang teknologi dan sains sepanjang sejarah hingga era modern.",
+      deskripsi: "Buku ini adalah buku tentang sejarah teknologi yang jujur, di dalam buku ini dijabarkan tentang keterlibatan kaum muslimin dalam mempelopori kebangkitan teknologi.Bagaimana ilmuwan muslim menjaga dan memelihara khazanah keilmuan peradaban-peradaban hebat di masa lalu, seperti Yunani, Persia, bahkan China.Bagaimana ilmuwan muslim meneruskan penelitian mereka dengan berpandu dengan Al-Quran yang hasilnya adalah penemuan-penemuan yang orisinil. Buku ini juga menjelaskan bagaimana peradaban keilmuan itu bisa runtuh dan berpindah ke barat.Semua isi buku ini insya Allah akan membangkitkan semangat dan gairah pemuda muslim untuk kembali bangkit dan kembali mendekati teknolog.",
       publishYear: 2025,
       price: {
         normal: 175000,
@@ -79,7 +79,7 @@
       id: "book-7",
       judul: "MENTAL BELAJAR TEKNOLOGI",
       seri: "Seri Teknologi Islami",
-      deskripsi: "Buku ini mengulas aspek psikologis dan mental dalam proses belajar teknologi, dengan pendekatan yang didasarkan pada nilai-nilai Islam. Pembaca akan dipandu untuk mengembangkan mindset yang tepat dalam menghadapi tantangan belajar teknologi baru.",
+      deskripsi: "Teknologi bagaikan kotak pandora, di dalamnya terdapat keburukan dan manfaat.Menghindari teknologi sudah tak mungkin! yang logis adalah menyiapkan anak dan siswa kita agar dia punya mental yang tangguh untuk mampu menjauhi keburukan teknologi dan punya mental yang tangguh untuk hanya fokus kepada manfaatnya serta punya mental yang produktif bahkan monetitatif dalam berteknologi.Buku ini menjadi penting bagi pendidik (orang tua dan guru) karena di dalamnya terdapat langkah demi langkah untukmembangun \"mental-mental berteknologi\" tersebut.",
       publishYear: 2025,
       price: {
         normal: 140000,
