@@ -15,7 +15,9 @@ jawabannya. InsyaAllah`,
     dimensions: "14 x 20",
     isbn: "978-623-129-470-8",
     series: "Karya Independen",
-    images: ["img/LC/cover.jpg", "img/LC/b-cover.jpg","img/LC/1.jpg","img/LC/2.jpg",]
+    images: ["img/LC/cover.jpg", "img/LC/b-cover.jpg","img/LC/1.jpg","img/LC/2.jpg",],
+    linkid: "https://gsiofficial.xyz/gsiofficial/rYM9yVK",
+    linkshopee: "https://shopee.co.id/Liquid-Curicullum-Kurikulum-untuk-Sekolah-Impian-yang-Akan-Menghasilkan-Generasi-Impian-i.1344216734.28786791996",
   },
   {
     id: "book-2",
@@ -30,6 +32,8 @@ jawabannya. InsyaAllah`,
     isbn: "978-623-129-458-6",
     series: "Seri Teknologi Islami",
     images: ["img/ITMI/cover.jpg", "img/ITMI/b-cover.jpg","img/ITMI/1.jpg","img/ITMI/2.jpg", "img/ITMI/3.jpg", "img/ITMI/4.jpg", "img/ITMI/5.jpg"],
+    linkid: "https://gsiofficial.xyz/gsiofficial/aYgaVW1",
+    linkshopee: "https://shopee.co.id/Islamic-Technology-Mindset-Installation-(ITMI)-i.1344216734.42701668117",
   },
   {
     id: "book-3",
@@ -43,7 +47,9 @@ jawabannya. InsyaAllah`,
     dimensions: "14 x 20",
     isbn: "978-623-129-466-1",
     series: "Seri Teknologi Islami",
-    images: ["img/ST/cover.jpg", "img/ST/b-cover.jpg", "img/ST/1.jpg","img/ST/2.jpg", "img/ST/3.jpg", "img/ST/4.jpg" ]
+    images: ["img/ST/cover.jpg", "img/ST/b-cover.jpg", "img/ST/1.jpg","img/ST/2.jpg", "img/ST/3.jpg", "img/ST/4.jpg" ],
+    linkid: "https://gsiofficial.xyz/gsiofficial/glPZKz9",
+    linkshopee: "https://shopee.co.id/Seri-Teknologi-Islami-Sejarah-Teknologi-dari-Perspektif-Kaum-Muslim-i.1344216734.40751654113",
   },
   {
     id: "book-4",
@@ -57,7 +63,9 @@ jawabannya. InsyaAllah`,
     dimensions: "14 x 20",
     isbn: "978-623-129-460-9",
     series: "Seri Teknologi Islami",
-    images: ["img/BT/cover.jpg", "img/BT/b-cover.jpg", "img/BT/1.jpg","img/BT/2.jpg", ]
+    images: ["img/BT/cover.jpg", "img/BT/b-cover.jpg", "img/BT/1.jpg","img/BT/2.jpg", ],
+    linkid: "https://gsiofficial.xyz/gsiofficial/9QGJL29",
+    linkshopee: "https://shopee.co.id/Seri-Teknologi-Islam-Mental-Belajar-i.1344216734.42801659863",
   },
   {
     id: "book-5",
@@ -71,7 +79,9 @@ jawabannya. InsyaAllah`,
     dimensions: "14 x 20",
     isbn: "978-623-129-460-9",
     series: "Seri Teknologi Islami",
-    images: ["img/IT-PF/cover.jpg", "img/IT-PF/b-cover.jpg", "img/IT-PF/1.jpg","img/IT-PF/2.jpg", ]
+    images: ["img/IT-PF/cover.jpg", "img/IT-PF/b-cover.jpg", "img/IT-PF/1.jpg","img/IT-PF/2.jpg", ],
+    linkid: "https://gsiofficial.xyz/gsiofficial/ep5AkLv",
+    linkshopee: "https://shopee.co.id/Seri-Teknologi-Islami-IT-dengan-Proyek-Festival-i.1344216734.43501664649",
   },
   {
     id: "book-6",
@@ -85,7 +95,9 @@ jawabannya. InsyaAllah`,
     dimensions: "14 x 20",
     isbn: "978-623-129-460-9",
     series: "Seri Teknologi Islami",
-    images: ["img/IT-BP/cover.jpg", "img/IT-BP/b-cover.jpg", "img/IT-BP/1.jpg","img/IT-BP/2.jpg",]
+    images: ["img/IT-BP/cover.jpg", "img/IT-BP/b-cover.jpg", "img/IT-BP/1.jpg","img/IT-BP/2.jpg",],
+    linkid: "https://gsiofficial.xyz/gsiofficial/oPNVqAV",
+    linkshopee: "https://shopee.co.id/Seri-Teknologi-Islami-IT-Berorientasi-Produktif-i.1344216734.41351680050",
   },
   {
     id: "book-7",
@@ -99,7 +111,9 @@ jawabannya. InsyaAllah`,
     dimensions: "14 x 20",
     isbn: "978-623-129-460-9",
     series: "Seri Teknologi Islami",
-    images: ["img/IT-BM/cover.jpg", "img/IT-BM/b-cover.jpg", "img/IT-BM/1.jpg","img/IT-BM/2.jpg", "img/IT-BM/3.jpg", ]
+    images: ["img/IT-BM/cover.jpg", "img/IT-BM/b-cover.jpg", "img/IT-BM/1.jpg","img/IT-BM/2.jpg", "img/IT-BM/3.jpg", ],
+    linkid: "https://gsiofficial.xyz/gsiofficial/xQAKrGZ",
+    linkshopee: "https://shopee.co.id/Seri-Teknologi-Islami-IT-Berorientasi-Monetitatif-i.1344216734.43551675445",
   }
 ];
 
@@ -118,7 +132,7 @@ function getBookIdFromUrl() {
         }
 
         // Function to render book details
-    function renderBookDetail(book) {
+   function renderBookDetail(book) {
     if (!book) {
         document.getElementById('bookDetailContainer').innerHTML = `
             <div class="p-8 text-center">
@@ -148,6 +162,28 @@ function getBookIdFromUrl() {
     const priceDisplay = book.price ? 
         `<div class="text-2xl font-bold text-green-700 mb-6">Rp ${book.price.toLocaleString('id-ID')}</div>` : 
         '';
+
+    // Create order buttons based on available links
+    const orderButtonsHtml = `
+        <div class="mt-4 flex flex-col gap-3">
+            ${book.linkid ? `
+                <a href="${book.linkid}" target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200 flex items-center justify-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    Pesan Sekarang 
+                </a>` : ''
+            }
+            ${book.linkshopee ? `
+                <a href="${book.linkshopee}" target="_blank" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition duration-200 flex items-center justify-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                    </svg>
+                    Beli di Shopee
+                </a>` : ''
+            }
+        </div>
+    `;
 
     const navigationButtonsHtml = `
         <div class="mt-8 flex gap-4">
@@ -180,14 +216,8 @@ function getBookIdFromUrl() {
                     <div class="flex flex-wrap gap-2 justify-center">
                         ${thumbnailsHtml}
                     </div>
-                    <div class="mt-6">
-                        <button id="orderBookBtn" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-200 flex items-center justify-center">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-                            Pesan Sekarang
-                        </button>
-                    </div>
+                    
+                    ${orderButtonsHtml}
                 </div>
                 
                 <div class="w-full md:w-2/3">
@@ -250,12 +280,6 @@ function getBookIdFromUrl() {
             window.location.href = `detailbuku.html?id=${prevBook.id}`;
         });
     }
-
-    // Event listener untuk tombol pesan
-    document.getElementById('orderBookBtn').addEventListener('click', () => {
-        // Fungsi untuk menangani pemesanan buku
-        orderBook(book.id, book.title);
-    });
 }
         // Function to change main image when thumbnail is clicked
         window.changeMainImage = function(src, element) {

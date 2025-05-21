@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>How Your Brain Works</title>
+        <title>ITMI</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link  href="img/GSI-Bulat-png.png" rel="icon">
         <link rel="stylesheet" href="css/index.css">
@@ -16,39 +16,46 @@
     </head>
     <body class="bg-gray-50">
 
-        <nav class="bg-orange-700 text-white py-4 sticky top-0 z-50 shadow-md">
-            <div class="container mx-auto px-6 flex justify-between items-center">
-                <div class="font-bold text-xl">Buku</div>
-                
-                <!-- Menu untuk desktop -->
-                <div class="hidden md:flex space-x-6">
-                    <a href="#home" class="nav-link hover:text-yellow-300 transition">Home</a>
-                    <a href="#penulis" class="nav-link hover:text-yellow-300 transition">Penulis</a>
-                    <a href="#buku" class="nav-link hover:text-yellow-300 transition">Buku</a>
-                    <a href="#paket" class="nav-link hover:text-yellow-300 transition">Paket</a>
-                    <!-- <a href="#faq" class="nav-link hover:text-yellow-300 transition">FAQ</a> -->
-                </div>
-                
-                <!-- Tombol menu untuk mobile -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
+    <nav class="bg-orange-700 text-white py-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="font-bold text-xl flex items-center">
+                <!-- Logo icon (contoh) -->
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+                Buku
             </div>
             
-            <!-- Menu dropdown untuk mobile -->
-            <div id="mobile-menu" class="md:hidden hidden bg-orange-700 pb-4 px-6">
-                <a href="#home" class="block py-2 hover:text-yellow-300 transition">Home</a>
-                <a href="#penulis" class="block py-2 hover:text-yellow-300 transition">Penulis</a>
-                <a href="#buku" class="block py-2 hover:text-yellow-300 transition">Buku</a>
-                <a href="#paket" class="block py-2 hover:text-yellow-300 transition">Paket</a>
-                <!-- <a href="#faq" class="block py-2 hover:text-yellow-300 transition">FAQ</a> -->
+            <!-- Menu untuk desktop -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-yellow-300 transition duration-300 px-2 py-1">Home</a>
+                <a href="#buku" class="nav-link hover:text-yellow-300 transition duration-300 px-2 py-1">Buku</a>
+                <a href="#paket" class="nav-link hover:text-yellow-300 transition duration-300 px-2 py-1">Paket</a>
+                <a href="#penulis" class="nav-link hover:text-yellow-300 transition duration-300 px-2 py-1">Penulis</a>
+                <!-- <a href="#faq" class="nav-link hover:text-yellow-300 transition">FAQ</a> -->
             </div>
-        </nav>
+            
+            <!-- Tombol menu untuk mobile -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="focus:outline-none transition duration-300 transform hover:scale-110">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
         
+        <!-- Menu dropdown untuk mobile -->
+        <div id="mobile-menu" class="md:hidden hidden bg-orange-800">
+            <div class="container mx-auto px-6 py-2">
+                <a href="#home" class="block py-3 hover:text-yellow-300 transition nav-link">Home</a>
+                <a href="#buku" class="block py-3 hover:text-yellow-300 transition nav-link">Buku</a>
+                <a href="#paket" class="block py-3 hover:text-yellow-300 transition nav-link">Paket</a>
+                <a href="#penulis" class="block py-3 hover:text-yellow-300 transition nav-link">Penulis</a>
+                <!-- <a href="#faq" class="block py-3 hover:text-yellow-300 transition nav-link">FAQ</a> -->
+            </div>
+        </div>
+    </nav>
 
    
           
@@ -57,36 +64,35 @@
         <header class="bg-gradient-to-r from-orange-600 to-orange-400 text-white py-20" id="home">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-10 items-center">
-                
-                <!-- Kiri: Judul & Isi -->
-                <div class="text-center md:text-left">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Judul Utama</h1>
-                    <p class="text-lg leading-relaxed mb-6">
-                    Ini adalah isi yang menjelaskan tentang produk, layanan, atau cerita brand kamu. Tulis dengan gaya storytelling biar makin engaging.
-                    </p>
-                    <!-- Tombol -->
-                    <a href="index.html#paket" class="inline-block px-6 py-3 bg-green-500 text-white font-semibold rounded-xl shadow hover:bg-green-600 transition duration-300">
-                    Lihat Paket
-                    </a>
-                </div>
             
-                <!-- Kanan: Flip Gambar -->
-                <div class="flex justify-center">
-                    <div class="flip-container w-72 h-80" onclick="flipCard(this)">
-                    <div class="flipper w-full h-full">
-                        <!-- Gambar Depan -->
-                        <div class="front rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/UP.png" alt="Gambar Depan" class="w-full h-full object-cover">
-                        </div>
-                        <!-- Gambar Belakang -->
-                        <div class="back rounded-xl overflow-hidden shadow-lg">
-                        <img src="img/buku-itmi.png" alt="Gambar Belakang" class="w-full h-full object-cover">
+                    <!-- Kiri: Judul & Isi -->
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">Judul Utama</h1>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Ini adalah isi yang menjelaskan tentang produk, layanan, atau cerita brand kamu. Tulis dengan gaya storytelling biar makin engaging.
+                        </p>
+                        <!-- Tombol -->
+                        <a href="index.html#paket"
+                            class="inline-block px-6 py-3 bg-green-500 text-white font-semibold rounded-xl shadow hover:bg-green-600 transition duration-300">
+                            Lihat Paket
+                        </a>
+                    </div>
+            
+                    <!-- Kanan: Flip Gambar -->
+                    <div class="flex justify-center">
+                        <div id="autoFlipCard" class="flip-container w-full max-w-3xl aspect-video">
+                            <div class="flipper">
+                                <div class="front rounded-xl overflow-hidden shadow-lg">
+                                <img src="img/dokumentasiItmi.png" class="w-full h-full object-cover" alt="Depan">
+                                </div>
+                                <div class="back rounded-xl overflow-hidden shadow-lg">
+                                <img src="img/bukuItmi.png" class="w-full h-full object-cover" alt="Belakang">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    </div>
                 </div>
-            
-                </div>
+            </div>
             </div>
         </header>
               
@@ -236,8 +242,8 @@
                             <img src="img/webinar.JPG" alt="Kegiatan Webinar IT" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
                             <div class="absolute inset-0 bg-gradient-to-t from-orange-900/70 to-transparent flex items-end">
                                 <div class="p-4 text-white">
-                                    <h4 class="font-semibold text-lg">Webinar IT Bersertifikat</h4>
-                                    <p class="text-sm opacity-90">Webinar interaktif dengan pembicara ahli di bidang IT</p>
+                                    <h4 class="font-semibold text-lg">Seminar IT Bersertifikat</h4>
+                                    <p class="text-sm opacity-90">Seminar interaktif dengan pembicara ahli di bidang IT</p>
                                 </div>
                             </div>
                         </div>
@@ -282,7 +288,7 @@
                 </div>
                 
                 <div class="mt-12 flex justify-center">
-                    <a href="#" class="px-8 py-3 bg-orange-700 text-white font-semibold rounded-lg hover:bg-orange-800 transition duration-300 shadow-lg">Dapatkan  Sekarang</a>
+                    <a href="https://gsiofficial.xyz/gsiofficial/rlmxr91gp7d1" target="_blank" class="px-8 py-3 bg-orange-700 text-white font-semibold rounded-lg hover:bg-orange-800 transition duration-300 shadow-lg">Dapatkan  Sekarang</a>
                 </div>
             </div>
         </section>
@@ -504,7 +510,8 @@
             benefits: [
                 "Buku paket seri IT (7 buku)",
                 "Mendapatkan akses video tutorial mapel IT"
-            ]
+            ],
+            link: "https://gsiofficial.xyz/gsiofficial/67ejrz6xdwgp"
             },
             {
             id: "paket-2",
@@ -515,7 +522,8 @@
                 "Buku paket seri IT (7 buku)",
                 "Mendapatkan akses video tutorial mapel IT",
                 "Mendapatkan ticket free webinar 2 minggu sekali"
-            ]
+            ],
+            link: "https://gsiofficial.xyz/gsiofficial/0kj4d1jje2dq"
             },
             {
             id: "paket-3",
@@ -528,56 +536,60 @@
                 "Mendapatkan ticket free webinar 2 minggu sekali",
                 "Mendapatkan event bedah buku sebanyak 7x @ durasi 120 mnt secara online",
                 "Opsi offline tersedia (biaya transportasi & akomodasi terpisah)"
-            ]
+            ],
+            link: "https://gsiofficial.xyz/gsiofficial/rlmxr91gp7d1"
+
             }
         ];
 
         const packageList = document.getElementById("package-list");
         
         dataPackage.forEach((paket) => {
-        const paketDiv = document.createElement("div");
-        paketDiv.className = "package-card relative bg-white rounded-xl overflow-hidden shadow-lg flex flex-col w-full max-w-sm";
+    const paketDiv = document.createElement("div");
+    paketDiv.className = "package-card relative bg-white rounded-xl overflow-hidden shadow-lg flex flex-col w-full max-w-sm";
 
-        // Add recommended badge if applicable
-        if (paket.recommended) {
-            const badge = document.createElement("div");
-            badge.className = "package-badge";
-            badge.textContent = "Recommended";
-            paketDiv.appendChild(badge);
-        }
+    // Tambah badge jika recommended
+    if (paket.recommended) {
+        const badge = document.createElement("div");
+        badge.className = "package-badge";
+        badge.textContent = "Recommended";
+        paketDiv.appendChild(badge);
+    }
 
-        const benefitsList = paket.benefits.map(item =>
-            `<li class="benefit-item mb-3">${item}</li>`
-        ).join("");
+    const benefitsList = paket.benefits.map(item =>
+        `<li class="benefit-item mb-3">${item}</li>`
+    ).join("");
 
-        paketDiv.innerHTML += `
-            <div class="bg-gradient-to-r ${paket.recommended ? 'from-yellow-400 to-orange-500' : 'from-gray-100 to-gray-200'} p-6">
+    paketDiv.innerHTML += `
+        <div class="bg-gradient-to-r ${paket.recommended ? 'from-yellow-400 to-orange-500' : 'from-gray-100 to-gray-200'} p-6">
             <h3 class="text-2xl font-bold ${paket.recommended ? 'text-white' : 'text-gray-800'}">${paket.name}</h3>
             <p class="text-xl font-semibold mt-2 ${paket.recommended ? 'text-white' : 'text-gray-700'}">${paket.price}</p>
-            </div>
-            <div class="p-6 flex-grow">
+        </div>
+        <div class="p-6 flex-grow">
             <ul class="text-gray-700 mb-6">
                 ${benefitsList}
             </ul>
-            </div>
-            <div class="px-6 pb-6">
-            <button class="pesan-btn w-full ${paket.recommended ? 'bg-orange-500 hover:bg-orange-600' : 'bg-yellow-500 hover:bg-yellow-600'} text-white font-bold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105">
+        </div>
+        <div class="px-6 pb-6">
+            <button class="pesan-btn w-full ${paket.recommended ? 'bg-orange-500 hover:bg-orange-600' : 'bg-yellow-500 hover:bg-yellow-600'} text-white font-bold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105" target="_blank">
                 Pesan Sekarang
             </button>
-            </div>
-        `;
+        </div>
+    `;
 
-        // Append card to list
-        packageList.appendChild(paketDiv);
+    packageList.appendChild(paketDiv);
 
-        // Add event listener to the button
-        const pesanButton = paketDiv.querySelector(".pesan-btn");
-        pesanButton.addEventListener("click", () => {
-            const pesan = `Saya ingin melakukan pemesanan untuk paket: ${paket.name}`;
-            const waURL = `https://wa.me/6285161231559?text=${encodeURIComponent(pesan)}`;
-            window.open(waURL, '_blank');
-        });
-        });
+    // Ganti tombol "Pesan Sekarang" agar buka link dari paket.link
+    const pesanButton = paketDiv.querySelector(".pesan-btn");
+    pesanButton.addEventListener("click", () => {
+        if (paket.link) {
+            window.open(paket.link, '_blank');
+        } else {
+            alert("Link pemesanan tidak tersedia.");
+        }
+    });
+});
+
 
         });
     </script>

@@ -29,6 +29,7 @@ body {
   background-color: #fbbf24;
   border-radius: 50%;
 }
+
 .package-badge {
   position: absolute;
   top: -10px;
@@ -72,7 +73,6 @@ body {
   transform: rotateY(180deg);
 }
 
-
 .flip-container {
   perspective: 1000px;
 }
@@ -107,7 +107,42 @@ body {
   aspect-ratio: 16 / 9;
 }
 
-.active-link {
-  color: #facc15; /* Tailwind 'text-yellow-300' */
+.nav-link.active {
+  color: #facc15; /* warna kuning-300 */
   font-weight: bold;
+  border-bottom: 2px solid #facc15;
+  padding-bottom: 2px;
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fef08a; /* warna kuning-200 untuk efek hover lebih cerah */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #fef08a;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Animasi untuk menu mobile */
+#mobile-menu {
+  display: none;
+}
+
+#mobile-menu.show {
+  display: block;
 }

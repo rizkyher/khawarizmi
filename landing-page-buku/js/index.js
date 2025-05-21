@@ -15,6 +15,8 @@
         discount: 120000
       },
       coverUrl: "img/LC/cover.jpg",
+      linkid: "https://gsiofficial.xyz/gsiofficial/rYM9yVK",
+      linkshopee: "https://shopee.co.id/Liquid-Curicullum-Kurikulum-untuk-Sekolah-Impian-yang-Akan-Menghasilkan-Generasi-Impian-i.1344216734.28786791996",
     },
     {
       id: "book-2",
@@ -27,6 +29,8 @@
         discount: 104000
       },
       coverUrl: "img/ITMI/cover.jpg",
+      linkid: "https://gsiofficial.xyz/gsiofficial/aYgaVW1",
+      linkshopee: "https://shopee.co.id/Islamic-Technology-Mindset-Installation-(ITMI)-i.1344216734.40351671301",
     },
     {
       id: "book-3",
@@ -39,6 +43,8 @@
         discount: 140000
       },
       coverUrl: "img/ST/cover.jpg",
+      linkid: "https://gsiofficial.xyz/gsiofficial/glPZKz9",
+      linkshopee: "https://shopee.co.id/Seri-Teknologi-Islami-Sejarah-Teknologi-dari-Perspektif-Kaum-Muslim-i.1344216734.40751654113",
     },
     {
       id: "book-4",
@@ -51,6 +57,8 @@
         discount: 112000
       },
       coverUrl: "img/BT/cover.jpg",
+      linkid: "https://gsiofficial.xyz/gsiofficial/9QGJL29",
+      linkshopee: "https://shopee.co.id/Seri-Teknologi-Islam-Mental-Belajar-i.1344216734.42801659863",
     },
       {
       id: "book-5",
@@ -63,6 +71,8 @@
         discount: 95000
       },
       coverUrl: "img/IT-PF/cover.jpg",
+      linkid: "https://gsiofficial.xyz/gsiofficial/ep5AkLv",
+      linkshopee: "https://shopee.co.id/Seri-Teknologi-Islami-IT-dengan-Proyek-Festival-i.1344216734.43501664649",
     },
       {
       id: "book-6",
@@ -75,6 +85,8 @@
         discount: 108000
       },
       coverUrl: "img/IT-BP/cover.jpg",
+      linkid: "https://gsiofficial.xyz/gsiofficial/oPNVqAV",
+      linkshopee: "https://shopee.co.id/Seri-Teknologi-Islami-IT-Berorientasi-Produktif-i.1344216734.41351680050",
     },
     {
         id: "book-7",
@@ -87,6 +99,8 @@
           discount: 99000
         },
         coverUrl: "img/IT-BM/cover.jpg",
+        linkid: "https://gsiofficial.xyz/gsiofficial/xQAKrGZ",
+        linkshopee: "https://shopee.co.id/Seri-Teknologi-Islami-IT-Berorientasi-Monetitatif-i.1344216734.43551675445",
       },
     
 
@@ -114,6 +128,13 @@ data.books.forEach(book => {
           data-judul="${book.judul}"
         >
           Pesan Sekarang - Rp${book.price.discount.toLocaleString('id-ID')}
+        </button>
+        <button
+          class="get-btn bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-md transition duration-300"
+          data-type="shopee"
+          data-judul="${book.judul}"
+        >
+          Beli di Shopee
         </button>
         <button
           class="get-btn bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-md transition duration-300"
@@ -146,20 +167,22 @@ data.books.forEach(book => {
 
     if (type === "pesan") {
       btn.addEventListener("click", () => {
-        const pesan = `Halo, saya tertarik untuk membeli buku *${book.judul}* (${book.publishYear}) dari seri "${book.seri}" seharga Rp ${book.price.discount.toLocaleString("id-ID")}.`;
-        const nomor = "6285161231559";
-        const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
-        window.open(url, "_blank");
+        // Menggunakan linkid untuk tombol pesan
+        window.open(book.linkid, "_blank");
+      });
+    } else if (type === "shopee") {
+      btn.addEventListener("click", () => {
+        // Menggunakan linkshopee untuk tombol shopee
+        window.open(book.linkshopee, "_blank");
       });
     } else if (type === "detail") {
       btn.addEventListener("click", () => {
-        // Redirect ke halaman detail dengan ID
+        // Menggunakan linkshopee untuk tombol detail (tidak diubah)
         window.location.href = `detailbuku.html?id=${book.id}`;
       });
     }
   });
 });
-
   // <button class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-3 px-8 rounded-md transition duration-300">
   //           Coba Gratis
   //         </button>
@@ -256,6 +279,75 @@ data.books.forEach(book => {
     }
   });
 });
-  
+
+function flipCard(container) {
+  container.classList.toggle('flip');
+}
+
+const autoFlipContainer = document.getElementById("autoFlipCard");
+          
+  // Flip manual saat diklik
+  autoFlipContainer.addEventListener("click", () => {
+    autoFlipContainer.classList.toggle("flip");
+  });
+
+  // Flip otomatis setiap 3 detik
+  setInterval(() => {
+    autoFlipContainer.classList.toggle("flip");
+  }, 3000);
 
   
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Tracking section aktif saat scroll
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+    
+    function onScroll() {
+        // Mendapatkan posisi scroll
+        const scrollPosition = window.scrollY + 100;
+        
+        // Mencari section yang sedang aktif
+        let currentSectionId = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSectionId = section.getAttribute("id");
+            }
+        });
+        
+        // Update class active pada link navigasi
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${currentSectionId}`) {
+                link.classList.add("active");
+            }
+        });
+    }
+    
+    // Toggle menu mobile
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    
+    mobileMenuButton.addEventListener("click", function() {
+        mobileMenu.classList.toggle("show");
+        console.log("Menu mobile diklik:", mobileMenu.classList.contains("show"));
+    });
+    
+    // Menutup menu mobile ketika klik link
+    const mobileLinks = mobileMenu.querySelectorAll("a");
+    mobileLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.remove("show");
+        });
+    });
+    
+    // Event listeners untuk scroll dan resize
+    window.addEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
+    
+    // Jalankan onScroll saat halaman dimuat
+    onScroll();
+});
