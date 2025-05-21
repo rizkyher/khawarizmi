@@ -71,3 +71,43 @@ body {
 .back {
   transform: rotateY(180deg);
 }
+
+
+.flip-container {
+  perspective: 1000px;
+}
+
+.flipper {
+  transition: transform 0.8s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-container.flip .flipper {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.active-link {
+  color: #facc15; /* Tailwind 'text-yellow-300' */
+  font-weight: bold;
+}

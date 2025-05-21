@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html  lang="id" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>How Your Brain Works</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link  href="img/GSI-Bulat-png.png" rel="icon">
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    </head>
+    <body class="bg-gray-50">
+
+        <nav class="bg-orange-700 text-white py-4 sticky top-0 z-50 shadow-md">
+            <div class="container mx-auto px-6 flex justify-between items-center">
+                <div class="font-bold text-xl">Buku</div>
+                
+                <!-- Menu untuk desktop -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="nav-link hover:text-yellow-300 transition">Home</a>
+                    <a href="#penulis" class="nav-link hover:text-yellow-300 transition">Penulis</a>
+                    <a href="#buku" class="nav-link hover:text-yellow-300 transition">Buku</a>
+                    <a href="#paket" class="nav-link hover:text-yellow-300 transition">Paket</a>
+                    <!-- <a href="#faq" class="nav-link hover:text-yellow-300 transition">FAQ</a> -->
+                </div>
+                
+                <!-- Tombol menu untuk mobile -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Menu dropdown untuk mobile -->
+            <div id="mobile-menu" class="md:hidden hidden bg-orange-700 pb-4 px-6">
+                <a href="#home" class="block py-2 hover:text-yellow-300 transition">Home</a>
+                <a href="#penulis" class="block py-2 hover:text-yellow-300 transition">Penulis</a>
+                <a href="#buku" class="block py-2 hover:text-yellow-300 transition">Buku</a>
+                <a href="#paket" class="block py-2 hover:text-yellow-300 transition">Paket</a>
+                <!-- <a href="#faq" class="block py-2 hover:text-yellow-300 transition">FAQ</a> -->
+            </div>
+        </nav>
+        
+
+   
+          
+        
+        <!-- Hero Section -->
+        <header class="bg-gradient-to-r from-orange-600 to-orange-400 text-white py-20" id="home">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+            
+                    <!-- Kiri: Judul & Isi -->
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">Judul Utama</h1>
+                        <p class="text-lg leading-relaxed mb-6">
+                            Ini adalah isi yang menjelaskan tentang produk, layanan, atau cerita brand kamu. Tulis dengan gaya storytelling biar makin engaging.
+                        </p>
+                        <!-- Tombol -->
+                        <a href="index.html#paket"
+                            class="inline-block px-6 py-3 bg-green-500 text-white font-semibold rounded-xl shadow hover:bg-green-600 transition duration-300">
+                            Lihat Paket
+                        </a>
+                    </div>
+            
+                    <!-- Kanan: Flip Gambar -->
+                    <div class="flex justify-center">
+                        <div id="autoFlipCard" class="flip-container w-full max-w-3xl aspect-video">
+                            <div class="flipper">
+                                <div class="front rounded-xl overflow-hidden shadow-lg">
+                                <img src="img/dokumentasi.png" class="w-full h-full object-cover" alt="Depan">
+                                </div>
+                                <div class="back rounded-xl overflow-hidden shadow-lg">
+                                <img src="img/bukuItmi.png" class="w-full h-full object-cover" alt="Belakang">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </header>
+    
+        <!-- Book Section -->
+        <section class="py-16 bg-gray-200" id="buku">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center text-orange-800">Buku Penulis</h2>
+
+            <!-- Swiper Carousel -->
+            <div class="swiper book-swiper">
+            <div class="swiper-wrapper" id="book-swiper-wrapper">
+                <!-- Slides akan di-generate oleh JavaScript -->
+            </div>
+
+            <!-- Navigasi -->
+            <!-- <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+            <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+        </section>
+        <!-- Book Packages Section -->
+        <section class="py-16 bg-gray-100" id="paket">
+            <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-14 text-center text-orange-800">Paket Buku</h2>
+
+            <div id="package-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center ">
+                <!-- Paket akan di-render di sini -->
+            </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-6 text-center text-orange-800">Full Lesson Plan</h2>
+                <!-- <p class="text-xl text-center mb-12 text-gray-700">Premium IT Learning Package</p> -->
+                
+                <div class="flex flex-col md:flex-row gap-8 ">
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-semibold mb-6 text-orange-700">Benefit yang Anda Dapatkan:</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="bg-orange-100 p-2 rounded-full mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700"><span class="font-medium">Buku paket seri IT</span> - Koleksi lengkap 7 buku panduan IT</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-orange-100 p-2 rounded-full mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700"><span class="font-medium">Akses video tutorial mapel IT</span> - Pembelajaran visual untuk pemahaman lebih mendalam</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-orange-100 p-2 rounded-full mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700"><span class="font-medium">Tiket free webinar</span> - Akses ke webinar eksklusif 2 minggu sekali</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-orange-100 p-2 rounded-full mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700"><span class="font-medium">Event bedah buku</span> - 7x sesi online berdurasi 120 menit</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-orange-100 p-2 rounded-full mr-4 mt-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <p class="text-gray-700"><span class="font-medium">Fleksibilitas mode belajar</span> - Tersedia online, atau offline dengan biaya transportasi dan akomodasi</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/3 flex flex-col gap-4 items-center">
+                        <div class="bg-white p-4 rounded-lg shadow-md w-full">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-600 p-3 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">7 BUKU SERI IT</p>
+                                    <p class="text-sm text-gray-600">Koleksi lengkap materi belajar</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md w-full">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-orange-600 p-3 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">VIDEO TUTORIAL</p>
+                                    <p class="text-sm text-gray-600">Pembelajaran visual interaktif</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md w-full">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-green-600 p-3 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">WEBINAR RUTIN</p>
+                                    <p class="text-sm text-gray-600">Setiap 2 minggu sekali</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md w-full">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-red-600 p-3 rounded-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">EVENT BEDAH BUKU</p>
+                                    <p class="text-sm text-gray-600">7x sesi @ 120 menit</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Activity Photos Section -->
+                <div class="mt-16">
+                    <h3 class="text-2xl font-semibold mb-8 text-center text-orange-700">Dokumentasi Pembelajaran </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                            <img src="img/webinar.JPG" alt="Kegiatan Webinar IT" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-orange-900/70 to-transparent flex items-end">
+                                <div class="p-4 text-white">
+                                    <h4 class="font-semibold text-lg">Webinar IT Bersertifikat</h4>
+                                    <p class="text-sm opacity-90">Webinar interaktif dengan pembicara ahli di bidang IT</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                            <img src="img/BedahBuku.JPG" alt="Bedah Buku IT" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-orange-900/70 to-transparent flex items-end">
+                                <div class="p-4 text-white">
+                                    <h4 class="font-semibold text-lg">Sesi Bedah Buku</h4>
+                                    <p class="text-sm opacity-90">Diskusi mendalam tentang konsep-konsep dalam buku IT</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                            <img src="img/praktekIt.JPG" alt="Praktek Lab IT" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-orange-900/70 to-transparent flex items-end">
+                                <div class="p-4 text-white">
+                                    <h4 class="font-semibold text-lg">Praktek Lab IT</h4>
+                                    <p class="text-sm opacity-90">Pengalaman hands-on dengan aplikasi dan teknologi terbaru</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial -->
+                    <!-- <div class="mt-12 bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex flex-col md:flex-row gap-6 items-center">
+                            <img src="/api/placeholder/160/160" alt="Peserta Program" class="w-32 h-32 rounded-full object-cover border-4 border-orange-200">
+                            <div>
+                                <svg class="h-8 w-8 text-orange-400 mb-2" fill="currentColor" viewBox="0 0 32 32">
+                                    <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"/>
+                                </svg>
+                                <p class="text-gray-700 italic mb-4">
+                                    "Paket 3 memberikan pengalaman belajar IT yang lengkap. Dari buku-buku berkualitas hingga sesi bedah buku yang interaktif, saya mendapatkan pemahaman yang mendalam tentang teknologi informasi. Webinar rutin juga sangat bermanfaat untuk mengikuti perkembangan terbaru."
+                                </p>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Aditya Prasetyo</p>
+                                    <p class="text-sm text-gray-600">Mahasiswa Teknik Informatika</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                
+                <div class="mt-12 flex justify-center">
+                    <a href="#" class="px-8 py-3 bg-orange-700 text-white font-semibold rounded-lg hover:bg-orange-800 transition duration-300 shadow-lg">Dapatkan  Sekarang</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-200" id="penulis">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h2 class="text-3xl font-bold mb-12 text-center text-orange-500">Tentang Penulis</h2>
+                
+                <div class="flex flex-col md:flex-row items-start gap-12">
+                    <!-- Kolom Foto -->
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <div class="sticky top-8">
+                            <img src="img/UP.png" alt="Purwanto Abdul Ghaffar" class="rounded-lg shadow-lg w-full">
+                            
+                            <div class="mt-8 bg-white p-6 rounded-lg shadow">
+                                <h3 class="font-semibold text-lg mb-4 text-center">Pencapaian</h3>
+                                <div class="flex justify-center gap-4">
+                                    <div class="text-center">
+                                        <div class="text-orange-600 font-bold text-2xl">20+</div>
+                                        <div class="text-gray-500 text-sm">Tahun Riset</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-orange-600 font-bold text-2xl">10+</div>
+                                        <div class="text-gray-500 text-sm">Buku Terbit</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kolom Biografi dengan Dropdown -->
+                    <div class="md:w-2/3">
+                        <div class="bg-white p-8 rounded-lg shadow">
+                            <h3 class="text-2xl font-semibold mb-6 text-gray-800">Biografi</h3>
+                            
+                            <div class="space-y-6 text-gray-700">
+                                <p class="leading-relaxed">
+                                    Purwanto Abdul Ghaffar lahir di Malang, Jawa Timur tahun 1972. Terlahir dari keluarga Kristen Katolik kemudian masuk Islam pada tahun 1990. Meniti karier di dunia pasar modal sejak tahun 1997 sampai resign di tahun 2007, sambil menulis beberapa buku bertema perbandingan agama.
+                                </p>
+                                
+                                <!-- Dropdown untuk Portofolio -->
+                                <div class="mt-6 border rounded-lg overflow-hidden">
+                                    <button onclick="toggleSection('portofolio')" class="w-full bg-gray-100 p-4 text-left font-semibold flex justify-between items-center">
+                                        <span>Portofolio</span>
+                                        <svg id="portofolio-icon" class="w-5 h-5 transform transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <div id="portofolio-content" class="hidden p-4 border-t">
+                                        <div class="mb-6">
+                                            <h5 class="font-semibold mb-2 text-gray-700">Buku:</h5>
+                                            <ul class="list-disc pl-6 space-y-1">
+                                                <li>Mencari Agama yang Benar Melalui Sejarah Kodifikasi Kitab Suci</li>
+                                                <li>Tuhan yang Menentramkan Bukan Tuhan yang Menggelisahkan</li>
+                                                <li>Menghafal Al-Quran Sambil Bermain</li>
+                                                <li>Yuk Jadi Abi Umi Nomor Satu Dunia Akhirat</li>
+                                                <li>Memeluk Al-Quran</li>
+                                                <li>Islamic Technology Mindset Installation</li>
+                                                <li>Liquid Curriculum</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div>
+                                            <h5 class="font-semibold mb-2 text-gray-700">Software:</h5>
+                                            <ul class="list-disc pl-6 space-y-1">
+                                                <li>Quran Memorization Tools (QMT) versi lab & Android</li>
+                                                <li>Game dunia mini Al-Quran 1, 2, dan 3</li>
+                                                <li>Game Puzle Al-Quran Kinect System</li>
+                                                <li>Materi Tarbiyah Digital</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Dropdown untuk Perjalanan Karir -->
+                                <div class="border rounded-lg overflow-hidden">
+                                    <button onclick="toggleSection('karir')" class="w-full bg-gray-100 p-4 text-left font-semibold flex justify-between items-center">
+                                        <span>Perjalanan Karir</span>
+                                        <svg id="karir-icon" class="w-5 h-5 transform transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                    <div id="karir-content" class="hidden p-4 border-t">
+                                        <div class="space-y-4">
+                                            <div class="border-l-4 border-orange-500 pl-4">
+                                                <span class="font-semibold">2007</span>
+                                                <p class="leading-relaxed">
+                                                    Purwanto keluar dari pekerjaannya sebagai pialang saham, kemudian sempat memperdalam Al-Qur'an di Perguruan Tinggi Ilmu Quran. Keterlibatan di dunia dakwah semakin intens dengan ditandai lahirnya organisasi yang disebut Fahim Quran (Fast Active Happy Integrated in Memorizing The Quran) yang membuat sebuah metode menghafal Al-Qur'an.
+                                                </p>
+                                            </div>
+                                            
+                                            <div class="border-l-4 border-orange-500 pl-4">
+                                                <span class="font-semibold">2015 - sekarang</span>
+                                                <p class="leading-relaxed">
+                                                    Misinya berfokus pada mendirikan institusi pendidikan Al-Qur'an dan IT. Mendirikan beberapa institusi pendidikan seperti Pondok Pesantren Fahim Quran Plus (FQ), Quadran Boarding School (QBS), dan Sekolah Tahfizh Fahim Quran (STFQ).
+                                                </p>
+                                            </div>
+                                            
+                                            <div class="border-l-4 border-orange-500 pl-4">
+                                                <span class="font-semibold">2019 - sekarang</span>
+                                                <p class="leading-relaxed">
+                                                    Masih aktif di dunia teknologi sebagai CEO di PT Al-Khawarizmi Kreatif Produktif, yaitu software developer yang menghasilkan produk-produk teknologi dan layanan di dunia teknologi.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JavaScript untuk dropdown functionality -->
+            <script>
+                function toggleSection(id) {
+                    const content = document.getElementById(id + '-content');
+                    const icon = document.getElementById(id + '-icon');
+                    
+                    if (content.classList.contains('hidden')) {
+                        content.classList.remove('hidden');
+                        icon.classList.add('rotate-180');
+                    } else {
+                        content.classList.add('hidden');
+                        icon.classList.remove('rotate-180');
+                    }
+                }
+            </script>
+        </section>
+       
+
+        <!-- Footer -->
+        <footer class="bg-orange-700 text-white py-12">
+            <div class="container mx-auto px-6 ">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8  ">
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">GSI Home Production</h3>
+                        <p class="text-orange-200"> adalah perusahaan yang bergerak di bidang pengembangan perangkat lunak islami dan teknologi pendidikan</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">Kontak</h3>
+                        <p class="text-orange-200">sekolahimpianstudio@gmail.com</p>
+                        <p class="text-orange-200">+62 851-6123-1559</p>
+                    </div>
+                    <!-- <div>
+                        <h3 class="font-bold text-lg mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-orange-300"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white hover:text-orange-300"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white hover:text-orange-300"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white hover:text-orange-300"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="border-t border-orange-800 pt-6 text-center text-orange-300">
+                    <p>&copy; 2025 GSI Home Production. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <script src="js/index.js"></script>
+    </body>
+</html>
