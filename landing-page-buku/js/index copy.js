@@ -233,21 +233,6 @@
   });
 });
   
-function flipCard(container) {
-  container.classList.toggle('flip');
-}
-
-const autoFlipContainer = document.getElementById("autoFlipCard");
-          
-  // Flip manual saat diklik
-  autoFlipContainer.addEventListener("click", () => {
-    autoFlipContainer.classList.toggle("flip");
-  });
-
-  // Flip otomatis setiap 3 detik
-  setInterval(() => {
-    autoFlipContainer.classList.toggle("flip");
-  }, 3000);
 
 
   // Simple script for interactive elements
