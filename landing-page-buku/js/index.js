@@ -116,7 +116,7 @@ data.books.forEach(book => {
   slide.className = 'swiper-slide flex flex-col md:flex-row items-center';
 
   slide.innerHTML = `
-    <div class="md:w-1/2 flex justify-center">
+    <div class="md:w-1/2 flex justify-center mb-8">
       <div class="relative">
         <div class="absolute -inset-4 rounded-full bg-blue-500 opacity-30 blur-lg"></div>
         <img src="${book.coverUrl}" alt="${book.judul}" class="book-cover h-80 md:h-96 relative z-10 shadow-2xl rounded-lg" />
