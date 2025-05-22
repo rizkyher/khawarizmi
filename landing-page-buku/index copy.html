@@ -1,54 +1,136 @@
 <!DOCTYPE html>
 <html  lang="id" class="scroll-smooth">
     <head>
+        <!-- Basic Meta Tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>How Your Brain Works</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- SEO Meta Tags -->
+        <title>ITMI - Islamic Technology and Media Institute | GSI Home Production</title>
+        <meta name="description" content="ITMI (Islamic Technology and Media Institute) - Platform pendidikan teknologi dan media islami terdepan. Bergabunglah dengan GSI Home Production untuk mengembangkan skill digital Anda.">
+        <meta name="keywords" content="ITMI, Islamic Technology, Media Institute, GSI Home Production, pendidikan islami, teknologi islami, media islami">
+        <meta name="author" content="GSI Home Production">
+        <meta name="robots" content="index, follow">
+        <meta name="language" content="Indonesian">
+        
+            <!-- Open Graph (untuk Facebook/Instagram preview saat dibagikan) -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://itmi.si.khwarizmi.co.id/">
+        <meta property="og:title" content="ITMI - Islamic Technology and Media Institute">
+        <meta property="og:description" content="Platform pendidikan teknologi dan media islami terdepan. Bergabunglah dengan GSI Home Production untuk mengembangkan skill digital Anda.">
+        <meta property="og:image" content="img/GSI-Bulat-png.png">
+        <meta property="og:site_name" content="GSI Home Production">
+        <meta property="og:locale" content="id_ID">
+
+        <!-- Twitter Card (bisa digunakan oleh Telegram, WhatsApp, dll) -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://itmi.si.khwarizmi.co.id/">
+        <meta name="twitter:title" content="ITMI - Islamic Technology and Media Institute">
+        <meta name="twitter:description" content="Platform pendidikan teknologi dan media islami terdepan. Bergabunglah dengan GSI Home Production untuk mengembangkan skill digital Anda.">
+        <meta name="twitter:image" content="img/GSI-Bulat-png.png">
+
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="img/GSI-Bulat-png.png">
+        <link rel="apple-touch-icon" href="img/GSI-Bulat-png.png">
+        
+        <!-- Preconnect for Performance -->
+        <link rel="preconnect" href="https://cdn.tailwindcss.com">
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        
+        <!-- CSS Libraries -->
         <script src="https://cdn.tailwindcss.com"></script>
-        <link  href="img/GSI-Bulat-png.png" rel="icon">
         <link rel="stylesheet" href="css/index.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        
         <!-- Swiper CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        
+        <!-- Additional Performance Optimization -->
+        <meta name="theme-color" content="#c2410c">
+        <meta name="msapplication-TileColor" content="#c2410c">
+        
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
     </head>
+    <style>
+        /* Custom CSS untuk Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: #9C4221 !important; /* Warna orange-800 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background-color: white;
+            transform: scale(1.1);
+        }
+        
+        .swiper-button-next {
+            right: 10px;
+        }
+        
+        .swiper-button-prev {
+            left: 10px;
+        }
+    </style>
+
     <body class="bg-gray-50">
 
-        <nav class="bg-orange-700 text-white py-4 sticky top-0 z-50 shadow-md">
-            <div class="container mx-auto px-6 flex justify-between items-center">
-                <div class="font-bold text-xl">Buku</div>
-                
-                <!-- Menu untuk desktop -->
-                <div class="hidden md:flex space-x-6">
-                    <a href="#home" class="nav-link hover:text-yellow-300 transition">Home</a>
-                    <a href="#buku" class="nav-link hover:text-yellow-300 transition">Buku</a>
-                    <a href="#paket" class="nav-link hover:text-yellow-300 transition">Paket</a>
-                    <a href="#penulis" class="nav-link hover:text-yellow-300 transition">Penulis</a>
-                    <!-- <a href="#faq" class="nav-link hover:text-yellow-300 transition">FAQ</a> -->
-                </div>
-                
-                <!-- Tombol menu untuk mobile -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
+    <nav class="bg-orange-700 text-white py-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="font-bold text-xl flex items-center">
+                <!-- Logo icon (contoh) -->
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+                Buku
             </div>
             
-            <!-- Menu dropdown untuk mobile -->
-            <div id="mobile-menu" class="md:hidden hidden bg-orange-700 pb-4 px-6">
-                <a href="#home" class="block py-2 hover:text-yellow-300 transition">Home</a>
-                <a href="#buku" class="block py-2 hover:text-yellow-300 transition">Buku</a>
-                <a href="#paket" class="block py-2 hover:text-yellow-300 transition">Paket</a>
-                <a href="#penulis" class="block py-2 hover:text-yellow-300 transition">Penulis</a>
-                <!-- <a href="#faq" class="block py-2 hover:text-yellow-300 transition">FAQ</a> -->
+            <!-- Menu untuk desktop -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-yellow-300 transition duration-300 px-2 py-1">Home</a>
+                <a href="#buku" class="nav-link hover:text-yellow-300 transition duration-300 px-2 py-1">Buku</a>
+                <a href="#paket" class="nav-link hover:text-yellow-300 transition duration-300 px-2 py-1">Paket</a>
+                <a href="#penulis" class="nav-link hover:text-yellow-300 transition duration-300 px-2 py-1">Penulis</a>
+                <!-- <a href="#faq" class="nav-link hover:text-yellow-300 transition">FAQ</a> -->
             </div>
-        </nav>
+            
+            <!-- Tombol menu untuk mobile -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="focus:outline-none transition duration-300 transform hover:scale-110">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
         
+        <!-- Menu dropdown untuk mobile -->
+        <div id="mobile-menu" class="md:hidden hidden bg-orange-800">
+            <div class="container mx-auto px-6 py-2">
+                <a href="#home" class="block py-3 hover:text-yellow-300 transition nav-link">Home</a>
+                <a href="#buku" class="block py-3 hover:text-yellow-300 transition nav-link">Buku</a>
+                <a href="#paket" class="block py-3 hover:text-yellow-300 transition nav-link">Paket</a>
+                <a href="#penulis" class="block py-3 hover:text-yellow-300 transition nav-link">Penulis</a>
+                <!-- <a href="#faq" class="block py-3 hover:text-yellow-300 transition nav-link">FAQ</a> -->
+            </div>
+        </div>
+    </nav>
 
    
           
@@ -57,12 +139,13 @@
         <header class="bg-gradient-to-r from-orange-600 to-orange-400 text-white py-20" id="home">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-10 items-center">
-            
+
                     <!-- Kiri: Judul & Isi -->
                     <div class="text-center md:text-left">
-                        <h1 class="text-4xl md:text-5xl font-bold mb-4">Judul Utama</h1>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">Bangun Generasi Hebat di Era Digital</h1>
                         <p class="text-lg leading-relaxed mb-6">
-                            Ini adalah isi yang menjelaskan tentang produk, layanan, atau cerita brand kamu. Tulis dengan gaya storytelling biar makin engaging.
+                            Teknologi adalah ladang peluang — tapi hanya bisa dipanen oleh generasi yang siap. <br><br>
+                            <strong>Seri Buku Teknologi</strong> hadir untuk membekali anak-anak kita dengan nilai Islam, semangat inovasi, dan keterampilan masa depan. Mulai dari sejarah ilmuwan Muslim hingga proyek digital yang seru — semua dirancang agar mereka tak hanya jadi pengguna, tapi pencipta perubahan.
                         </p>
                         <!-- Tombol -->
                         <a href="index.html#paket"
@@ -70,43 +153,44 @@
                             Lihat Paket
                         </a>
                     </div>
-            
+
                     <!-- Kanan: Flip Gambar -->
                     <div class="flex justify-center">
                         <div id="autoFlipCard" class="flip-container w-full max-w-3xl aspect-video">
                             <div class="flipper">
                                 <div class="front rounded-xl overflow-hidden shadow-lg">
-                                <img src="img/dokumentasi.png" class="w-full h-full object-cover" alt="Depan">
+                                    <img src="img/dokumentasiItmi.png" class="w-full h-full object-cover" alt="Depan">
                                 </div>
                                 <div class="back rounded-xl overflow-hidden shadow-lg">
-                                <img src="img/bukuItmi.png" class="w-full h-full object-cover" alt="Belakang">
+                                    <img src="img/bukuItmi.png" class="w-full h-full object-cover" alt="Belakang">
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-            </div>
         </header>
-    
-        <!-- Book Section -->
+
+        <!-- Section Buku -->
         <section class="py-16 bg-gray-200" id="buku">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center text-orange-800">Buku Penulis</h2>
+            <div class="container mx-auto px-6 relative">  <!-- Tambahkan 'relative' di sini -->
+                <h2 class="text-3xl font-bold mb-12 text-center text-orange-800">Buku Penulis</h2>
 
-            <!-- Swiper Carousel -->
-            <div class="swiper book-swiper">
-            <div class="swiper-wrapper" id="book-swiper-wrapper">
-                <!-- Slides akan di-generate oleh JavaScript -->
-            </div>
+                <!-- Swiper Carousel -->
+                <div class="swiper book-swiper">
+                    <div class="swiper-wrapper" id="book-swiper-wrapper">
+                        <!-- Slides akan di-generate oleh JavaScript -->
+                    </div>
 
-            <!-- Navigasi -->
-            <!-- <div class="swiper-button-next text-white"></div>
-            <div class="swiper-button-prev text-white"></div>
-            <div class="swiper-pagination"></div> -->
+                    <!-- Navigasi -->
+                    <div class="swiper-button-next !text-orange-800"></div>
+                    <div class="swiper-button-prev !text-orange-800"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
-        </div>
         </section>
+        
         <!-- Book Packages Section -->
         <section class="py-16 bg-gray-100" id="paket">
             <div class="container mx-auto px-6">
@@ -233,8 +317,8 @@
                             <img src="img/webinar.JPG" alt="Kegiatan Webinar IT" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105">
                             <div class="absolute inset-0 bg-gradient-to-t from-orange-900/70 to-transparent flex items-end">
                                 <div class="p-4 text-white">
-                                    <h4 class="font-semibold text-lg">Webinar IT Bersertifikat</h4>
-                                    <p class="text-sm opacity-90">Webinar interaktif dengan pembicara ahli di bidang IT</p>
+                                    <h4 class="font-semibold text-lg">Seminar IT Bersertifikat</h4>
+                                    <p class="text-sm opacity-90">Seminar interaktif dengan pembicara ahli di bidang IT</p>
                                 </div>
                             </div>
                         </div>
@@ -279,7 +363,7 @@
                 </div>
                 
                 <div class="mt-12 flex justify-center">
-                    <a href="#" class="px-8 py-3 bg-orange-700 text-white font-semibold rounded-lg hover:bg-orange-800 transition duration-300 shadow-lg">Dapatkan  Sekarang</a>
+                    <a href="https://gsiofficial.xyz/gsiofficial/rlmxr91gp7d1" target="_blank" class="px-8 py-3 bg-orange-700 text-white font-semibold rounded-lg hover:bg-orange-800 transition duration-300 shadow-lg">Dapatkan  Sekarang</a>
                 </div>
             </div>
         </section>
@@ -409,6 +493,41 @@
                 }
             </script>
         </section>
+
+        <section class="bg-white py-16 px-6 md:px-12 lg:px-24">
+            <div class="max-w-7xl mx-auto">
+                
+                <!-- Judul Center -->
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-orange-500">
+                Tentang Sekolah Impian
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <!-- Teks Deskripsi -->
+                    <div>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Sekolah Impian adalah institusi dakwah yang memilih pendidikan sebagai jalan perjuangannya. Misi kami adalah mengintegrasikan AlQuran dengan teknologi, bahasa, dan karakter. Dengan cara menghasilkan generasi yang mulia di akhirat dengan menghafal Quran & mulia didunia karena memiliki life skill teknologi. Insya Allah Ta’ala mereka akan menjadi generasi muda yang cerdas, canggih, namun tetap soleh.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                        Sampai sekarang level pendidikan yang kami selenggarakan adalah tingkat SMP dan SMA, insya Allah kami sedang berjuang untuk menyelenggarakan level pendidikan yang lain baik TK, SD, maupun level yang lebih tinggi baik Vokasi hingga Universitas, Insya Allah.
+                        </p>
+                    </div>
+
+                    <!-- Video YouTube -->
+                    <div class="aspect-video w-full">
+                        <iframe 
+                            class="w-full h-full rounded-xl shadow-lg"
+                            src="https://www.youtube.com/embed/-plMLDUNNus?si=hNfJAYzcSf91wQhE" 
+                            title="Tentang Sekolah Impian" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
        
 
         <!-- Footer -->
@@ -439,6 +558,156 @@
                 </div>
             </div>
         </footer>
+        <script>
+        function flipCard(container) {
+        container.classList.toggle('flip');
+        }
+        </script>
+             <script>
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll(".nav-link");
+          
+            function setActiveLink() {
+              let currentSection = "";
+          
+              sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 80; // buffer top
+                if (scrollY >= sectionTop) {
+                  currentSection = section.getAttribute("id");
+                }
+              });
+          
+              navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(currentSection)) {
+                  link.classList.add("active");
+                }
+              });
+            }
+          
+            window.addEventListener("scroll", setActiveLink);
+          </script>
+        
+    
+        <script>
+            // Simple script for interactive elements
+
+            document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Menutup menu saat link menu diklik
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+        </script>
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const dataPackage = [
+            {
+            id: "paket-1",
+            name: "Regular Lesson Plan",
+            price: "Rp 799.000",
+            recommended: false,
+            benefits: [
+                "Buku paket seri IT (7 buku)",
+                "Mendapatkan akses video tutorial mapel IT"
+            ],
+            link: "https://gsiofficial.xyz/gsiofficial/67ejrz6xdwgp"
+            },
+            {
+            id: "paket-2",
+            name: "Premium Lesson Plan",
+            price: "Rp 1.299.000",
+            recommended: false,
+            benefits: [
+                "Buku paket seri IT (7 buku)",
+                "Mendapatkan akses video tutorial mapel IT",
+                "Mendapatkan ticket free webinar 2 minggu sekali"
+            ],
+            link: "https://gsiofficial.xyz/gsiofficial/0kj4d1jje2dq"
+            },
+            {
+            id: "paket-3",
+            name: "Full Lesson Plan",
+            price: "Rp 1.999.000",
+            recommended: true,
+            benefits: [
+                "Buku paket seri IT (7 buku)",
+                "Mendapatkan akses video tutorial mapel IT",
+                "Mendapatkan ticket free webinar 2 minggu sekali",
+                "Mendapatkan event bedah buku sebanyak 7x @ durasi 120 mnt secara online",
+                "Opsi offline tersedia (biaya transportasi & akomodasi terpisah)"
+            ],
+            link: "https://gsiofficial.xyz/gsiofficial/rlmxr91gp7d1"
+
+            }
+        ];
+
+        const packageList = document.getElementById("package-list");
+        
+        dataPackage.forEach((paket) => {
+    const paketDiv = document.createElement("div");
+    paketDiv.className = "package-card relative bg-white rounded-xl overflow-hidden shadow-lg flex flex-col w-full max-w-sm";
+
+    // Tambah badge jika recommended
+    if (paket.recommended) {
+        const badge = document.createElement("div");
+        badge.className = "package-badge";
+        badge.textContent = "Recommended";
+        paketDiv.appendChild(badge);
+    }
+
+    const benefitsList = paket.benefits.map(item =>
+        `<li class="benefit-item mb-3">${item}</li>`
+    ).join("");
+
+    paketDiv.innerHTML += `
+        <div class="bg-gradient-to-r ${paket.recommended ? 'from-yellow-400 to-orange-500' : 'from-gray-100 to-gray-200'} p-6">
+            <h3 class="text-2xl font-bold ${paket.recommended ? 'text-white' : 'text-gray-800'}">${paket.name}</h3>
+            <p class="text-xl font-semibold mt-2 ${paket.recommended ? 'text-white' : 'text-gray-700'}">${paket.price}</p>
+        </div>
+        <div class="p-6 flex-grow">
+            <ul class="text-gray-700 mb-6">
+                ${benefitsList}
+            </ul>
+        </div>
+        <div class="px-6 pb-6">
+            <button class="pesan-btn w-full ${paket.recommended ? 'bg-orange-500 hover:bg-orange-600' : 'bg-yellow-500 hover:bg-yellow-600'} text-white font-bold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105" target="_blank">
+                Pesan Sekarang
+            </button>
+        </div>
+    `;
+
+    packageList.appendChild(paketDiv);
+
+    // Ganti tombol "Pesan Sekarang" agar buka link dari paket.link
+    const pesanButton = paketDiv.querySelector(".pesan-btn");
+    pesanButton.addEventListener("click", () => {
+        if (paket.link) {
+            window.open(paket.link, '_blank');
+        } else {
+            alert("Link pemesanan tidak tersedia.");
+        }
+    });
+});
+
+
+        });
+    </script>
+
         <script src="js/index.js"></script>
+
+    
+    </script>
+    </script>
     </body>
 </html>
