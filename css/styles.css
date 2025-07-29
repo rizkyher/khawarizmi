@@ -51,6 +51,23 @@ p {
   height: 100%;
 }
 
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 aspect ratio */
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	background: #000;
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -1164,12 +1181,10 @@ a:hover.back-to-top {
 /* GSI Video Slider Custom Styles */
 .swiper-container-gsi {
   width: 100%;
-  height: 200px; /* Reduced height for a tighter look */
   padding-bottom: 40px;
 }
 
 .swiper-container-gsi .swiper-slide {
-  height: 160px; /* Reduced card height */
   display: flex;
   flex-direction: column;
 }

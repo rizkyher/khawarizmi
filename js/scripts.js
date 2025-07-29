@@ -201,7 +201,7 @@
 
   /* YouTube Video Fetcher */
   function loadYouTubeVideos() {
-    const apiKey = 'AIzaSyCmc5jzhGiMxm1C5SVg4Cegrb5Tax_npYI'; // GANTI DENGAN API KEY ANDA
+    const apiKey = 'AIzaSyBLNixSSMcCzRdhMXMnZPK4RybxRs2Nboo'; // GANTI DENGAN API KEY ANDA
     const channelId = 'UCGaPL10pZk09k_anyhRf5qw'; // GANTI DENGAN CHANNEL ID ANDA
     const maxResults = 10;
     const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`;
@@ -217,29 +217,32 @@
                 if (item.id.kind === 'youtube#video') {
                     const videoId = item.id.videoId;
                     const thumbnailUrl = item.snippet.thumbnails.high.url;
+            
                     const title = item.snippet.title;
 
                     const slide = document.createElement('div');
-                    slide.className = 'swiper-slide';
+                    slide.className = 'swiper-slide flex flex-col';
                     slide.innerHTML = `
-                        <div class="relative group">
-                            <img src="${thumbnailUrl}" alt="${title}" class="w-full h-auto rounded-lg">
-                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <button onclick="openModal(this, '${videoId}')" class="text-white text-4xl">
-                                    <i class="fas fa-play-circle"></i>
-                                </button>
+                        <div class="w-full rounded-lg overflow-hidden shadow-lg mb-2 group">
+                            <div class="aspect-w-16 aspect-h-9 relative">
+                                <img src="${thumbnailUrl}" alt="${title}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-center justify-center p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <button onclick="openModal(this, '${videoId}')" class="text-white text-4xl">
+                                        <i class="fas fa-play-circle"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-center mt-2">${title}</p>
+                        <p class="video-title text-center text-sm">${title}</p>
                     `;
                     videoContainer.appendChild(slide);
                 }
             });
-        }
-
+          }
+        
         // Initialize Swiper for GSI videos
         new Swiper('.swiper-container-gsi', {
-            spaceBetween: 25,
+            spaceBetween: 20,
             navigation: {
                 nextEl: '.swiper-button-next-gsi',
                 prevEl: '.swiper-button-prev-gsi',
@@ -249,8 +252,9 @@
                 clickable: true,
             },
             breakpoints: {
-                640: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
+                320: { slidesPerView: 1 },
+                640: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
                 1024: { slidesPerView: 4 },
             },
         });
