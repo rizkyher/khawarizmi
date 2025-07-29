@@ -198,4 +198,70 @@
       }
     });
   }
+
+  /* YouTube Video Fetcher */
+  function loadYouTubeVideos() {
+    const apiKey = 'AIzaSyCmc5jzhGiMxm1C5SVg4Cegrb5Tax_npYI'; // GANTI DENGAN API KEY ANDA
+    const channelId = 'UCGaPL10pZk09k_anyhRf5qw'; // GANTI DENGAN CHANNEL ID ANDA
+    const maxResults = 10;
+    const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const videoContainer = document.getElementById('gsi-video-container');
+        if (!videoContainer) return;
+
+        if (data.items) {
+            data.items.forEach(item => {
+                if (item.id.kind === 'youtube#video') {
+                    const videoId = item.id.videoId;
+                    const thumbnailUrl = item.snippet.thumbnails.high.url;
+                    const title = item.snippet.title;
+
+                    const slide = document.createElement('div');
+                    slide.className = 'swiper-slide';
+                    slide.innerHTML = `
+                        <div class="relative group">
+                            <img src="${thumbnailUrl}" alt="${title}" class="w-full h-auto rounded-lg">
+                            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <button onclick="openModal(this, '${videoId}')" class="text-white text-4xl">
+                                    <i class="fas fa-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-center mt-2">${title}</p>
+                    `;
+                    videoContainer.appendChild(slide);
+                }
+            });
+        }
+
+        // Initialize Swiper for GSI videos
+        new Swiper('.swiper-container-gsi', {
+            spaceBetween: 25,
+            navigation: {
+                nextEl: '.swiper-button-next-gsi',
+                prevEl: '.swiper-button-prev-gsi',
+            },
+            pagination: {
+                el: '.swiper-pagination-gsi',
+                clickable: true,
+            },
+            breakpoints: {
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 4 },
+            },
+        });
+
+      })
+      .catch(error => console.error('Error fetching YouTube videos:', error));
+  }
+
+  // Load videos when the document is ready
+  $(document).ready(function() {
+      loadYouTubeVideos();
+  });
+
 })(jQuery);
