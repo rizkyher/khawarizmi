@@ -50,6 +50,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
+  
   <!-- Navigation -->
   <nav class="navbar fixed-top">
     <div class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap">
@@ -806,7 +807,7 @@
           <div class="flex space-x-4">
             <a href="https://www.instagram.com/sekolahimpianofficial/" class="text-gray-400 hover:text-white"
               id="instagram Khwarizmi" aria-label="instagram Khwarizmi"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@sekolahimpianku" class="text-gray-400 hover:text-white"
+            <a href="https://www.youtube.com/@sekolahimpianku=" class text-gray-400 hover:text-white"
               id="youtube Khwarizmi" aria-label="youtube Khwarizmi"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
@@ -876,6 +877,44 @@
   <script src="js/morphext.min.js" async></script>
   <script src="js/validator.min.js" async></script>
   <script src="js/scripts.js" async></script>
+
+<div id="welcomeModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-3xl flex flex-col md:flex-row items-center gap-6 relative">
+      <button onclick="closeWelcomeModal()" class="absolute top-2 right-2 text-red-600 hover:text-red-800 text-xl font-bold">&times;</button>
+      
+      <div class="flex-shrink-0">
+        <img src="img/logo-khwarizmi.png" alt="Logo Ruang Pangan" class="w-40">
+      </div>
+  
+      <div>
+        <h2 class="text-xl font-bold mb-2">Selamat Datang di web khawarizmi</h2>
+        <p class="text-gray-700 mb-4">
+          "Cukup posting dan share link! Yuk jadi bagian dari affiliate produk Khwarizmi dan dapatkan komisi hingga 20%"
+        </p>
+  
+        <div class="flex flex-wrap gap-3">
+          <a href="https://wa.me/6285161231559" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-medium">
+            Hubungi Kami
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function closeWelcomeModal() {
+      document.getElementById('welcomeModal').style.display = 'none';
+    }
+  
+    // Tampilkan popup setiap kali halaman dibuka
+    window.onload = function () {
+      // Pastikan modal hanya ditampilkan jika belum ditutup sebelumnya
+      // (Bisa dikembangkan dengan cookie/localStorage jika perlu)
+      document.getElementById('welcomeModal').style.display = 'flex';
+    };
+  </script>
+
+
 </body>
 
 </html>
