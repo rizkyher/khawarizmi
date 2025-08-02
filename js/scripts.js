@@ -188,20 +188,23 @@
   function changeActive() {
     const menuItems = getMenuItems();
     $.each(menuItems, function (index, value) {
-      var offsetSection = $("#" + value).offset().top;
-      var docScroll = $(document).scrollTop();
-      var docScroll1 = docScroll + 1;
+      var section = $("#" + value);
+      if (section.length) { // ✅ pastikan element ada
+        var offsetSection = section.offset().top;
+        var docScroll = $(document).scrollTop() + 1;
 
-      if (docScroll1 >= offsetSection) {
-        $(".nav-link").removeClass("active");
-        $('.nav-link[href$="#' + value + '"]').addClass("active");
+        if (docScroll >= offsetSection) {
+          $(".nav-link").removeClass("active");
+          $('.nav-link[href$="#' + value + '"]').addClass("active");
+        }
       }
     });
   }
 
+
   /* YouTube Video Fetcher */
   function loadYouTubeVideos() {
-    const apiKey = 'AIzaSyBLNixSSMcCzRdhMXMnZPK4RybxRs2Nboo'; // GANTI DENGAN API KEY ANDA
+    const apiKey = 'AIzaSyBSWYYfMJIbXVD2fPGHLRwdsYQY0qoSs4g'; // GANTI DENGAN API KEY ANDA
     const channelId = 'UCGaPL10pZk09k_anyhRf5qw'; // GANTI DENGAN CHANNEL ID ANDA
     const maxResults = 10;
     const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`;
