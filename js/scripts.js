@@ -204,7 +204,7 @@
 
   /* YouTube Video Fetcher */
   function loadYouTubeVideos() {
-    const apiKey = 'AIzaSyBSWYYfMJIbXVD2fPGHLRwdsYQY0qoSs4g'; // GANTI DENGAN API KEY ANDA
+    const apiKey = 'AIzaSyBLNixSSMcCzRdhMXMnZPK4RybxRs2Nboo'; // GANTI DENGAN API KEY ANDA
     const channelId = 'UCGaPL10pZk09k_anyhRf5qw'; // GANTI DENGAN CHANNEL ID ANDA
     const maxResults = 10;
     const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`;
