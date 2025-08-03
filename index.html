@@ -735,28 +735,24 @@
   <!-- end of Products Section -->
 
   <!-- GSI Section -->
-  <section id="gsi" class="py-12 bg-gray-200">
-    <div class="container mx-auto px-4 sm:px-8 xl:px-4 relative">
+  <section id="gsi" class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
       <h1 class="text-3xl font-bold text-center mb-8">
       Video <span class="text-yellow-500">Inspiratif & Edukatif </span>
       </h1>
-      <div class="text-center sm:absolute sm:top-6 sm:right-4 sm:text-right mb-4 sm:mb-0">
-        <a href="https://www.youtube.com/@sekolahimpianku" target="_blank"
-          class="text-blue-500 hover:underline text-md font-medium">
-          Lihat Channel YouTube
-        </a>
-      </div>
+
       <!-- Swiper -->
-      <div class="swiper-container-gsi overflow-hidden">
-        <div id="gsi-video-container" class="swiper-wrapper"></div>
+      <div class="swiper-container-gsi">
+        <div class="swiper-wrapper" id="gsi-video-container">
+          <!-- Video items will be dynamically inserted here -->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination-gsi"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next-gsi"></div>
+        <div class="swiper-button-prev-gsi"></div>
       </div>
-      <!-- Swiper Navigation -->
-      <div class="swiper-button-next-gsi text-yellow-500"></div>
-      <div class="swiper-button-prev-gsi text-yellow-500"></div>
-      <div class="swiper-pagination-gsi"></div>
     </div>
-  </section>
-  <!-- end of GSI Section -->
 
     <!-- Modal Popup -->
     <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center hidden z-50">
@@ -770,9 +766,9 @@
           <iframe id="modalVideo" src="" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+        </div>
       </div>
     </div>
-  </div>
   </section>
   <!-- end of GSI Section -->
 
@@ -891,14 +887,15 @@
       </div>
   
       <div>
-        <h2 class="text-xl font-bold mb-2">Selamat Datang di web khawarizmi</h2>
+        <h2 class="text-xl font-bold mb-2">📚 Selamat Datang di Web Khawarizmi</h2>
         <p class="text-gray-700 mb-4">
-          "Cukup posting dan share link! Yuk jadi bagian dari affiliate produk Khwarizmi dan dapatkan komisi hingga 20%"
+          Kenali Seri Buku Teknologi Islami
+          Buku ini menghadirkan strategi pembelajaran bidang Teknologi Informasi (IT) yang terinspirasi dari nilai-nilai Islam.
         </p>
   
         <div class="flex flex-wrap gap-3">
           <a href="https://islamic-it-school.com" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-medium">
-            Buku nya
+           Lihat Buku Nya
           </a>
         </div>
       </div>
