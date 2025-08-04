@@ -106,7 +106,7 @@
 
   <!-- Header -->
   <header id="header" class="header text-left pt-16 md:pt-18 lg:text-left xl:pt-26 xl:pb-28">
-    <div class="container px-4 sm:px-8 lg:flex lg:justify-between lg:items-center">
+    <div class="container px-4 sm:px-8 flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center">
       <div class="mb-12 lg:mt-24 xl:mt-28 xl:mr-8">
         <h1 class="text-base sm:text-sm md:text-xl lg:text-2xl xl:text-3xl h1-large mb-5">
           Buku Seri Teknologi Islami
@@ -126,11 +126,31 @@
           </a>
         </div>
       </div>
-      <div class="hidden lg:block xl:text-right">
-        <img class="inline" src="landing-page-buku/img/bukuItmi.png" alt="Santri Khwarizmi" />
+     <div class="block mb-6 lg:mb-0 lg:block xl:text-right">
+      <img class="inline float-desktop" src="landing-page-buku/img/bukuItmi.png" alt="Santri Khwarizmi" />
       </div>
     </div>
     <!-- end of container -->
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .float-desktop {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @media (max-width: 1023px) {
+    .float-desktop {
+      animation: none;
+    }
+  }
+</style>
+
+
   </header>
   <!-- end of header -->
 
@@ -878,42 +898,70 @@
   <script src="js/validator.min.js" async></script>
   <script src="js/scripts.js" async></script>
 
+<!-- Popup Modal Selamat Datang -->
 <div id="welcomeModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-3xl flex flex-col md:flex-row items-center gap-6 relative">
-      <button onclick="closeWelcomeModal()" class="absolute top-2 right-2 text-red-600 hover:text-red-800 text-xl font-bold">&times;</button>
-      
-      <div class="flex-shrink-0">
-        <img src="img/produk2/bukuItmi.png" alt="Logo Ruang Pangan" class="w-40">
-      </div>
-  
-      <div>
-        <h2 class="text-xl font-bold mb-2">📚 Selamat Datang di Web Khawarizmi</h2>
-        <p class="text-gray-700 mb-4">
-          Kenali Seri Buku Teknologi Islami
-          Buku ini menghadirkan strategi pembelajaran bidang Teknologi Informasi (IT) yang terinspirasi dari nilai-nilai Islam.
-        </p>
-  
-        <div class="flex flex-wrap gap-3">
-          <a href="https://islamic-it-school.com" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-medium">
-           Lihat Buku Nya
-          </a>
-        </div>
+  <div class="bg-white rounded-lg shadow-lg p-6 w-11/12 max-w-3xl flex flex-col md:flex-row items-center md:items-start gap-6 relative">
+    
+    <!-- Tombol Tutup -->
+<button onclick="closeWelcomeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-red-600 transition duration-300">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+  </svg>
+</button>
+
+    
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <img src="img/produk2/bukuItmi.png" alt="Logo Ruang Pangan" class="w-40">
+    </div>
+
+    <!-- Konten -->
+    <div class="text-center md:text-left">
+      <h2 class="text-xl font-bold mb-2">📚 Selamat Datang di Web Khawarizmi</h2>
+      <p class="text-gray-700 mb-4">
+        Kenali Seri Buku Teknologi Islami
+        Buku ini menghadirkan strategi pembelajaran bidang Teknologi Informasi (IT) yang terinspirasi dari nilai-nilai Islam.
+      </p>
+
+      <!-- Tombol Aksi -->
+      <div class="flex flex-col md:flex-row md:justify-start gap-3">
+        <a href="https://islamic-it-school.com/" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-medium text-center">
+         Lihat Bukunya
+        </a>
+        <button onclick="shareWebsite()" class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded font-medium">
+          Bagikan Website
+        </button>
       </div>
     </div>
   </div>
-  
+</div>
+
   <script>
-    function closeWelcomeModal() {
-      document.getElementById('welcomeModal').style.display = 'none';
+  function closeWelcomeModal() {
+    document.getElementById('welcomeModal').style.display = 'none';
+  }
+
+  // Munculkan popup setiap kali halaman dibuka
+  window.onload = function () {
+    document.getElementById('welcomeModal').style.display = 'flex';
+  };
+
+  function shareWebsite() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Ruang Pangan Indonesia',
+        text: 'Yuk kunjungi web keren ini!',
+        url: window.location.href
+      }).then(() => {
+        console.log('Berhasil dibagikan');
+      }).catch((error) => {
+        console.error('Gagal membagikan', error);
+      });
+    } else {
+      alert("Browser kamu tidak mendukung fitur share langsung. Silakan salin URL secara manual.");
     }
-  
-    // Tampilkan popup setiap kali halaman dibuka
-    window.onload = function () {
-      // Pastikan modal hanya ditampilkan jika belum ditutup sebelumnya
-      // (Bisa dikembangkan dengan cookie/localStorage jika perlu)
-      document.getElementById('welcomeModal').style.display = 'flex';
-    };
-  </script>
+  }
+</script>
 
 
 </body>
