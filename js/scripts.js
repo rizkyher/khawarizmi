@@ -163,4 +163,75 @@
     });
   }
 
+  document.addEventListener('DOMContentLoaded', function() {
+    const videoContainer = document.getElementById('video-container');
+    const youtubeChannelId = 'UCGaPL10pZk09k_anyhRf5qw'; 
+    const apiKey = 'AIzaSyCe5ixS37xZ4Ud-4kZ3iLrj59aGNo7jnLE';
+    const maxResults = 3;
+
+    async function fetchLatestVideos() {
+        if (!videoContainer) {
+            console.error('Elemen #video-container tidak ditemukan.');
+            return;
+        }
+
+        try {
+            const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${youtubeChannelId}&part=snippet,id&order=date&maxResults=${maxResults}`);
+            const data = await response.json();
+            
+            if (data.items && data.items.length > 0) {
+                videoContainer.innerHTML = '';
+                data.items.forEach(item => {
+                    if (item.id.kind === 'youtube#video') {
+                        const videoId = item.id.videoId;
+                        const title = item.snippet.title;
+                        const thumbnailUrl = item.snippet.thumbnails.high.url;
+
+                        const cardHtml = `
+                            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                                <a href="https://www.youtube.com/embed/${videoId}" class="popup-youtube relative block w-full aspect-[16/9]">
+                                    <img src="${thumbnailUrl}" alt="${title}" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 transition duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="p-4">
+                                    <h3 class="text-lg font-bold text-gray-800 mb-1">${title}</h3>
+                                </div>
+                            </div>
+                        `;
+                        videoContainer.insertAdjacentHTML('beforeend', cardHtml);
+                    }
+                });
+
+              $('.popup-youtube').magnificPopup({
+                disableOn: 700,
+                type: 'iframe',
+                mainClass: 'mfp-fade',
+                removalDelay: 160,
+                preloader: false,
+                fixedContentPos: false,
+                iframe: {
+                  patterns: {
+                    youtube: {
+                      index: 'https://www.youtube.com/embed/$',
+                      id: 'v=',
+                      src: '//www.youtube.com/embed/%id%?autoplay=1&mute=1' // URL dengan autoplay dan mute
+                    }
+                  }
+                }
+              });
+            } else {
+                videoContainer.innerHTML = `<p class="text-center text-gray-500">Tidak ada video yang ditemukan.</p>`;
+            }
+        } catch (error) {
+            console.error('Gagal mengambil video dari YouTube API', error);
+            videoContainer.innerHTML = `<p class="text-center text-gray-500">Gagal memuat video terbaru. Silakan coba lagi nanti.</p>`;
+        }
+    }
+
+    fetchLatestVideos();
+});
 })(jQuery);
