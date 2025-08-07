@@ -34,6 +34,7 @@
   <link href="css/magnific-popup.css" rel="stylesheet" />
   <link href="css/styles.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
   <!-- Favicon  -->
   <link rel="icon" href="img/logo-khwarizmi.png" />
@@ -102,29 +103,24 @@
     <!-- end of navigation -->
 
     <!-- Header -->
-  <header id="header" class="header text-left pt-16 md:pt-18 lg:text-left xl:pt-26 xl:pb-28">
-    <div class="container px-4 sm:px-8 flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center">
+  <header id="header" class="header text-left pt-16 md:pt-18 lg:text-left xl:pt-26 xl:pb-28 relative overflow-hidden" data-aos="fade-up">
+    <div class="absolute inset-0 bg-gradient-to-br from-yellow-100 via-blue-100 to-white opacity-80 pointer-events-none"></div>
+    <div class="container px-4 sm:px-8 flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center relative z-10">
       <div class="mb-12 lg:mt-24 xl:mt-28 xl:mr-8">
-        <h1 class="text-base sm:text-sm md:text-xl lg:text-2xl xl:text-3xl h1-large mb-5">
+        <h1 class="text-base sm:text-sm md:text-xl lg:text-2xl xl:text-3xl h1-large mb-5 typing-effect">
           Buku Seri Teknologi Islami
         </h1>
-        <p
-          class="text-lg text-gray-500 font-bold mb-6 md:mb-8 leading-relaxed"
-        >
-          Buku Seri Teknologi Islami, adalah buku yang berisi strategi ajar
-          bidang Teknologi Informasi (IT).
+        <p class="text-lg text-gray-500 font-bold mb-6 md:mb-8 leading-relaxed">
+          Buku Seri Teknologi Islami, adalah buku yang berisi strategi ajar bidang Teknologi Informasi (IT).
         </p>
-
         <div class="container p-0">
-          <a class="btn btn-lg inline-flex items-center justify-start bg-yellow-500 text-white py-2 px-4 rounded transition-colors duration-300 hover:bg-yellow-600"
-            href="https://wa.me/6285161231559?text=Assalamu'alaikum%20warahmatullahi%20wabarakatuh...%20saya%20ingin%20bertanya%20tentang%20PT.%20Khwarizmi"
-            target="_blank" alt="Customer Service Khwarizmi">
+          <a class="btn btn-lg inline-flex items-center justify-start bg-yellow-500 text-white py-2 px-4 rounded transition-colors duration-300 hover:bg-yellow-600" href="https://wa.me/6285161231559?text=Assalamu'alaikum%20warahmatullahi%20wabarakatuh...%20saya%20ingin%20bertanya%20tentang%20PT.%20Khwarizmi" target="_blank" alt="Customer Service Khwarizmi">
             <i class="fab fa-whatsapp mr-2"></i>Hubungi kami
           </a>
         </div>
       </div>
-     <div class="block mb-6 lg:mb-0 lg:block xl:text-right">
-      <img class="inline float-desktop" src="landing-page-buku/img/bukuItmi.png" alt="Santri Khwarizmi" />
+      <div class="block mb-6 lg:mb-0 lg:block xl:text-right">
+        <img class="inline float-desktop" src="landing-page-buku/img/bukuItmi.png" alt="Santri Khwarizmi" />
       </div>
     </div>
     <!-- end of container -->
@@ -159,7 +155,7 @@
   </div>
 
     <!-- About Section -->
-  <section id="about" class="py-24">
+  <section id="about" class="py-24" data-aos="fade-up">
     <h1 class="text-3xl font-bold text-center mb-8">
       About <span class="text-yellow-500">Us</span>
     </h1>
@@ -361,23 +357,20 @@
     <!-- end of Team Section -->
 
     <!-- Products Section -->
-  <section id="products" class="py-12 bg-gray-100">
+  <section id="products" class="py-12 bg-gray-100" data-aos="fade-up">
     <div class="container mx-auto px-4 sm:px-8 xl:px-4 relative">
       <h1 class="text-3xl font-bold text-center mb-8">
         Buku Terbitan <span class="text-yellow-500">Khwarizmi</span>
       </h1>
-      <div class="text-center sm:absolute sm:top-6 sm:right-4 sm:text-right mb-4 sm:mb-0">
-        <a href="https://lynk.id/gsiofficial/page/product-buku"
-          class="text-blue-500 hover:underline text-md font-medium">
-          Lihat Selengkapnya
-        </a>
+      <div class="text-center sm:absolute sm:top-6 sm:right-4 sm:text-right mb-4 sm:mb-0 flex flex-col sm:flex-row gap-2 items-center justify-center">
+        <a href="https://lynk.id/gsiofficial/page/product-buku" class="text-blue-500 hover:underline text-md font-medium">Lihat Selengkapnya</a>
       </div>
       <div class="swiper-container">
         <div class="swiper-wrapper">
 
 <!-- Card -->
-<div class="swiper-slide">
-  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col" style="min-height: 450px">
+<div class="swiper-slide" data-aos="fade-up">
+  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col card-hover" style="min-height: 450px">
     <!-- Gambar -->
     <div class="card-image p-0">
       <img src="img/produk2/Liquid Curriculum.png" alt="Khwarizmi Book al-quran"
@@ -407,8 +400,8 @@
 <!-- end of Card -->
 
 <!-- Card -->
-<div class="swiper-slide">
-  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col" style="min-height: 450px">
+<div class="swiper-slide" data-aos="fade-up">
+  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col card-hover" style="min-height: 450px">
     <!-- Gambar -->
     <div class="card-image p-0">
       <img src="img/produk2/IT - Berorientasi Produktif.png" alt="Khwarizmi Book al-quran"
@@ -439,8 +432,8 @@
 <!-- end of card -->
 
 <!-- card -->
-<div class="swiper-slide">
-  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col" style="min-height: 450px">
+<div class="swiper-slide" data-aos="fade-up">
+  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col card-hover" style="min-height: 450px">
     <!-- Gambar -->
     <div class="card-image p-0">
       <img src="img/produk2/IT - Monetitatif.png" alt="Khwarizmi Book al-quran"
@@ -471,8 +464,8 @@
 <!-- end of card -->
 
 <!-- Card -->
-<div class="swiper-slide">
-  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col" style="min-height: 450px">
+<div class="swiper-slide" data-aos="fade-up">
+  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col card-hover" style="min-height: 450px">
     <!-- Gambar -->
     <div class="card-image p-0">
       <img src="img/produk2/IT - Proyek Festival.png" alt="Khwarizmi Book al-quran"
@@ -503,8 +496,8 @@
 <!-- end of Card -->
 
 <!-- Card -->
-<div class="swiper-slide">
-  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col" style="min-height: 450px">
+<div class="swiper-slide" data-aos="fade-up">
+  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col card-hover" style="min-height: 450px">
     <!-- Gambar -->
     <div class="card-image p-0">
       <img src="img/produk2/Mental Belajar.png" alt="Khwarizmi Book al-quran"
@@ -535,8 +528,8 @@
 <!-- end of Card -->
 
 <!-- Card -->
-<div class="swiper-slide">
-  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col" style="min-height: 450px">
+<div class="swiper-slide" data-aos="fade-up">
+  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col card-hover" style="min-height: 450px">
     <!-- Gambar -->
     <div class="card-image p-0">
       <img src="img/produk2/ITMI.png" alt="Khwarizmi Book al-quran"
@@ -567,8 +560,8 @@
 <!-- end of Card -->
 
 <!-- Card -->
-<div class="swiper-slide">
-  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col" style="min-height: 450px">
+<div class="swiper-slide" data-aos="fade-up">
+  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col card-hover" style="min-height: 450px">
     <!-- Gambar -->
     <div class="card-image p-0">
       <img src="img/produk2/Sejarah Teknologi.png" alt="Khwarizmi Book al-quran"
@@ -599,8 +592,8 @@
 <!-- end of Card -->
 
 <!-- Card -->
-<div class="swiper-slide">
-  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col" style="min-height: 450px">
+<div class="swiper-slide" data-aos="fade-up">
+  <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col card-hover" style="min-height: 450px">
     <!-- Gambar -->
     <div class="card-image p-0">
       <img src="img/produk2/Paket 1.png" alt="Khwarizmi Book artificial"
@@ -630,7 +623,7 @@
 <!-- end of Card -->
 
 <!-- Card -->
-<div class="swiper-slide">
+<div class="swiper-slide" data-aos="fade-up">
   <div class="card w-full max-w-[300px] bg-white rounded-lg shadow-md flex flex-col" style="min-height: 450px">
     <!-- Gambar -->
     <div class="card-image p-0">
@@ -779,7 +772,7 @@
   <!-- end of Products Section -->
 
   <!-- start of GSI Section -->
-  <section id="video-section" class="bg-gray-100 py-12 px-6">
+  <section id="video-section" class="bg-gray-100 py-12 px-6" data-aos="fade-up">
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col sm:flex-row justify-between items-center mb-8">
         <h2 class="text-3xl font-bold text-center sm:text-left">
@@ -791,55 +784,41 @@
         >🎥 Kunjungi Channel Kami
         </button>
       </div>
-      <div id="video-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"> </div>
+      <div id="video-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"> 
+  <!-- Card video akan diisi JS, tambahkan data-aos="zoom-in" pada card -->
+</div>
     </div>
   </section>
   <!-- end of GSI Section -->
 
   <!-- Footer -->
-  <footer class="py-6 bg-gray-800 text-gray-400">
+  <footer class="py-6 bg-gradient-to-br from-gray-800 via-gray-900 to-blue-900 text-gray-400" data-aos="fade-up">
     <div class="container mx-auto px-4 sm:px-8">
       <div class="flex flex-wrap justify-between">
         <div class="w-full md:w-1/4 mb-6 md:mb-0">
           <h5 class="font-semibold text-white">About Us</h5>
           <p>
-            PT. Khwarizmi Kreatif Produktif adalah perusahaan yang bergerak di
-            bidang pengembangan perangkat lunak islami dan teknologi
-            pendidikan.
+            PT. Khwarizmi Kreatif Produktif adalah perusahaan yang bergerak di bidang pengembangan perangkat lunak islami dan teknologi pendidikan.
           </p>
         </div>
-
         <div class="w-full md:w-1/3 mb-6 md:mb-0">
           <h5 class="font-semibold text-white">Contact Us</h5>
           <ul class="list-none">
-            <li class="mb-2">
-              <i class="fas fa-envelope mr-2"></i>info@khwarizmi.co.id
-            </li>
-            <li class="mb-2">
-              <i class="fas fa-phone mr-2"></i>+62 851-6123-1559
-            </li>
-            <li>
-              <i class="fas fa-map-marker-alt mr-2"></i>Kampung Ciangsana,
-              RT.02/RW.04, Tapos I, Kec. Tenjolaya, Kabupaten Bogor, Jawa
-              Barat 16371
-            </li>
+            <li class="mb-2"><i class="fas fa-envelope mr-2"></i>info@khwarizmi.co.id</li>
+            <li class="mb-2"><i class="fas fa-phone mr-2"></i>+62 851-6123-1559</li>
+            <li><i class="fas fa-map-marker-alt mr-2"></i>Kampung Ciangsana, RT.02/RW.04, Tapos I, Kec. Tenjolaya, Kabupaten Bogor, Jawa Barat 16371</li>
           </ul>
         </div>
-
         <div class="w-full md:w-1/3">
           <h5 class="font-semibold text-white">Follow Us</h5>
           <div class="flex space-x-4">
-            <a href="https://www.instagram.com/sekolahimpianofficial/" class="text-gray-400 hover:text-white"
-              id="instagram Khwarizmi" aria-label="instagram Khwarizmi"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@GenerasiSantriProduktif" class="text-gray-400 hover:text-white"
-              id="youtube Khwarizmi" aria-label="youtube Khwarizmi"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/sekolahimpianofficial/" class="text-gray-400 hover:text-white icon-anim" id="instagram Khwarizmi" aria-label="instagram Khwarizmi"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@GenerasiSantriProduktif" class="text-gray-400 hover:text-white icon-anim" id="youtube Khwarizmi" aria-label="youtube Khwarizmi"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
       </div>
       <div class="text-center mt-6">
-        <p>
-          © 2024 PT. Khwarizmi Kreatif Produktif. All rights reserved.
-        </p>
+        <p>© 2024 PT. Khwarizmi Kreatif Produktif. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -861,9 +840,14 @@
 
 <!-- Add Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
   <!-- Initialize Swiper -->
   <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
     var swiper = new Swiper(".swiper-container", {
       spaceBetween: 25,
       navigation: {

@@ -533,7 +533,38 @@ input[type="checkbox"] {
 /*    Header     */
 /*****************/
 .header {
-  background: linear-gradient(rgba(197, 234, 249, 1), rgba(255, 255, 255, 1));
+  background: linear-gradient(135deg, #fef9c3 0%, #fbfeff 0%);
+  /* position: relative;
+  overflow: hidden; */
+}
+/* .header .container {
+  position: relative;
+  z-index: 2; 
+} */
+.header .btn {
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.header .btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+}
+.typing-effect {
+  border-right: 2px solid #eda130;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 2.5s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #eda130; }
 }
 
 /********************/
@@ -1222,4 +1253,69 @@ a:hover.back-to-top {
     height: 100%;
     top: 0;
     left: 0;
+}
+/* Animasi transisi dark mode */
+body, .navbar, .card, .footer {
+  transition: background 0.4s, color 0.4s;
+}
+
+/* AOS custom style jika perlu */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+}
+/* .card-hover {
+  position: relative;
+  transition: transform 0.25s, box-shadow 0.25s;
+  z-index: 1;
+}
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(7, 192, 238, 0.164);
+  z-index: 2;
+} */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.filter-btn.active, .filter-btn:focus {
+  outline: 2px solid #eda130;
+  background: #eda130;
+  color: #fff;
+}
+.video-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.video-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(7,192,238,0.12);
+}
+.video-card .share-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: #f59e0b;
+  color: #fff;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  transition: background 0.2s, opacity 0.2s;
+  z-index: 2;
+}
+.video-card .share-btn:hover {
+  background: #23272f;
+  opacity: 1;
 }
