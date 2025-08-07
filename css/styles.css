@@ -27,7 +27,7 @@ Colors:
 ******************************************/
 
 /**************************/
-/* General Styles     */
+/*     General Styles     */
 /**************************/
 
 body,
@@ -371,7 +371,7 @@ input[type="checkbox"] {
 /* end of fade-move animation for details lightbox - magnific popup */
 
 /**********************/
-/* Navigation     */
+/*     Navigation     */
 /**********************/
 
 .navbar {
@@ -530,14 +530,14 @@ input[type="checkbox"] {
 /* end of dropdown menu */
 
 /*****************/
-/* Header     */
+/*    Header     */
 /*****************/
 .header {
   background: linear-gradient(rgba(197, 234, 249, 1), rgba(255, 255, 255, 1));
 }
 
 /********************/
-/* Features     */
+/*     Features     */
 /********************/
 .cards-1 {
   padding-top: 4rem;
@@ -573,7 +573,7 @@ input[type="checkbox"] {
 }
 
 /****************************/
-/* Details Lightbox     */
+/*     Details Lightbox     */
 /****************************/
 .lightbox-basic {
   position: relative;
@@ -633,7 +633,7 @@ input[type="checkbox"] {
 /* end of close x button */
 
 /**********************/
-/* Statistics     */
+/*     Statistics     */
 /**********************/
 .counter {
   padding-top: 2rem;
@@ -669,7 +669,7 @@ input[type="checkbox"] {
 }
 
 /************************/
-/* Testimonials     */
+/*     Testimonials     */
 /************************/
 
 .slider-1 .slider-container {
@@ -724,7 +724,7 @@ input[type="checkbox"] {
 }
 
 /*******************/
-/* Pricing     */
+/*     Pricing     */
 /*******************/
 .cards-2 {
   position: relative;
@@ -820,7 +820,7 @@ input[type="checkbox"] {
 /* end of best value label */
 
 /**********************/
-/* Conclusion     */
+/*     Conclusion     */
 /**********************/
 .basic-5 {
   padding-top: 4.5rem;
@@ -831,7 +831,7 @@ input[type="checkbox"] {
 }
 
 /******************/
-/* Footer     */
+/*     Footer     */
 /******************/
 .footer {
   padding-top: 6rem;
@@ -870,7 +870,7 @@ input[type="checkbox"] {
 }
 
 /*********************/
-/* Copyright     */
+/*     Copyright     */
 /*********************/
 .copyright {
   padding-top: 1.5rem;
@@ -879,7 +879,7 @@ input[type="checkbox"] {
 }
 
 /******************************/
-/* Back To Top Button     */
+/*     Back To Top Button     */
 /******************************/
 a.back-to-top {
   position: fixed;
@@ -900,7 +900,7 @@ a:hover.back-to-top {
 }
 
 /***********************/
-/* Extra Pages     */
+/*     Extra Pages     */
 /***********************/
 .ex-header {
   padding-top: 8.5rem;
@@ -939,7 +939,7 @@ a:hover.back-to-top {
 }
 
 /*************************/
-/* Media Queries     */
+/*     Media Queries     */
 /*************************/
 
 /* Min-width 768px */
