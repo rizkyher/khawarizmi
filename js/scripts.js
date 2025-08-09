@@ -188,7 +188,7 @@
                         const thumbnailUrl = item.snippet.thumbnails.high.url;
 
                         const cardHtml = `
-                            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                            <div class="video-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative" data-aos="zoom-in">
                                 <a href="https://www.youtube.com/embed/${videoId}" class="popup-youtube relative block w-full aspect-[16/9]">
                                     <img src="${thumbnailUrl}" alt="${title}" class="w-full h-full object-cover">
                                     <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 transition duration-300">
@@ -197,6 +197,9 @@
                                         </svg>
                                     </div>
                                 </a>
+                                <button class="share-btn" title="Bagikan" onclick="navigator.share ? navigator.share({title: '${title}', url: 'https://www.youtube.com/watch?v=${videoId}'}) : alert('Fitur share tidak didukung di browser ini. Silakan salin URL secara manual.');">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
                                 <div class="p-4">
                                     <h3 class="text-lg font-bold text-gray-800 mb-1">${title}</h3>
                                 </div>
@@ -235,3 +238,34 @@
     fetchLatestVideos();
 });
 })(jQuery);
+
+   // Sticky shadow on navbar
+  $(window).on('scroll', function () {
+    if ($('.navbar').offset().top > 10) {
+      $('.navbar').addClass('sticky-shadow');
+    } else {
+      $('.navbar').removeClass('sticky-shadow');
+    }
+  });
+
+  // Inisialisasi AOS
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  }
+
+// Typing effect ulang (opsional)
+setInterval(function() {
+  var el = document.querySelector('.typing-effect');
+  if (el) {
+    el.style.width = '0';
+    el.classList.remove('aos-animate');
+    setTimeout(function() {
+      el.style.animation = 'none';
+      el.offsetHeight; // trigger reflow
+      el.style.animation = null;
+    }, 10);
+  }
+}, 6000);
