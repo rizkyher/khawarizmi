@@ -48,6 +48,27 @@
     gtag('js', new Date());
     gtag('config', 'G-F54MNRFKZJ');
   </script>
+<!-- style slide kecil -->
+
+    <style>
+.bookThumbs {
+  max-width: 350px; /* lebar maksimal slider */
+  margin: 0 auto; /* biar center */
+}
+.bookThumbs img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.bookThumbs .swiper-button-next,
+.bookThumbs .swiper-button-prev {
+  color: #333;
+  top: 35%;
+  transform: scale(0.8);
+}
+</style>
+
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
@@ -120,8 +141,26 @@
         </div>
       </div>
       <div class="block mb-6 lg:mb-0 lg:block xl:text-right">
-        <img class="inline float-desktop" src="landing-page-buku/img/bukuItmi.png" alt="Santri Khwarizmi" />
-      </div>
+  <!-- Gambar utama -->
+  <img class="inline float-desktop w-[300px] mx-auto" src="landing-page-buku/img/bukuItmi.png" alt="Buku Utama" />
+
+  <!-- Slider kecil di bawah buku -->
+  <div class="swiper bookThumbs mt-4 max-w-[300px] mx-auto">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/produk2/mockup-lc.png" class="w-full" alt="Buku 1"></div>
+      <div class="swiper-slide"><img src="img/produk2/mockup-st.png" class="w-full" alt="Buku 2"></div>
+      <div class="swiper-slide"><img src="img/produk2/mockup-it-bm.png" class="w-full" alt="Buku 3"></div>
+      <div class="swiper-slide"><img src="img/produk2/mockup-it-bt.png" class="w-full" alt="Buku 4"></div>
+      <div class="swiper-slide"><img src="img/produk2/mockup-it-bp.png" class="w-full" alt="Buku 4"></div>
+      <div class="swiper-slide"><img src="img/produk2/mockup-itmi.png" class="w-full" alt="Buku 4"></div>
+      <div class="swiper-slide"><img src="img/produk2/mockup-it-pf.png" class="w-full" alt="Buku 4"></div>
+      <!-- Tambah slide sesuai kebutuhan -->
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
     </div>
     <!-- end of container -->
 
@@ -390,7 +429,7 @@
       <!-- Tombol -->
       <div class="mt-4">
         <a href="https://islamic-it-school.com/lc/"
-          class="block text-center w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200">
+          class="block text-center w-full bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition duration-200">
           Selengkapnya
         </a>
       </div>
@@ -422,7 +461,7 @@
       <!-- Tombol -->
       <div class="mt-4">
         <a href="https://islamic-it-school.com/it-bp/"
-          class="block text-center w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200">
+          class="block text-center w-full bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition duration-200">
           Selengkapnya
         </a>
       </div>
@@ -453,8 +492,8 @@
 
       <!-- Tombol -->
       <div class="mt-4">
-        <a href="https://islamic-it-school.com/it-bm/"
-          class="block text-center w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200">
+          <a href="https://islamic-it-school.com/it-bm/"
+            class="block text-center w-full bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition duration-200">
           Selengkapnya
         </a>
       </div>
@@ -486,7 +525,7 @@
       <!-- Tombol -->
       <div class="mt-4">
         <a href="https://islamic-it-school.com/it-pf/"
-          class="block text-center w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200">
+          class="block text-center w-full bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition duration-200">
           Selengkapnya
         </a>
       </div>
@@ -518,7 +557,7 @@
         <!-- Tombol -->
       <div class="mt-4">
         <a href="https://islamic-it-school.com/mbt/"
-          class="block text-center w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200">
+          class="block text-center w-full bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition duration-200">
           Selengkapnya
         </a>
       </div>
@@ -550,7 +589,7 @@
         <!-- Tombol -->
       <div class="mt-4">
         <a href="https://islamic-it-school.com/itmi/"
-          class="block text-center w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200">
+          class="block text-center w-full bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition duration-200">
           Selengkapnya
         </a>
       </div>
@@ -582,7 +621,7 @@
       <!-- Tombol -->
       <div class="mt-4">
         <a href="https://islamic-it-school.com/st/"
-          class="block text-center w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200">
+          class="block text-center w-full bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition duration-200">
           Selengkapnya
         </a>
       </div>
@@ -597,7 +636,7 @@
     <!-- Gambar -->
     <div class="card-image p-0">
       <img src="img/produk2/Paket 1.png" alt="Khwarizmi Book artificial"
-        class="w-full h-48 object-cover rounded-t-lg" />
+        class="w-full h-50 object-cover rounded-t-lg" />
     </div>
 
     <!-- Konten -->
@@ -613,7 +652,7 @@
 
         <!-- Tombol -->
       <div class="mt-4">
-        <a href="https://lynk.id/gsiofficial/page/product-buku" class="block text-center w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200">
+        <a href="https://lynk.id/gsiofficial/page/product-buku" class="block text-center w-full bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition duration-200">
           Selengkapnya
         </a>
       </div>
@@ -628,7 +667,7 @@
     <!-- Gambar -->
     <div class="card-image p-0">
       <img src="img/produk2/Paket.png" alt="Khwarizmi Book sesal"
-        class="w-full h-48 object-cover rounded-t-lg" />
+        class="w-full h-50 object-cover rounded-t-lg" />
     </div>
 
     <!-- Konten -->
@@ -644,7 +683,7 @@
 
         <!-- Tombol -->
       <div class="mt-4">
-        <a href="https://lynk.id/gsiofficial/page/product-buku" class="block text-center w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200">
+        <a href="https://lynk.id/gsiofficial/page/product-buku" class="block text-center w-full bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 transition duration-200">
           Selengkapnya
         </a>
       </div>
@@ -909,7 +948,7 @@
 
     <!-- Logo -->
     <div class="flex-shrink-0">
-      <img src="img/produk2/bukuItmi.png" alt="Logo bukuItmi"class="w-40">
+      <img src="img/produk2/TempatBuku.png" alt="Logo tempatBuku" class="w-40">
     </div>
 
     <!-- Konten -->
@@ -955,6 +994,21 @@
   //     alert("Browser kamu tidak mendukung fitur share langsung. Silakan salin URL secara manual.");
   //   }
   // }
+</script>
+ <!-- script slide kecil -->
+<script>
+var bookThumbs = new Swiper(".bookThumbs", {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".bookThumbs .swiper-button-next",
+    prevEl: ".bookThumbs .swiper-button-prev",
+  },
+  breakpoints: {
+    640: { slidesPerView: 4 },
+    1024: { slidesPerView: 5 }
+  }
+});
 </script>
 
 
