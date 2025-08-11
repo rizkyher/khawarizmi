@@ -33,7 +33,7 @@ Colors:
 body,
 p {
   color: #6b747b;
-  font: 400 1rem/1.625rem "Open Sans", sans-serif;
+  font: 400 1rem/1.625rem 'Open Sans', sans-serif;
 }
 
 .modal-video-container {
@@ -52,20 +52,20 @@ p {
 }
 
 .video-container {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 aspect ratio */
-	height: 0;
-	overflow: hidden;
-	max-width: 100%;
-	background: #000;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
 }
 
 .video-container iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 h1,
@@ -263,7 +263,7 @@ select {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
-  background-image: url("../images/down-arrow.png");
+  background-image: url('../images/down-arrow.png');
   background-position: 96% 50%;
   background-repeat: no-repeat;
   outline: none;
@@ -302,7 +302,7 @@ select {
   line-height: 1.25rem;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   vertical-align: -10%;
   margin-right: 0.5rem;
 }
@@ -396,7 +396,7 @@ input[type="checkbox"] {
 }
 
 .navbar-toggler-icon {
-  content: "";
+  content: '';
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: center center;
@@ -420,7 +420,8 @@ input[type="checkbox"] {
   background-color: #f1f9fc;
   transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out,
+    -webkit-transform 0.3s ease-in-out;
 }
 
 .offcanvas-collapse.open {
@@ -447,7 +448,7 @@ input[type="checkbox"] {
   display: inline-block;
   margin-left: 0.255em;
   vertical-align: 0.255em;
-  content: "";
+  content: '';
   border-top: 0.3em solid;
   border-right: 0.3em solid transparent;
   border-bottom: 0;
@@ -544,27 +545,37 @@ input[type="checkbox"] {
 .header .btn {
   font-size: 1rem;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .header .btn:hover {
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
 }
 .typing-effect {
   border-right: 2px solid #eda130;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  animation: typing 2.5s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+  animation: typing 2.5s steps(30, end) forwards,
+    blink-caret 0.75s step-end infinite;
 }
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #eda130; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #eda130;
+  }
 }
 
 /********************/
@@ -623,7 +634,7 @@ input[type="checkbox"] {
   color: #ffffff;
   opacity: 1;
   font-weight: 600;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
 }
 
 .lightbox-basic .btn-solid-reg.mfp-close:hover {
@@ -643,7 +654,7 @@ input[type="checkbox"] {
   background-color: transparent;
   color: #252c38;
   opacity: 1;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
 }
 
 .lightbox-basic .btn-outline-reg.mfp-close.as-button:hover {
@@ -760,7 +771,8 @@ input[type="checkbox"] {
 .cards-2 {
   position: relative;
   padding-top: 8rem;
-  background: linear-gradient(rgba(50, 60, 70, 0.9), rgba(50, 60, 70, 0.9)), url("../images/pricing-background.jpg") center center no-repeat;
+  background: linear-gradient(rgba(50, 60, 70, 0.9), rgba(50, 60, 70, 0.9)),
+    url('../images/pricing-background.jpg') center center no-repeat;
   background-size: cover;
   text-align: center;
 }
@@ -856,7 +868,7 @@ input[type="checkbox"] {
 .basic-5 {
   padding-top: 4.5rem;
   padding-bottom: 7.5rem;
-  background: url("../images/conclusion-background.jpg") center center no-repeat;
+  background: url('../images/conclusion-background.jpg') center center no-repeat;
   background-size: cover;
   text-align: center;
 }
@@ -867,37 +879,19 @@ input[type="checkbox"] {
 .footer {
   padding-top: 6rem;
   padding-bottom: 3rem;
-  background: linear-gradient(rgba(255, 255, 255, 1), rgba(197, 234, 249, 1));
+  background: #23395d; /* Biru gelap elegan */
+  color: #fff;
   text-align: center;
 }
 
 .footer a {
+  color: #eda130; /* Kuning gold dari tema, agar link terlihat */
   text-decoration: none;
 }
 
-.footer .fa-stack {
-  width: 2em;
-  margin-bottom: 1.25rem;
-  margin-right: 0.375rem;
-  font-size: 1.5rem;
-}
-
-.footer .fa-stack .fa-stack-1x {
-  color: #252c38;
-  transition: all 0.2s ease;
-}
-
-.footer .fa-stack .fa-stack-2x {
-  color: #ffffff;
-  transition: all 0.2s ease;
-}
-
-.footer .fa-stack:hover .fa-stack-1x {
-  color: #ffffff;
-}
-
-.footer .fa-stack:hover .fa-stack-2x {
-  color: #252c38;
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 /*********************/
@@ -921,7 +915,7 @@ a.back-to-top {
   width: 40px;
   height: 40px;
   border-radius: 30px;
-  background: #343e48 url("../images/up-arrow.png") no-repeat center 47%;
+  background: #343e48 url('../images/up-arrow.png') no-repeat center 47%;
   background-size: 18px 18px;
   text-indent: -9999px;
 }
@@ -1232,7 +1226,8 @@ a:hover.back-to-top {
   font-weight: 600;
 }
 
-.swiper-button-next-gsi, .swiper-button-prev-gsi {
+.swiper-button-next-gsi,
+.swiper-button-prev-gsi {
   color: #f59e0b;
   transform: scale(0.8);
 }
@@ -1243,19 +1238,22 @@ a:hover.back-to-top {
 
 /* Tambahkan kode ini ke styles.css */
 .aspect-w-16 {
-    position: relative;
-    padding-bottom: 56.25%; /* Rasio aspek 16:9 */
-    height: 0;
+  position: relative;
+  padding-bottom: 56.25%; /* Rasio aspek 16:9 */
+  height: 0;
 }
 .aspect-w-16 iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 /* Animasi transisi dark mode */
-body, .navbar, .card, .footer {
+body,
+.navbar,
+.card,
+.footer {
   transition: background 0.4s, color 0.4s;
 }
 
@@ -1274,30 +1272,31 @@ body, .navbar, .card, .footer {
 }
 .card-hover:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(7, 192, 238, 0.164);
+  box-shadow: 0 8px 32px rgba(0, 192, 238, 0.164);
   z-index: 2;
 } */
 .badge {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.03em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-.filter-btn.active, .filter-btn:focus {
+.filter-btn.active,
+.filter-btn:focus {
   outline: 2px solid #eda130;
   background: #eda130;
   color: #fff;
 }
 .video-card {
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
 }
 .video-card:hover {
   transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(7,192,238,0.12);
+  box-shadow: 0 8px 32px rgba(7, 192, 238, 0.12);
 }
 .video-card .share-btn {
   position: absolute;
