@@ -61,9 +61,9 @@
   height: auto;
   border-radius: 4px;
 }
-.bookThumbs .swiper-button-next,
-.bookThumbs .swiper-button-prev {
-  color: #333;
+.bookThumbs ,
+.bookThumbs {
+  color: #f50808;
   top: 35%;
   transform: scale(0.8);
 }
@@ -214,8 +214,8 @@
       <div class="swiper-slide"><img src="img/produk2/mockup-it-pf.png" class="w-full" alt="Buku 4"></div>
       <!-- Tambah slide sesuai kebutuhan -->
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="bookThumbs-next swiper-button-next"></div>
+    <div class="bookThumbs-prev swiper-button-prev"></div>
   </div>
 </div>
 
@@ -1068,8 +1068,8 @@ var bookThumbs = new Swiper(".bookThumbs", {
   slidesPerView: 3,
   spaceBetween: 10,
   navigation: {
-    nextEl: ".bookThumbs .swiper-button-next",
-    prevEl: ".bookThumbs .swiper-button-prev",
+    nextEl: ".bookThumbs-next",
+    prevEl: ".bookThumbs-prev",
   },
   breakpoints: {
     640: { slidesPerView: 4 },
