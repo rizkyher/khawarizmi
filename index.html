@@ -125,8 +125,17 @@
   }
 }
 
+/* Efek 3D Hover */
+.team-photo-3d {
+  transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+  will-change: transform;
+  cursor: pointer;
+  perspective: 600px;
+}
+.team-photo-3d.is-hovered {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.15);
+}
 </style>
-
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
@@ -259,7 +268,7 @@
       <div class="text-center sm:absolute sm:top-6 sm:right-4 sm:text-right mb-4 sm:mb-0 flex flex-col sm:flex-row gap-2 items-center justify-center">
         <a href="https://lynk.id/gsiofficial/page/product-buku" class="text-blue-500 hover:underline text-md font-medium">Lihat Selengkapnya</a>
       </div>
-      <div class="swiper-container">
+      <div class="swiper-container produk-swiper">
         <div class="swiper-wrapper">
 
 <!-- Card -->
@@ -658,25 +667,25 @@
 </style>
 
 <!-- Add Navigation -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next produk-next"></div>
+        <div class="swiper-button-prev produk-prev"></div>
       </div>
     </div>
   </section>
   <!-- end of Products Section -->   
 
     <!-- Team Section -->
-  <!-- <section id="team" class="py-12 bg-gray-100">
+  <section id="team" class="py-12 bg-gray-100">
     <div class="container mx-auto px-4">
       <h1 class="text-3xl font-bold text-center mb-8">
         Tim <span class="text-yellow-500">Kami</span>
       </h1>
-      <div class="swiper-container">
+      <div class="swiper-container tim-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="bg-white rounded-lg shadow-lg p-4">
               <img src="img/tim/UP.webp" alt="Team Khwarizmi Member 1"
-                class="w-full h-full object-cover rounded-t-lg" />
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
               <div class="mt-2 text-center">
                 <h3 class="text-xl font-semibold">Purwanto Abdul Ghoffar</h3>
                 <p class="text-gray-600">CEO</p>
@@ -686,7 +695,7 @@
           <div class="swiper-slide">
             <div class="bg-white rounded-lg shadow-lg p-4">
               <img src="img/tim/UDim.webp" alt="Team Khwarizmi Member 2"
-                class="w-full h-full object-cover rounded-t-lg" />
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
               <div class="mt-2 text-center">
                 <h3 class="text-xl font-semibold">Dimas Tekad Santosa</h3>
                 <p class="text-gray-600">CTO</p>
@@ -695,8 +704,8 @@
           </div>
           <div class="swiper-slide">
             <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/UW.webp" alt="Team Khwarizmi Member 3"
-                class="w-full h-full object-cover rounded-t-lg" />
+              <img src="img/tim/ust wawan.png" alt="Team Khwarizmi Member 3"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
               <div class="mt-2 text-center">
                 <h3 class="text-xl font-semibold">Doni Setiawan</h3>
                 <p class="text-gray-600">COO</p>
@@ -706,7 +715,7 @@
           <div class="swiper-slide">
             <div class="bg-white rounded-lg shadow-lg p-4">
               <img src="img/tim/bunda-yaumi (2).webp" alt="Team Khwarizmi Member 4"
-                class="w-full h-full object-cover rounded-t-lg" />
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
               <div class="mt-2 text-center">
                 <h3 class="text-xl font-semibold">Yaumi Kusuma Dewi</h3>
                 <p class="text-gray-600">CFO</p>
@@ -715,28 +724,8 @@
           </div>
           <div class="swiper-slide">
             <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/rizky-tim.webp" alt="Team Khwarizmi Member 5"
-                class="w-full h-full object-cover rounded-t-lg" />
-              <div class="mt-2 text-center">
-                <h3 class="text-lg font-semibold">Rizky Herdiansyah</h3>
-                <p class="text-gray-600">Developer</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/uwan-tim.webp" alt="Team Khwarizmi Member 6"
-                class="w-full h-full object-cover rounded-t-lg" />
-              <div class="mt-2 text-center">
-                <h3 class="text-xl font-semibold">Uwan Maharaya</h3>
-                <p class="text-gray-600">Developer</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/auvia-tim.webp" alt="Team Khwarizmi Member 7"
-                class="w-full h-full object-cover rounded-t-lg" />
+              <img src="img/tim/auvia-tim.webp" alt="Team Khwarizmi Member 5"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
               <div class="mt-2 text-center">
                 <h3 class="text-lg font-semibold">Auvia Azzahra Al Sofwa</h3>
                 <p class="text-gray-600">Marketing Communication</p>
@@ -745,103 +734,133 @@
           </div>
           <div class="swiper-slide">
             <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/khansa-tim.webp" alt="Team Khwarizmi Member 8"
-                class="w-full h-full object-cover rounded-t-lg" />
+              <img src="img/tim/najwa-tim.webp" alt="Team Khwarizmi Member 6"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
               <div class="mt-2 text-center">
-                <h3 class="text-lg font-semibold">Khansa Syahidah</h3>
+                <h3 class="text-lg font-semibold">Najwa Millati Aprilia R.F</h3>
                 <p class="text-gray-600">Marketing Communication</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/najwa-tim.webp" alt="Team Khwarizmi Member 9"
-                class="w-full h-full object-cover rounded-t-lg" />
+              <img src="img/tim/aisha.png" alt="Team Khwarizmi Member 7"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
+              <div class="mt-2 text-center">
+                <h3 class="text-lg font-semibold">Aisha</h3>
+                <p class="text-gray-600">Marketing Communication</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-lg p-4">
+              <img src="img/tim/rizky-tim.webp" alt="Team Khwarizmi Member 8"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
+              <div class="mt-2 text-center">
+                <h3 class="text-lg font-semibold">Rizky Herdiansyah</h3>
+                <p class="text-gray-600">Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-lg p-4">
+              <img src="img/tim/uwan-tim.webp" alt="Team Khwarizmi Member 9"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
+              <div class="mt-2 text-center">
+                <h3 class="text-xl font-semibold">Uwan Maharaya</h3>
+                <p class="text-gray-600">Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-lg p-4">
+              <img src="img/tim/azzaam.png" alt="Team Khwarizmi Member 10"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
               <div class="mt-2 text-center">
                 <h3 class="text-lg font-semibold">
-                  Najwa Millati Aprilia R.F
+                  Azzam Hudiya Rahman
                 </h3>
-                <p class="text-gray-600">Marketing Communication</p>
+                <p class="text-gray-600">Developer</p>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/illiy-tim.webp" alt="Team Khwarizmi Member 10"
-                class="w-full h-full object-cover rounded-t-lg" />
+              <img src="img/tim/aab.png" alt="Team Khwarizmi Member 11"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
               <div class="mt-2 text-center">
-                <h3 class="text-lg font-semibold">Illiyyina Maria Azzahra</h3>
-                <p class="text-gray-600">Marketing Communication</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/ismah-tim.webp" alt="Team Khwarizmi Member 11"
-                class="w-full h-full object-cover rounded-t-lg" />
-              <div class="mt-2 text-center">
-                <h3 class="text-lg font-semibold">Ismah Mujahidah</h3>
-                <p class="text-gray-600">Marketing Communication</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/fajari-tim.webp" alt="Team Khwarizmi Member 12"
-                class="w-full h-full object-cover rounded-t-lg" />
-              <div class="mt-2 text-center">
-                <h3 class="text-lg font-semibold">M. Saepul Fajari</h3>
-                <p class="text-gray-600">Design Assets</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/albab-tim.webp" alt="Team Khwarizmi Member 13"
-                class="w-full h-full object-cover rounded-t-lg" />
-              <div class="mt-2 text-center">
-                <h3 class="text-lg font-semibold">Albab Ghozari</h3>
-                <p class="text-gray-600">Videographer</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/aziz-tim.webp" alt="Team Khwarizmi Member 14"
-                class="w-full h-full object-cover rounded-t-lg" />
-              <div class="mt-2 text-center">
-                <h3 class="text-lg font-semibold">Abdul Aziz</h3>
-                <p class="text-gray-600">Video Editor</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/hady-tim.webp" alt="Team Khwarizmi Member 15"
-                class="w-full h-full object-cover rounded-t-lg" />
-              <div class="mt-2 text-center">
-                <h3 class="text-lg font-semibold">Hady Satria Pamungkas</h3>
-                <p class="text-gray-600">Video Editor</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white rounded-lg shadow-lg p-4">
-              <img src="img/tim/haydar-tim.webp" alt="Team Khwarizmi Member 16"
-                class="w-full h-full object-cover rounded-t-lg" />
-              <div class="mt-2 text-center">
-                <h3 class="text-lg font-semibold">Ahmad Haydar</h3>
+                <h3 class="text-lg font-semibold">Abduh Abdullah M.A</h3>
                 <p class="text-gray-600">Production Team</p>
               </div>
             </div>
           </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-lg p-4">
+              <img src="img/tim/arif.png" alt="Team Khwarizmi Member 12"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
+              <div class="mt-2 text-center">
+                <h3 class="text-lg font-semibold">Arif Purnomo</h3>
+                <p class="text-gray-600">Team GSI Product</p>
+              </div>
+            </div>
           </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-lg p-4">
+              <img src="img/tim/zaidan.png" alt="Team Khwarizmi Member 13"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
+              <div class="mt-2 text-center">
+                <h3 class="text-lg font-semibold">Akhmad Shidiq K.Z</h3>
+                <p class="text-gray-600">Team GSI Product</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-lg p-4">
+              <img src="img/tim/jose.png" alt="Team Khwarizmi Member 14"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
+              <div class="mt-2 text-center">
+                <h3 class="text-lg font-semibold">Joshe Mario Us Olin</h3>
+                <p class="text-gray-600">Team GSI Product</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-lg p-4">
+              <img src="img/tim/zain.png" alt="Team Khwarizmi Member 15"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
+              <div class="mt-2 text-center">
+                <h3 class="text-lg font-semibold">M. Alawy Zain Lafairuz</h3>
+                <p class="text-gray-600">Team GSI Product</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-lg p-4">
+              <img src="img/tim/shidiq.png" alt="Team Khwarizmi Member 16"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
+              <div class="mt-2 text-center">
+                <h3 class="text-lg font-semibold">M. Ash-shiddiq Mardin</h3>
+                <p class="text-gray-600">Team GSI Product</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg shadow-lg p-4">
+              <img src="img/tim/bayu.png" alt="Team Khwarizmi Member 17"
+                class="w-full h-full object-cover rounded-t-lg team-photo-3d" />
+              <div class="mt-2 text-center">
+                <h3 class="text-lg font-semibold">Yanuar Bayu Riansyah</h3>
+                <p class="text-gray-600">Team GSI Product</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        <div class="swiper-button-next tim-next"></div>
+        <div class="swiper-button-prev tim-prev"></div>
+        <!-- <div class="swiper-pagination tim-pagination"></div> -->
       </div>
     </div>
-  </section> -->
+  </section>
     <!-- end of Team Section -->
 
     <!-- Products Section -->
@@ -947,11 +966,12 @@
       duration: 800,
       once: true
     });
-    var swiper = new Swiper(".swiper-container", {
+    // Swiper untuk produk
+    var swiperProduk = new Swiper('.produk-swiper', {
       spaceBetween: 25,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: '.produk-next',
+        prevEl: '.produk-prev',
       },
       pagination: {
         el: ".swiper-pagination",
@@ -972,6 +992,34 @@
         },
       },
     });
+
+    // Swiper untuk tim
+    var swiperTim = new Swiper('.tim-swiper', {
+      spaceBetween: 25,
+      navigation: {
+        nextEl: '.tim-next',
+        prevEl: '.tim-prev',
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        // Ketika layar lebih kecil dari 640px (mobile)
+        640: {
+          slidesPerView: 1,
+        },
+        // Ketika layar lebih besar dari 640px
+        768: {
+          slidesPerView: 2,
+        },
+        // Ketika layar lebih besar dari 1024px
+        1024: {
+          slidesPerView: 4,
+        },
+      },
+    });
+
     function openModal(element, videoId) {
       var modal = document.getElementById('videoModal');
       var iframe = document.getElementById('modalVideo');
@@ -1029,7 +1077,7 @@
       <!-- Tombol Aksi -->
       <div class="flex flex-col md:flex-row md:justify-start gap-3">
         <a href="https://islamic-it-school.com/buku.html" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-medium text-center">
-         Lihat Selekapnya
+         Lihat Selengkapnya
         </a>
       </div>
     </div>
@@ -1113,6 +1161,34 @@ var bookThumbs = new Swiper(".bookThumbs", {
       bookModal.classList.add('hidden');
     }
   });
+</script>
+
+<script>
+document.querySelectorAll('.team-photo-3d').forEach(function(img) {
+  // Hover 3D effect
+  img.addEventListener('mousemove', function(e) {
+    const rect = img.getBoundingClientRect();
+    const x = e.clientX - rect.left; // X posisi mouse
+    const y = e.clientY - rect.top;  // Y posisi mouse
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * 10; // max 10deg
+    const rotateY = ((x - centerX) / centerX) * 10;
+    img.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.07)`;
+    img.classList.add('is-hovered');
+  });
+  img.addEventListener('mouseleave', function() {
+    img.style.transform = '';
+    img.classList.remove('is-hovered');
+  });
+  // Klik untuk efek 3D lebih dalam
+  img.addEventListener('mousedown', function() {
+    img.style.transform += ' scale(1.12)';
+  });
+  img.addEventListener('mouseup', function() {
+    img.style.transform = img.style.transform.replace(' scale(1.12)', '');
+  });
+});
 </script>
 
 </body>
