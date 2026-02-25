@@ -94,6 +94,88 @@
                         radial-gradient(at 0% 50%, hsla(156,92%,95%,1) 0px, transparent 50%);
     }
 
+    
+.porto-card-visual {
+    position: relative;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #f1f5f9;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.porto-card-visual:hover {
+    transform: translateY(-15px);
+    border-color: #f59e0b;
+    box-shadow: 0 40px 80px -20px rgba(15, 23, 42, 0.1);
+}
+
+.porto-img-box {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #f8fafc;
+}
+
+.porto-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.porto-card-visual:hover .porto-img-box img {
+    transform: scale(1.1);
+}
+
+/* Custom Cursor Follower sebagai Indicator */
+#porto-cursor {
+    width: 120px;
+    height: 120px;
+    background: rgba(245, 158, 11, 0.9);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+    position: fixed;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Detail Buku List */
+.buku-list-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 1.5rem;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.buku-list-item:hover {
+    background: white;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+    border-color: #f59e0b;
+}
+
+.buku-img-small {
+    width: 80px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
     /* Floating Animation */
     .floating { animation: float 6s ease-in-out infinite; }
     @keyframes float {
@@ -217,173 +299,255 @@
 </div>
   </nav>
 
-  <header id="header" class="pt-32 pb-24 md:pt-48 md:pb-32 hero-mesh relative overflow-hidden">
+<header id="header" class="pt-24 pb-16 md:pt-48 md:pb-32 hero-mesh relative overflow-hidden bg-white">
+    <div class="hidden lg:block absolute top-0 right-0 w-1/3 h-screen bg-slate-50/50 -skew-x-12 transform origin-top translate-x-20 z-0"></div>
+
     <div class="container mx-auto px-6 relative z-10">
-      <div class="flex flex-col md:flex-row items-center gap-12">
-        <div class="md:w-1/2 text-center md:text-left reveal" data-reveal>
-          <div class="inline-block px-4 py-1.5 mb-6 bg-amber-100 text-amber-700 rounded-full text-xs font-bold uppercase tracking-wider border border-amber-200">
-            Solusi Teknologi Islami
-          </div>
-          <h1 class="text-4xl md:text-6xl font-heading font-extrabold text-slate-900 leading-tight mb-6">
-            Teknologi yang <span class="text-gradient">Canggih</span>, <br class="hidden md:block">
-            <span class="text-gradient-green">Indah</span> & Bermanfaat.
-          </h1>
-          <p class="text-slate-600 text-lg md:text-xl leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
-            Kami membantu Anda menciptakan keunggulan kompetitif melalui solusi digital yang mudah, sederhana, dan efisien.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a href="https://wa.me/6281282251136" target="_blank" class="bg-slate-900 text-white hover:bg-slate-800 px-8 py-4 rounded-xl font-bold transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
-              <i class="fab fa-whatsapp"></i> Konsultasi Gratis
-            </a>
-            <a href="#services" class="bg-white text-slate-700 border border-slate-200 hover:border-primary hover:text-primary px-8 py-4 rounded-xl font-bold transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-2">
-              <i class="fas fa-arrow-down"></i> Lihat Layanan
-            </a>
-          </div>
-        </div>
-        <div class="md:w-1/2 flex justify-center reveal" style="transition-delay: 0.2s" data-reveal>
-          <div class="relative">
-            <div class="absolute inset-0 bg-gradient-to-tr from-amber-400 to-emerald-400 rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
-            <img src="img/banner-web.webp" alt="Santri Khwarizmi" class="relative rounded-2xl shadow-2xl floating max-w-full w-full md:w-[500px] border-4 border-white" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section id="about" class="py-24 bg-white relative">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16 reveal" data-reveal>
-        <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-slate-900 mb-4">
-          Kenapa Memilih <span class="text-gradient">Khwarizmi?</span>
-        </h2>
-        <p class="text-slate-500 max-w-2xl mx-auto">Kami memadukan kecanggihan teknologi dengan nilai-nilai profesionalisme dan integritas.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 stagger" data-stagger>
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(245,158,11,0.1)] transition-all hover:-translate-y-2 group">
-          <div class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center text-primary text-3xl mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-            <i class="fas fa-lightbulb"></i>
-          </div>
-          <h3 class="text-xl font-heading font-bold text-slate-800 mb-3">Inovatif</h3>
-          <p class="text-slate-600 leading-relaxed text-sm">
-            Mitra strategis di era digital dengan solusi web & mobile apps modern yang berdampak nyata bagi bisnis Anda.
-          </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(16,185,129,0.1)] transition-all hover:-translate-y-2 group">
-          <div class="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-secondary text-3xl mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
-            <i class="fas fa-star"></i>
-          </div>
-          <h3 class="text-xl font-heading font-bold text-slate-800 mb-3">Berkualitas</h3>
-          <p class="text-slate-600 leading-relaxed text-sm">
-            Produk yang tangguh, scalable, dan mudah dioperasikan, memadukan teknologi terkini dengan desain elegan.
-          </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] transition-all hover:-translate-y-2 group">
-          <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 text-3xl mb-6 group-hover:bg-blue-500 group-hover:text-white transition-colors">
-            <i class="fas fa-heart"></i>
-          </div>
-          <h3 class="text-xl font-heading font-bold text-slate-800 mb-3">Islami & Amanah</h3>
-          <p class="text-slate-600 leading-relaxed text-sm">
-            Kami bekerja dengan prinsip kehati-hatian, kejujuran, dan fokus pada kebermanfaatan umat.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="technology" class="py-20 bg-slate-50 border-y border-slate-200">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-heading font-bold">Tech Stack</h2>
-            <p class="text-slate-500 mt-2">Teknologi andalan kami untuk performa maksimal</p>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-5xl mx-auto">
-            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center gap-3 hover:shadow-md transition-shadow">
-                <i class="fab fa-laravel text-red-500 text-2xl"></i> <span class="font-semibold text-slate-700">Laravel</span>
-            </div>
-            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center gap-3 hover:shadow-md transition-shadow">
-                <i class="fab fa-js text-yellow-500 text-2xl"></i> <span class="font-semibold text-slate-700">JavaScript</span>
-            </div>
-            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center gap-3 hover:shadow-md transition-shadow">
-                <i class="fab fa-react text-blue-400 text-2xl"></i> <span class="font-semibold text-slate-700">React/Next</span>
-            </div>
-            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center gap-3 hover:shadow-md transition-shadow">
-                <i class="fab fa-vuejs text-emerald-500 text-2xl"></i> <span class="font-semibold text-slate-700">Vue/Nuxt</span>
-            </div>
-             <div class="bg-white p-4 rounded-xl shadow-sm flex items-center gap-3 hover:shadow-md transition-shadow">
-                <i class="fas fa-mobile-alt text-blue-600 text-2xl"></i> <span class="font-semibold text-slate-700">Flutter</span>
-            </div>
-            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center gap-3 hover:shadow-md transition-shadow">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            
+            <div class="w-full lg:w-3/5 text-center lg:text-left reveal" data-reveal>
+                <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-heading font-black text-slate-900 leading-[1.2] md:leading-[1.1] mb-6 md:mb-8">
+                    Teknologi <span class="text-primary">Canggih</span>, <br class="hidden md:block">
+                    <span class="italic text-secondary">Indah</span> & Bermanfaat.
+                </h1>
                 
-                <img 
-                    src="img/svelte.svg" 
-                    alt="Svelte Logo"
-                    class="w-6 h-6 flex-shrink-0"
-                />
-
-                <span class="font-semibold text-slate-700">Svelte</span>
-
+                <p class="text-slate-500 text-base md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto lg:mx-0">
+                    PT. Alkhwarizmi Kreatif Produktif menghadirkan solusi digital yang efisien bagi kebutuhan Anda, sekaligus menjadi unit dana produktif pondok untuk mendukung <span class="text-slate-800 font-semibold">Gerakan Sekolah Impian</span>.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="https://wa.me/6281282251136" target="_blank" class="w-full sm:w-auto bg-slate-900 text-white hover:bg-primary px-10 py-5 rounded-2xl font-bold transition-all shadow-2xl shadow-slate-200 hover:shadow-primary/20 flex items-center justify-center gap-3 group">
+                        <i class="fab fa-whatsapp text-xl"></i> 
+                        <span>Konsultasi Gratis</span>
+                        <i class="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
+                    </a>
+                    <a href="#about" class="w-full sm:w-auto bg-white text-slate-600 border border-slate-200 hover:border-primary hover:text-primary px-10 py-5 rounded-2xl font-bold transition-all flex items-center justify-center gap-2">
+                        Mengenal Kami
+                    </a>
+                </div>
             </div>
 
-
-
-            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center gap-3 hover:shadow-md transition-shadow">
-                <i class="fas fa-pencil-ruler text-pink-500 text-2xl"></i> <span class="font-semibold text-slate-700">Figma</span>
-            </div>
-            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center gap-3 hover:shadow-md transition-shadow">
-                <i class="fas fa-video text-purple-600 text-2xl"></i> <span class="font-semibold text-slate-700">Premiere</span>
+            <div class="hidden md:flex lg:w-2/5 justify-center reveal w-full" style="transition-delay: 0.2s" data-reveal>
+                <div class="relative w-full max-w-[300px] md:max-w-md">
+                    <div class="absolute -inset-4 bg-slate-100 rounded-[2.5rem] md:rounded-[3rem] rotate-3 scale-95"></div>
+                    <div class="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] border-4 border-white floating">
+                        <img src="img/banner-web.webp" alt="Khwarizmi Creative Team" class="w-full h-auto object-cover" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-  </section>
+</header>
 
-  <section id="services" class="py-24 bg-white relative">
+<section id="about" class="py-16 md:py-24 bg-white">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-slate-900">
-          Layanan <span class="text-primary">Kami</span>
-        </h2>
-      </div>
+        <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16 mb-20 md:mb-24 reveal" data-reveal>
+            <div class="hidden md:flex md:w-1/2 justify-center items-center p-6 md:p-8 rounded-3xl">
+                <img src="img/logo-khwarizmi.png" alt="Logo Khwarizmi" 
+                     class="w-48 sm:w-64 md:w-full md:max-w-[320px] h-auto object-contain transition-all duration-700 hover:scale-105">
+            </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger" data-stagger>
-        <div class="group bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:border-primary/30 transition-all duration-300">
-          <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:scale-110 transition-transform">
-            <i class="fas fa-paint-brush"></i>
-          </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-3">Web Design</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Website company profile, portal berita, dan landing page yang estetis dan responsif.</p>
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <h2 class="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-4">Siapa Kami</h2>
+                <h3 class="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-slate-900 mb-6 leading-tight">
+                    Islamic Software Developer <br class="hidden lg:block"> Berbasis Nilai Qur'ani.
+                </h3>
+                <p class="text-slate-500 text-sm md:text-base leading-relaxed mb-8">
+                    PT. AlKhwarizmi Kreatif Produktif diisi oleh para <strong>huffadz Al-Qur’an</strong> dan talenta muda yang berkarya di bidang teknologi. Kami bukan sekadar pengembang, tapi juga unit dana produktif untuk mendukung Gerakan Sekolah Impian.
+                </p>
+                
+                <div class="flex flex-row justify-center md:justify-start gap-4 sm:gap-8">
+                    <div class="text-center md:text-left">
+                        <p class="text-base md:text-xl font-bold text-slate-800">Teknologi</p>
+                        <p class="text-[9px] md:text-[10px] text-slate-400 uppercase tracking-widest">Canggih</p>
+                    </div>
+                    <div class="border-l border-slate-200"></div>
+                    <div class="text-center md:text-left">
+                        <p class="text-base md:text-xl font-bold text-slate-800">Desain</p>
+                        <p class="text-[9px] md:text-[10px] text-slate-400 uppercase tracking-widest">Indah</p>
+                    </div>
+                    <div class="border-l border-slate-200"></div>
+                    <div class="text-center md:text-left">
+                        <p class="text-base md:text-xl font-bold text-slate-800">Solusi</p>
+                        <p class="text-[9px] md:text-[10px] text-slate-400 uppercase tracking-widest">Bermanfaat</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="group bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:border-primary/30 transition-all duration-300">
-          <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 text-2xl mb-6 group-hover:scale-110 transition-transform">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-3">Development</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Aplikasi berbasis Web, Desktop, dan Mobile (Android/iOS) yang handal.</p>
+        <div class="bg-slate-50 rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-16 border border-slate-100 reveal" data-reveal>
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="w-14 h-14 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mx-auto mb-6 border border-slate-100">
+                    <i class="fas fa-shield-halved text-primary text-2xl"></i>
+                </div>
+                <h3 class="text-lg md:text-2xl font-heading font-bold text-slate-900 mb-4 md:mb-6 uppercase tracking-wide">Legalitas Resmi</h3>
+                <p class="text-slate-600 text-sm md:text-base mb-8 leading-relaxed">
+                    Kami beroperasi secara sah sebagai Perseroan Terbatas di bawah naungan hukum Republik Indonesia dengan nomor registrasi resmi:
+                </p>
+                <div class="bg-white border border-slate-200 inline-block px-4 py-3 md:px-8 md:py-4 rounded-xl md:rounded-full shadow-sm">
+                    <span class="text-slate-800 font-mono font-bold tracking-tight md:tracking-wider text-[11px] sm:text-sm md:text-base break-words">AHU-0055395.AH.01.01. TAHUN 2019</span>
+                </div>
+                <p class="mt-8 text-[10px] md:text-xs text-slate-400 italic font-medium">
+                    "Komitmen pada transparansi, akuntabilitas, dan profesionalisme."
+                </p>
+            </div>
         </div>
-
-        <div class="group bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:border-primary/30 transition-all duration-300">
-          <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-500 text-2xl mb-6 group-hover:scale-110 transition-transform">
-            <i class="fas fa-video"></i>
-          </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-3">Multimedia</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Video iklan, dokumenter, motion graphics, dan editing profesional.</p>
-        </div>
-
-        <div class="group bg-white rounded-3xl p-8 border border-slate-100 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:border-primary/30 transition-all duration-300">
-          <div class="w-14 h-14 bg-rose-50 rounded-2xl flex items-center justify-center text-rose-500 text-2xl mb-6 group-hover:scale-110 transition-transform">
-            <i class="fas fa-vector-square"></i>
-          </div>
-          <h3 class="text-xl font-bold text-slate-800 mb-3">Graphic Design</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Desain logo, branding identity, brosur, banner, dan kebutuhan visual lainnya.</p>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
+<section id="technology" class="py-16 md:py-24 bg-white border-y border-slate-100">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12 md:mb-16 reveal" data-reveal>
+            <h2 class="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-3">Keahlian Kami</h2>
+            <h3 class="text-2xl md:text-4xl font-heading font-bold text-slate-900">Tech Stack & Tools</h3>
+            <p class="text-slate-500 mt-4 text-sm md:text-base max-w-2xl mx-auto">Teknologi andalan kami untuk performa maksimal dalam setiap proyek digital.</p>
+        </div>
 
+        <div class="mb-12">
+            <h4 class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 border-b border-slate-100 pb-2">Web & Mobile Development</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 stagger" data-stagger>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <i class="fab fa-js text-yellow-500 text-lg md:text-xl"></i>
+                    <span class="text-xs md:text-sm font-bold text-slate-700">JavaScript</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/flutter.svg" class="w-5 h-5 object-contain" alt="Flutter">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Flutter</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/svelte.svg" class="w-5 h-5" alt="Svelte">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Svelte</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <i class="fab fa-vuejs text-emerald-500 text-lg md:text-xl"></i>
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Vue</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/NuxtJS.svg" class="w-5 h-5 object-contain" alt="Nuxt JS">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Nuxt</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <i class="fab fa-laravel text-red-500 text-lg md:text-xl"></i>
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Laravel</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <i class="fab fa-react text-blue-400 text-lg md:text-xl"></i>
+                    <span class="text-xs md:text-sm font-bold text-slate-700">React</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/Next.js.svg" class="w-5 h-5 object-contain" alt="Next JS">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Next JS</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <i class="fab fa-node-js text-green-600 text-lg md:text-xl"></i>
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Node JS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-12">
+            <h4 class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 border-b border-slate-100 pb-2">Design & Multimedia</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 stagger" data-stagger>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/canva.svg" class="w-5 h-5 object-contain" alt="Canva">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Canva</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/figma.svg" class="w-5 h-5 object-contain" alt="Figma">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Figma</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/procreat.svg" class="w-5 h-5 object-contain" alt="Procreate">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Procreate</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/after-effects.svg" class="w-5 h-5 object-contain" alt="After Effect">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">After Effect</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/premier.svg" class="w-5 h-5 object-contain" alt="Premier Pro">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Premier Pro</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/photoshop.svg" class="w-5 h-5 object-contain" alt="Photoshop">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Photoshop</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h4 class="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 border-b border-slate-100 pb-2">3D & Game Engine</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 stagger" data-stagger>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/unreal.svg" class="w-5 h-5 object-contain" alt="Unreal Engine">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Unreal Engine</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/Blender-Light.svg" class="w-5 h-5 object-contain" alt="Blender">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Blender</span>
+                </div>
+                <div class="group flex items-center gap-3 p-3 md:p-4 bg-slate-50 rounded-xl md:rounded-2xl border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-sm transition-all">
+                    <img src="img/unity.svg" class="w-5 h-5 object-contain" alt="Unity">
+                    <span class="text-xs md:text-sm font-bold text-slate-700">Unity</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="py-16 md:py-24 bg-white relative">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12 md:mb-16 reveal" data-reveal>
+            <h2 class="text-sm font-bold tracking-[0.2em] text-primary uppercase mb-3">Solusi Kreatif & Teknologi</h2>
+            <h3 class="text-2xl md:text-5xl font-heading font-extrabold text-slate-900">
+                Layanan <span class="text-primary">Kami</span>
+            </h3>
+            <p class="text-slate-500 mt-4 text-sm md:text-base max-w-2xl mx-auto">Membantu kebutuhan digital Anda melalui pendekatan teknologi modern dan desain yang fungsional.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 stagger" data-stagger>
+            <div class="group bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all duration-500 flex flex-col h-full">
+                <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-4">Web Designer</h3>
+                <p class="text-slate-500 text-sm leading-relaxed flex-grow">
+                    Pembuatan website dalam berbagai bentuk seperti blog, website berita, website portfolio, hingga website resmi pemerintah.
+                </p>
+            </div>
+
+            <div class="group bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:border-blue-500/20 transition-all duration-500 flex flex-col h-full">
+                <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 text-2xl mb-6 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500 shadow-sm">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-4">Software Development</h3>
+                <p class="text-slate-500 text-sm leading-relaxed flex-grow">
+                    Pengembangan aplikasi berbasis web, desktop, atau mobile untuk bidang pendidikan, umum, dan kebutuhan bisnis Anda.
+                </p>
+            </div>
+
+            <div class="group bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:border-purple-500/20 transition-all duration-500 flex flex-col h-full">
+                <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-500 text-2xl mb-6 group-hover:bg-purple-500 group-hover:text-white transition-all duration-500 shadow-sm">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-4">Production House</h3>
+                <p class="text-slate-500 text-sm leading-relaxed flex-grow">
+                    Melayani pembuatan video iklan, film dokumenter, video liputan, dan berbagai kebutuhan multimedia profesional lainnya.
+                </p>
+            </div>
+
+            <div class="group bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:border-rose-500/20 transition-all duration-500 flex flex-col h-full">
+                <div class="w-14 h-14 bg-rose-50 rounded-2xl flex items-center justify-center text-rose-500 text-2xl mb-6 group-hover:bg-rose-500 group-hover:text-white transition-all duration-500 shadow-sm">
+                    <i class="fas fa-pen-nib"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800 mb-4">Graphic Designer</h3>
+                <p class="text-slate-500 text-sm leading-relaxed flex-grow">
+                    Pembuatan desain logo, maskot, company profile, poster, brosur, banner, hingga desain kemasan produk yang menarik.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
   
@@ -483,423 +647,52 @@
     </div>
   </section>
 
-  <section id="products" class="py-24 bg-slate-50 relative overflow-hidden bg-handwriting" data-bg="Produk">
+
+<div id="porto-cursor" class="fixed w-64 h-40 pointer-events-none z-[999] opacity-0 overflow-hidden rounded-xl shadow-2xl transition-opacity duration-300 ease-in-out hidden lg:block">
+    <img id="cursor-img" src="" class="w-full h-full object-cover">
+</div>
+
+<section id="products" class="py-16 md:py-24 bg-white relative overflow-hidden">
     <div class="container mx-auto px-6 relative z-10">
-      
-      <div class="text-center mb-12 reveal" data-reveal>
-        <h2 class="text-4xl md:text-5xl font-heading font-extrabold text-slate-900 mb-4">
-          Produk <span class="text-gradient-green">Unggulan</span>
-        </h2>
-        <p class="text-slate-600 max-w-2xl mx-auto">
-          Koleksi resmi PT. Khwarizmi — buku seri, aplikasi, dan sistem. Sentuh cover untuk membuka tampilan preview.
-        </p>
-      </div>
-
-      <div class="flex justify-center mb-16 reveal" data-reveal>
-        <div class="bg-white p-1.5 rounded-full shadow-lg border border-slate-100 inline-flex relative z-10" role="tablist">
-            <button class="kategori-btn px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 focus:outline-none flex items-center gap-2" 
-              data-kategori="APLIKASI" aria-pressed="true">
-              <i class="fas fa-mobile-alt"></i> APLIKASI
-            </button>
-            <button class="kategori-btn px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 focus:outline-none flex items-center gap-2" 
-              data-kategori="BUKU" aria-pressed="false">
-              <i class="fas fa-book"></i> BUKU
-            </button>
+        <div class="text-center mb-10 md:mb-16">
+            <h2 class="text-xs md:text-sm font-bold tracking-[0.3em] text-primary uppercase mb-3 md:mb-4">Our Masterpieces</h2>
+            <h3 class="text-3xl md:text-5xl font-heading font-black text-slate-900">Portofolio Kami</h3>
         </div>
-      </div>
 
-      <div class="kategori-panel hidden" data-kategori-panel="BUKU">
+        <div class="flex md:justify-center mb-12 md:mb-20 overflow-x-auto hide-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
+    <div class="flex gap-4 md:gap-8 border-b border-slate-100 whitespace-nowrap min-w-max md:min-w-0">
+        <button class="porto-tab text-sm md:text-base font-bold pb-4 border-b-2 transition-all duration-300 text-primary border-primary" onclick="filterPorto('SEMUA')">Semua</button>
         
-      <div class="grid grid-cols-1 gap-12 mb-20 px-4 md:px-0">
-      <div class="bg-slate-900 rounded-[2.5rem] p-6 md:p-12 shadow-2xl border border-slate-800 flex flex-col md:flex-row items-center gap-8 md:gap-16 reveal relative overflow-hidden" data-reveal>
-        <div class="absolute -bottom-24 -right-24 w-80 h-80 bg-orange-500/10 rounded-full blur-[100px]"></div>
-
-        <div class="w-full md:w-2/5 flex justify-center relative z-10">
-            <div class="relative group cursor-pointer" onclick="openLB('img/produk/buku/paket1.png')">
-                <div class="absolute inset-0 bg-orange-500/20 rounded-[2.5rem] -rotate-6 group-hover:-rotate-3 transition-transform duration-500 blur-xl"></div>
-                <img src="img/produk/buku/paket1.png" alt="Paket Installation" 
-                     class="relative w-48 md:w-64 rounded-2xl shadow-2xl transform group-hover:-translate-y-3 transition-transform duration-500 border border-white/10">
-            </div>
-        </div>
-
-        <div class="w-full md:w-3/5 text-center md:text-left relative z-10">
-            <div class="inline-flex items-center gap-2 bg-orange-500 text-white text-[10px] md:text-xs font-black px-4 py-2 rounded-full uppercase tracking-[0.2em] mb-6 shadow-lg shadow-orange-500/20">
-                <i class="fas fa-crown"></i>
-                Best Seller
-            </div>
-            
-            <h3 class="text-3xl md:text-5xl font-heading font-black text-white mb-6 leading-tight">
-                Paket <span class="text-orange-500">Installation</span>
-            </h3>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 mb-10">
-                <div class="flex items-center gap-3 text-slate-300 text-sm md:text-base font-semibold">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center border border-orange-500/20">
-                        <i class="fas fa-check text-orange-500 text-xs"></i>
-                    </div>
-                    7 Buku Seri Lengkap
-                </div>
-                <div class="flex items-center gap-3 text-slate-300 text-sm md:text-base font-semibold">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center border border-orange-500/20">
-                        <i class="fas fa-university text-orange-500 text-xs"></i>
-                    </div>
-                    Workshop ITMI
-                </div>
-                <div class="flex items-center gap-3 text-slate-300 text-sm md:text-base font-semibold">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center border border-orange-500/20">
-                        <i class="fas fa-headset text-orange-500 text-xs"></i>
-                    </div>
-                    Support Pendampingan
-                </div>
-                <div class="flex items-center gap-3 text-slate-300 text-sm md:text-base font-semibold">
-                    <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center border border-orange-500/20">
-                        <i class="fas fa-laptop-code text-orange-500 text-xs"></i>
-                    </div>
-                    E-Learning Access
-                </div>
-            </div>
-
-            <div class="flex flex-col sm:flex-row items-center gap-4">
-                <a href="https://wa.me/6285161231559?text=Halo%20Admin,%20saya%20mau%20tanya%20harga%20dan%20pesan%20PAKET%20INSTALLATION" 
-                   target="_blank" 
-                   class="flex items-center justify-center gap-3 bg-orange-500 text-white px-8 py-5 rounded-2xl font-black text-lg shadow-[0_20px_40px_rgba(249,115,22,0.3)] hover:bg-orange-600 hover:scale-105 transition-all duration-300 w-full md:w-auto group">
-                   <span>Dapatkan Paket Lengkap</span>
-                   <i class="fas fa-rocket group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
-                </a>
-            </div>
-        </div>
+        <button class="porto-tab text-sm md:text-base font-bold pb-4 border-b-2 transition-all duration-300 text-slate-400 border-transparent hover:text-slate-700 hover:border-slate-300" onclick="filterPorto('BISNIS')">Bisnis</button>
+        
+        <button class="porto-tab text-sm md:text-base font-bold pb-4 border-b-2 transition-all duration-300 text-slate-400 border-transparent hover:text-slate-700 hover:border-slate-300" onclick="filterPorto('DAKWAH')">Dakwah</button>
+        
+        <button class="porto-tab text-sm md:text-base font-bold pb-4 border-b-2 transition-all duration-300 text-slate-400 border-transparent hover:text-slate-700 hover:border-slate-300" onclick="filterPorto('PENDIDIKAN')">Pendidikan</button>
+        
+        <button class="porto-tab text-sm md:text-base font-bold pb-4 border-b-2 transition-all duration-300 text-slate-400 border-transparent hover:text-slate-700 hover:border-slate-300" onclick="filterPorto('BUKU')">Literasi</button>
     </div>
-    <div class="bg-white rounded-[2.5rem] p-6 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-amber-100/50 flex flex-col md:flex-row items-center gap-8 md:gap-16 reveal relative overflow-hidden" data-reveal>
-        <div class="absolute -top-24 -left-24 w-64 h-64 bg-amber-50 rounded-full blur-3xl opacity-60"></div>
-
-        <div class="w-full md:w-2/5 flex justify-center relative z-10">
-            <div class="relative group cursor-pointer" onclick="openLB('img/produk/buku/paket1.png')">
-                <div class="absolute inset-0 bg-amber-200 rounded-[2.5rem] rotate-6 group-hover:rotate-3 transition-transform duration-500"></div>
-                <img src="img/produk/buku/paket1.png" alt="Paket Technology" 
-                     class="relative w-48 md:w-64 rounded-2xl shadow-2xl transform group-hover:-translate-y-3 transition-transform duration-500">
-                <div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-2 rounded-full shadow-lg md:hidden">
-                    <i class="bx bx-zoom-in text-amber-600"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="w-full md:w-3/5 text-center md:text-left relative z-10">
-            <div class="inline-flex items-center gap-2 bg-amber-50 text-amber-700 text-[10px] md:text-xs font-black px-4 py-2 rounded-full uppercase tracking-[0.2em] mb-6 border border-amber-100">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
-                </span>
-                Pilihan Dasar
-            </div>
-            
-            <h3 class="text-3xl md:text-5xl font-heading font-black text-slate-800 mb-6 leading-tight">
-                Paket <span class="text-amber-500">Technology</span>
-            </h3>
-            
-            <p class="text-slate-600 mb-8 leading-relaxed text-base md:text-xl font-medium">
-                Koleksi 7 judul buku Seri Teknologi Islami. Dilengkapi akses video tutorial eksklusif untuk panduan belajar visual.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center gap-4">
-                <a href="https://wa.me/6285161231559?text=Halo%20Admin,%20saya%20mau%20tanya%20harga%20dan%20pesan%20PAKET%20TECHNOLOGY" 
-                   target="_blank" 
-                   class="flex items-center justify-center gap-3 bg-slate-900 text-white px-8 py-5 rounded-2xl font-bold shadow-2xl hover:bg-amber-500 transition-all duration-300 w-full md:w-auto group">
-                   <span>Tanya Harga & Pesan</span>
-                   <i class="fab fa-whatsapp text-xl group-hover:rotate-12 transition-transform"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-  
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger" data-stagger>
-    
-    <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:border-amber-200 transition-all group h-full flex flex-col">
-        <div class="h-52 bg-slate-50 rounded-2xl mb-5 overflow-hidden relative flex items-center justify-center">
-             <img src="img/produk/buku/lc.png" class="h-full object-contain group-hover:scale-110 transition-transform duration-500" alt="Liquid Curriculum">
-             <button class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" onclick="openLB('img/produk/buku/lc.png')">
-                 <span class="bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-eye"></i></span>
-             </button>
-        </div>
-        <h4 class="font-heading font-bold text-lg text-slate-800 mb-2 leading-tight">Liquid Curriculum</h4>
-        <p class="text-sm text-slate-500 line-clamp-3 mb-6 flex-grow">Membongkar kesalahan fatal sistem pendidikan modern dan mencetak generasi berakhlak mulia.</p>
-        <div class="mt-auto border-t border-slate-50 pt-5">
-            <a href="https://wa.me/6285161231559?text=Saya%20ingin%20pesan%20Buku%20Liquid%20Curriculum" class="block text-center bg-slate-900 text-white px-4 py-3.5 rounded-xl text-sm font-bold hover:bg-amber-500 transition-all">Pesan Satuan</a>
-        </div>
+        <div id="porto-grid" class="flex flex-col reveal" data-reveal>
+            </div>
     </div>
+</section>
 
-    <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:border-amber-200 transition-all group h-full flex flex-col">
-        <div class="h-52 bg-slate-50 rounded-2xl mb-5 overflow-hidden relative flex items-center justify-center">
-             <img src="img/produk/buku/itmi.png" class="h-full object-contain group-hover:scale-110 transition-transform duration-500" alt="ITMI">
-             <button class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" onclick="openLB('img/produk/buku/itmi.png')">
-                 <span class="bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-eye"></i></span>
-             </button>
+<div id="porto-detail" class="fixed inset-0 z-[100] bg-white hidden overflow-y-auto">
+    <div class="container mx-auto px-6 py-8 md:py-12">
+        <div class="flex justify-between items-center mb-8 md:mb-12">
+            <button onclick="closeDetail()" class="group flex items-center gap-2 md:gap-3 text-slate-400 hover:text-primary transition-all font-bold uppercase tracking-widest text-[10px] md:text-xs">
+                <i class="fas fa-long-arrow-alt-left text-base md:text-lg group-hover:-translate-x-2 transition-transform"></i> Kembali
+            </button>
+            <img src="img/logo-khwarizmi.png" class="h-6 md:h-8 opacity-50" alt="Logo">
         </div>
-        <h4 class="font-heading font-bold text-lg text-slate-800 mb-2 leading-tight">Islamic Tech Mindset</h4>
-        <p class="text-sm text-slate-500 line-clamp-3 mb-6 flex-grow">Metode kuratif mudhorot teknologi dengan strategi ajar berbasis mindset Islami.</p>
-        <div class="mt-auto border-t border-slate-50 pt-5">
-            <a href="https://wa.me/6285161231559?text=Saya%20ingin%20pesan%20Buku%20ITMI" class="block text-center bg-slate-900 text-white px-4 py-3.5 rounded-xl text-sm font-bold hover:bg-amber-500 transition-all">Pesan Satuan</a>
-        </div>
+        
+        <div id="detail-content">
+            </div>
     </div>
-
-    <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:border-amber-200 transition-all group h-full flex flex-col">
-        <div class="h-52 bg-slate-50 rounded-2xl mb-5 overflow-hidden relative flex items-center justify-center">
-             <img src="img/produk/buku/st.png" class="h-full object-contain group-hover:scale-110 transition-transform duration-500" alt="Sejarah Teknologi">
-             <button class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" onclick="openLB('img/produk/buku/st.png')">
-                 <span class="bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-eye"></i></span>
-             </button>
-        </div>
-        <h4 class="font-heading font-bold text-lg text-slate-800 mb-2 leading-tight text-teal-600">Sejarah Teknologi</h4>
-        <p class="text-sm text-slate-500 line-clamp-3 mb-6 flex-grow">Bagaimana kaum muslimin memelopori kebangkitan teknologi dunia secara jujur.</p>
-        <div class="mt-auto border-t border-slate-50 pt-5">
-            <a href="https://wa.me/6285161231559?text=Saya%20ingin%20pesan%20Buku%20Sejarah%20Teknologi" class="block text-center bg-slate-900 text-white px-4 py-3.5 rounded-xl text-sm font-bold hover:bg-amber-500 transition-all">Pesan Satuan</a>
-        </div>
-    </div>
-
-    <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:border-amber-200 transition-all group h-full flex flex-col">
-        <div class="h-52 bg-slate-50 rounded-2xl mb-5 overflow-hidden relative flex items-center justify-center">
-             <img src="img/produk/buku/mbt.png" class="h-full object-contain group-hover:scale-110 transition-transform duration-500" alt="MBT">
-             <button class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" onclick="openLB('img/produk/buku/mbt.png')">
-                 <span class="bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-eye"></i></span>
-             </button>
-        </div>
-        <h4 class="font-heading font-bold text-lg text-slate-800 mb-2 leading-tight">Mental Belajar Teknologi</h4>
-        <p class="text-sm text-slate-500 line-clamp-3 mb-6 flex-grow">Langkah membangun mental berteknologi yang tangguh bagi anak dan siswa.</p>
-        <div class="mt-auto border-t border-slate-50 pt-5">
-            <a href="https://wa.me/6285161231559?text=Saya%20ingin%20pesan%20Buku%20Mental%20Belajar%20Teknologi" class="block text-center bg-slate-900 text-white px-4 py-3.5 rounded-xl text-sm font-bold hover:bg-amber-500 transition-all">Pesan Satuan</a>
-        </div>
-    </div>
-
-    <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:border-amber-200 transition-all group h-full flex flex-col">
-        <div class="h-52 bg-slate-50 rounded-2xl mb-5 overflow-hidden relative flex items-center justify-center">
-             <img src="img/produk/buku/itpf.png" class="h-full object-contain group-hover:scale-110 transition-transform duration-500" alt="ITPF">
-             <button class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" onclick="openLB('img/produk/buku/itpf.png')">
-                 <span class="bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-eye"></i></span>
-             </button>
-        </div>
-        <h4 class="font-heading font-bold text-lg text-slate-800 mb-2 leading-tight">IT Proyek Festival</h4>
-        <p class="text-sm text-slate-500 line-clamp-3 mb-6 flex-grow">Strategi pembelajaran berbasis project untuk meningkatkan efektivitas mapel IT.</p>
-        <div class="mt-auto border-t border-slate-50 pt-5">
-            <a href="https://wa.me/6285161231559?text=Saya%20ingin%20pesan%20Buku%20IT%20Proyek%20Festival" class="block text-center bg-slate-900 text-white px-4 py-3.5 rounded-xl text-sm font-bold hover:bg-amber-500 transition-all">Pesan Satuan</a>
-        </div>
-    </div>
-
-    <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:border-amber-200 transition-all group h-full flex flex-col">
-        <div class="h-52 bg-slate-50 rounded-2xl mb-5 overflow-hidden relative flex items-center justify-center">
-             <img src="img/produk/buku/itbp.png" class="h-full object-contain group-hover:scale-110 transition-transform duration-500" alt="ITBP">
-             <button class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" onclick="openLB('img/produk/buku/itbp.png')">
-                 <span class="bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-eye"></i></span>
-             </button>
-        </div>
-        <h4 class="font-heading font-bold text-lg text-slate-800 mb-2 leading-tight text-orange-600">IT Produktif</h4>
-        <p class="text-sm text-slate-500 line-clamp-3 mb-6 flex-grow">Menuntun anak belajar IT secara produktif dengan membuat proyek nyata.</p>
-        <div class="mt-auto border-t border-slate-50 pt-5">
-            <a href="https://wa.me/6285161231559?text=Saya%20ingin%20pesan%20Buku%20IT%20Produktif" class="block text-center bg-slate-900 text-white px-4 py-3.5 rounded-xl text-sm font-bold hover:bg-amber-500 transition-all">Pesan Satuan</a>
-        </div>
-    </div>
-
-    <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:border-amber-200 transition-all group h-full flex flex-col">
-        <div class="h-52 bg-slate-50 rounded-2xl mb-5 overflow-hidden relative flex items-center justify-center">
-             <img src="img/produk/buku/itbm.png" class="h-full object-contain group-hover:scale-110 transition-transform duration-500" alt="ITBM">
-             <button class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" onclick="openLB('img/produk/buku/itbm.png')">
-                 <span class="bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-eye"></i></span>
-             </button>
-        </div>
-        <h4 class="font-heading font-bold text-lg text-slate-800 mb-2 leading-tight text-teal-600">IT Monetitatif</h4>
-        <p class="text-sm text-slate-500 line-clamp-3 mb-6 flex-grow">Menjadikan skill teknologi menghasilkan pendapatan yang halal dan berkah.</p>
-        <div class="mt-auto border-t border-slate-50 pt-5">
-            <a href="https://wa.me/6285161231559?text=Saya%20ingin%20pesan%20Buku%20IT%20Monetitatif" class="block text-center bg-slate-900 text-white px-4 py-3.5 rounded-xl text-sm font-bold hover:bg-amber-500 transition-all">Pesan Satuan</a>
-        </div>
-    </div>
-
-    <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:border-amber-200 transition-all group h-full flex flex-col">
-        <div class="h-52 bg-slate-50 rounded-2xl mb-5 overflow-hidden relative flex items-center justify-center">
-             <img src="img/produk/buku/paket1.png" class="h-full object-contain group-hover:scale-110 transition-transform duration-500" alt="Paket Satuan">
-             <button class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" onclick="openLB('img/produk/buku/paket1.png')">
-                 <span class="bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-eye"></i></span>
-             </button>
-        </div>
-        <h4 class="font-heading font-bold text-lg text-slate-800 mb-2 leading-tight">Edisi Koleksi Paket</h4>
-        <p class="text-sm text-slate-500 line-clamp-3 mb-6 flex-grow">Koleksi spesial 7 buku teknologi Islami dalam satu paket bundel menarik.</p>
-        <div class="mt-auto border-t border-slate-50 pt-5">
-            <a href="https://wa.me/6285161231559?text=Saya%20ingin%20tanya%20Edisi%20Koleksi%20Paket" class="block text-center bg-slate-900 text-white px-4 py-3.5 rounded-xl text-sm font-bold hover:bg-amber-500 transition-all">Pesan Satuan</a>
-        </div>
-    </div>
-
 </div>
 
-         </div>
-      </div>
 
-      <div class="kategori-panel space-y-16" data-kategori-panel="APLIKASI">
-        
-        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col lg:flex-row items-center gap-12 reveal" data-reveal>
-            <div class="lg:w-1/2">
-                <div class="relative group cursor-pointer" onclick="openLB('img/produk/apps/portal-si.png')">
-                    <div class="absolute inset-0 bg-amber-100 rounded-2xl -rotate-2 group-hover:-rotate-1 transition-transform"></div>
-                    <img src="img/produk/apps/portal-si.png" alt="Portal SI" class="relative w-full rounded-2xl shadow-lg transform group-hover:-translate-y-1 transition-transform">
-                </div>
-            </div>
-            <div class="lg:w-1/2">
-                <h3 class="text-3xl font-heading font-bold text-slate-800 mb-2">Portal SI</h3>
-                <div class="h-1 w-20 bg-primary mb-6"></div>
-                <p class="text-slate-600 mb-6 text-lg">Social Media Eksklusif & Portfolio Santri — aman, Islami, & terintegrasi dengan sistem akademik.</p>
-                
-                <div class="space-y-4 mb-8" data-accordion-group>
-                    <div class="accordion-item border border-slate-200 rounded-xl overflow-hidden">
-                        <button class="accordion-summary w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 transition-colors" data-acc aria-expanded="false">
-                            <span class="font-bold text-slate-700">Fitur Utama</span>
-                            <i class="fas fa-chevron-down chev text-slate-400"></i>
-                        </button>
-                        <div class="accordion-body bg-white p-4 text-sm text-slate-600 border-t border-slate-100" hidden>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li>Portfolio santri & karya</li>
-                                <li>Privacy control & modul moderasi</li>
-                                <li>Integrasi ke dashboard akademik</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="accordion-item border border-slate-200 rounded-xl overflow-hidden">
-                        <button class="accordion-summary w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 transition-colors" data-acc aria-expanded="false">
-                            <span class="font-bold text-slate-700">Keamanan & Privasi</span>
-                            <i class="fas fa-chevron-down chev text-slate-400"></i>
-                        </button>
-                        <div class="accordion-body bg-white p-4 text-sm text-slate-600 border-t border-slate-100" hidden>
-                            Fitur moderation, reporting, dan role-based access control (RBAC) untuk menjamin lingkungan aman.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://wa.me/6281282251136?text=Info%20Portal%20SI" target="_blank" class="bg-primary text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-amber-100 hover:bg-primary-dark transition-all hover:-translate-y-1">Info & Demo</a>
-                    <a href="pdf/catalog.pdf" target="_blank" class="text-primary border border-primary px-8 py-3 rounded-xl font-bold hover:bg-amber-50 transition-colors">Download Brosur</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col lg:flex-row-reverse items-center gap-12 reveal" data-reveal>
-             <div class="lg:w-1/2">
-                <div class="relative group cursor-pointer" onclick="openLB('img/produk/apps/hris.png')">
-                    <div class="absolute inset-0 bg-emerald-100 rounded-2xl rotate-2 group-hover:rotate-1 transition-transform"></div>
-                    <img src="img/produk/apps/hris.png" alt="HRIS" class="relative w-full rounded-2xl shadow-lg transform group-hover:-translate-y-1 transition-transform">
-                </div>
-            </div>
-            <div class="lg:w-1/2">
-                <h3 class="text-3xl font-heading font-bold text-slate-800 mb-2">HRIS System</h3>
-                <div class="h-1 w-20 bg-emerald-500 mb-6"></div>
-                <p class="text-slate-600 mb-6 text-lg">Human Resource Information System: absensi, data karyawan, approval document, & reporting.</p>
-                 
-                <div class="space-y-4 mb-8" data-accordion-group>
-                    <div class="accordion-item border border-slate-200 rounded-xl overflow-hidden">
-                        <button class="accordion-summary w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 transition-colors" data-acc aria-expanded="false">
-                            <span class="font-bold text-slate-700">Modul SDM</span>
-                            <i class="fas fa-chevron-down chev text-slate-400"></i>
-                        </button>
-                        <div class="accordion-body bg-white p-4 text-sm text-slate-600 border-t border-slate-100" hidden>
-                             <ul class="list-disc pl-5 space-y-1">
-                                <li>Absensi online & report export</li>
-                                <li>Manajemen cuti & approval berjenjang</li>
-                                <li>Dashboard HR analytics</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="accordion-item border border-slate-200 rounded-xl overflow-hidden">
-                        <button class="accordion-summary w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 transition-colors" data-acc aria-expanded="false">
-                            <span class="font-bold text-slate-700">Integrasi</span>
-                            <i class="fas fa-chevron-down chev text-slate-400"></i>
-                        </button>
-                        <div class="accordion-body bg-white p-4 text-sm text-slate-600 border-t border-slate-100" hidden>
-                            API & webhook untuk sinkronisasi data ke sistem payroll & accounting lain.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://wa.me/6281282251136?text=Info%20HRIS" target="_blank" class="bg-emerald-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-emerald-100 hover:bg-emerald-700 transition-all hover:-translate-y-1">Info & Demo</a>
-                    <a href="pdf/hris.pdf" target="_blank" class="text-emerald-600 border border-emerald-600 px-8 py-3 rounded-xl font-bold hover:bg-emerald-50 transition-colors">Download Brosur</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col lg:flex-row items-center gap-12 reveal" data-reveal>
-            <div class="lg:w-1/2">
-                <div class="relative group cursor-pointer" onclick="openLB('img/produk/apps/inisiasi.png')">
-                    <div class="absolute inset-0 bg-indigo-100 rounded-2xl -rotate-2 group-hover:-rotate-1 transition-transform"></div>
-                    <img src="img/produk/apps/inisiasi.png" alt="Inisiasi" class="relative w-full rounded-2xl shadow-lg transform group-hover:-translate-y-1 transition-transform">
-                </div>
-            </div>
-            <div class="lg:w-1/2">
-                <h3 class="text-3xl font-heading font-bold text-indigo-700 mb-2">INISIASI</h3>
-                <div class="h-1 w-20 bg-indigo-500 mb-6"></div>
-                <p class="text-slate-600 mb-6 text-lg">Solusi all-in-one ekosistem terpadu di pondok pesantren: akademik, spiritual, sosial & ekonomi.</p>
-                
-                <div class="space-y-4 mb-8" data-accordion-group>
-                    <div class="accordion-item border border-slate-200 rounded-xl overflow-hidden">
-                        <button class="accordion-summary w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 transition-colors" data-acc aria-expanded="false">
-                            <span class="font-bold text-slate-700">Integrasi Kurikulum</span>
-                            <i class="fas fa-chevron-down chev text-slate-400"></i>
-                        </button>
-                        <div class="accordion-body bg-white p-4 text-sm text-slate-600 border-t border-slate-100" hidden>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li>Penilaian & portofolio terintegrasi</li>
-                                <li>Reporting & dashboard akademik</li>
-                                <li>Integrasi alumni & CRM</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="accordion-item border border-slate-200 rounded-xl overflow-hidden">
-                        <button class="accordion-summary w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 transition-colors" data-acc aria-expanded="false">
-                            <span class="font-bold text-slate-700">Modul Ekonomi</span>
-                            <i class="fas fa-chevron-down chev text-slate-400"></i>
-                        </button>
-                        <div class="accordion-body bg-white p-4 text-sm text-slate-600 border-t border-slate-100" hidden>
-                            Kelola transaksi internal pesantren, inventory & laporan keuangan sederhana hingga lanjutan.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://wa.me/6281282251136?text=Info%20Inisiasi" target="_blank" class="bg-indigo-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-indigo-100 hover:bg-indigo-700 transition-all hover:-translate-y-1">Jadwalkan Demo</a>
-                    <a href="pdf/catalog.pdf" target="_blank" class="text-indigo-600 border border-indigo-600 px-8 py-3 rounded-xl font-bold hover:bg-indigo-50 transition-colors">Download Brosur</a>
-                </div>
-            </div>
-        </div>
-      </div>
-
-      <div class="mt-20 bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 md:p-16 shadow-2xl relative overflow-hidden reveal" data-reveal>
-        <div class="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full mix-blend-overlay filter blur-[100px] opacity-20"></div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
-            <div>
-                <h3 class="text-3xl md:text-4xl font-heading font-black text-white mb-6">BUILD YOUR <br><span class="text-primary">OWN FEATURES</span></h3>
-                <p class="text-slate-300 text-lg mb-8 leading-relaxed">
-                    Punya kebutuhan khusus atau ide unik? Kami siap mewujudkannya. Mulai dari modul kustom, integrasi API, hingga fitur spesifik untuk mendukung visi lembaga Anda.
-                </p>
-                <ul class="space-y-3 mb-8 text-slate-300">
-                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> Analisis kebutuhan mendalam</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> Estimasi biaya transparan</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary"></i> Development & Testing terjamin</li>
-                </ul>
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://wa.me/6281282251136?text=Konsultasi%20Custom%20Feature" class="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-dark transition-all shadow-lg hover:shadow-primary/50">Konsultasi Sekarang</a>
-                </div>
-            </div>
-            <div class="flex justify-center">
-                <div class="relative">
-                     <div class="absolute inset-0 bg-primary/20 blur-xl rounded-full"></div>
-                     <img src="img/produk/apps/custom.png" alt="Custom Feature" class="relative rounded-2xl shadow-2xl border-4 border-slate-700/50 transform rotate-2 hover:rotate-0 transition-all duration-500">
-                     <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl max-w-xs hidden md:block">
-                        <p class="text-xs text-slate-600 font-bold">Contoh: Aplikasi QuranMemo</p>
-                        <p class="text-[10px] text-slate-400">Permudah hafalan Al-Quran dengan fitur kustom.</p>
-                     </div>
-                </div>
-            </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
 
   <footer class="bg-slate-900 text-slate-400 py-16 relative overflow-hidden">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
@@ -952,6 +745,311 @@
   </div>
 
   <script>
+
+
+const portoData = [
+    {
+        id: "seri-buku",
+        nama: "7 Buku Seri Teknologi Islami",
+        kategori: "BUKU",
+        tagline: "Strategi ajar bidang IT Sekolah Impian.",
+        img: "img/produk/buku/paket1.png",
+        isBuku: true,
+        deskripsi: "Buku Seri Teknologi Islami berisi strategi ajar bidang Teknologi Informasi (IT) yang mencakup aspek mindset, sejarah, hingga monetisasi halal.",
+        listBuku: [
+            { judul: "Liquid Curriculum", ket: "Membongkar kesalahan fatal sistem pendidikan.", imgBuku: "img/produk/buku/lc.png" },
+            { judul: "Islamic Technology Mindset", ket: "Instalasi mindset Islami sebelum teknis.", imgBuku: "img/produk/buku/itmi.png" },
+            { judul: "Sejarah Teknologi", ket: "Perspektif jujur dari kaum Muslimin.", imgBuku: "img/produk/buku/st.png" },
+            { judul: "Mental Belajar Teknologi", ket: "Membangun mentalitas pembelajar tangguh.", imgBuku: "img/produk/buku/mbt.png" },
+            { judul: "IT Proyek Festival", ket: "Strategi pembelajaran berbasis project.", imgBuku: "img/produk/buku/itpf.png" },
+            { judul: "IT Berorientasi Produktif", ket: "Menjadikan siswa sebagai kreator digital.", imgBuku: "img/produk/buku/itbp.png" },
+            { judul: "IT Berorientasi Monetitatif", ket: "Skill teknologi yang menghasilkan pendapatan halal.", imgBuku: "img/produk/buku/itbm.png" }
+        ],
+        paket: [
+            { nama: "Paket Technology", detail: "7 judul buku & akses video tutorial." },
+            { nama: "Paket Installation", detail: "7 Buku, Workshop, Pendampingan, & E-Learning." }
+        ],
+        brosur: "pdf/katalog-buku.pdf",
+        wa: "6285161231559"
+    },
+     {
+        id: "inisiasi",
+        nama: "INISIASI",
+        kategori: "PENDIDIKAN",
+        tagline: "Integrasi Sistem Akademik Sekolah Impian.",
+        img: "img/produk/inisiasii.png",
+        deskripsi: "Solusi all-in-one untuk menciptakan ekosistem terpadu di lingkungan pondok pesantren mencakup akademik, spiritual, sosial, dan ekonomi.",
+        fitur: ["HRD & Staff Management", "Academic Management", "Tahfidz Management", "PPDB", "CCTV for Parents", "Marketplace Civitas Pondok", "Social Media Eksklusif Pondok", "Online Donation System", "Finance & Payment System"],
+        brosur: "pdf/brosur-inisiasi.pdf",
+        wa: "6281282251136"
+    },
+    {
+        id: "hris",
+        nama: "HRIS by Khwarizmi",
+        kategori: "BISNIS",
+        tagline: "Human Resource Information System.",
+        img: "img/produk/hris.png",
+        deskripsi: "Sistem terintegrasi untuk mengelola absensi, data karyawan, dan approval dokumen yang dibangun khusus untuk membantu perusahaan membangun sistem HR mandiri.",
+        fitur: ["Employee Management", "Attendance & Time Management", "Document & Approval System", "Payroll Management"],
+        brosur: "pdf/brosur-hris.pdf",
+        wa: "6281282251136"
+    },
+    {
+        id: "quranmemo",
+        nama: "QuranMemo",
+        kategori: "DAKWAH",
+        tagline: "Komunitas Menghafal Al-Quran.",
+        img: "img/produk/quranmemo.png",
+        deskripsi: "Aplikasi untuk memudahkan menghafal Al-Quran berbasis komunitas melalui web app dan android app.",
+        fitur: ["Manajemen Hafalan", "Metode Hafalan", "Setoran Hafalan", "Quiz Hafalan", "Tasmi' Hafalan", "Talaqi Hafalan"],
+        brosur: "pdf/brosur-quranmemo.pdf",
+        wa: "6281282251136"
+    },
+    {
+        id: "rpl-dietisien",
+        nama: "RPL Dietisien",
+        kategori: "PENDIDIKAN",
+        tagline: "Rekognisi Pembelajaran Lampau.",
+        img: "img/produk/rpl.png",
+        deskripsi: "Aplikasi pembelajaran lampau untuk memfasilitasi kebutuhan rekognisi akademik di fakultas gizi dan kesehatan se-Indonesia.",
+        fitur: ["Manajemen List Formulir", "Biodata Calon Mahasiswa", "Tracking Monitoring"],
+        brosur: "pdf/brosur-rpl-dietisien.pdf",
+        wa: "6281282251136"
+    },
+    
+    {
+        id: "tadarus-apps",
+        nama: "Tadarus Apps",
+        kategori: "DAKWAH",
+        tagline: "Belajar Mengenal Ayat Demi Ayat.",
+        img: "img/produk/tadarus.png",
+        deskripsi: "Aplikasi Quran spesial untuk belajar lebih dekat mengenal pemaknaan ayat melalui fitur pendukung spiritual.",
+        fitur: ["Tafsir", "Tadabbur", "Tazkiyah"],
+        brosur: "pdf/brosur-tadarus.pdf",
+        wa: "6281282251136"
+    },
+    {
+        id: "keep-istiqomah",
+        nama: "Keep Istiqomah",
+        kategori: "DAKWAH",
+        tagline: "Digital Mutaba'ah Yaumiyah.",
+        img: "img/produk/keepistiqomah.png",
+        deskripsi: "Platform website & aplikasi untuk membantu Muslim menjaga konsistensi ibadah harian melalui sistem pemantauan yang praktis dan terstruktur.",
+        fitur: ["Laporan Statistik Ibadah Harian", "Fitur Pendukung Ibadah", "Data Global dan Komunitas", "Navigasi & Informasi"],
+        brosur: "pdf/brosur-keep-istiqomah.pdf",
+        wa: "6281282251136"
+    },
+    {
+        id: "muhasabah-digital",
+        nama: "Muhasabah Digital",
+        kategori: "DAKWAH",
+        tagline: "Pantauan Aktivitas Ibadah & Kegiatan Siswa.",
+        img: "img/produk/muhasabah.png",
+        deskripsi: "Sistem manajemen sekolah berbasis aplikasi/web yang berfungsi untuk memantau, mencatat, dan mengevaluasi aktivitas harian serta pembentukan karakter siswa.",
+        fitur: ["Navigasi & Informasi", "Portal Akses & Keamanan", "Laporan & Evaluasi Digital"],
+        brosur: "pdf/brosur-muhasabah.pdf",
+        wa: "6281282251136"
+    },
+    
+    {
+        id: "biz-marketplace",
+        nama: "BIZ Marketplace",
+        kategori: "BISNIS",
+        tagline: "Marketplace System Terintegrasi.",
+        img: "img/produk/biz.png",
+        deskripsi: "Sistem marketplace yang dirancang khusus untuk bisnis agar beralih dari sistem konvensional menuju ekosistem digital yang efisien.",
+        fitur: ["Admin Panel Overview", "User Role Management", "Payment Gateway System", "Tracking & Logistic", "Order System Monitoring", "Report & Finance Analysis"],
+        brosur: "pdf/brosur-biz-market.pdf",
+        wa: "6281282251136"
+    },
+    {
+        id: "silakban",
+        nama: "SILAKBAN",
+        kategori: "BISNIS",
+        tagline: "Sistem Pelaporan Perkembangan Ternak Bantuan.",
+        img: "img/produk/silakban.png",
+        deskripsi: "Aplikasi berbasis web untuk pendataan, pelaporan, pemantauan, dan verifikasi perkembangan ternak bantuan pemerintah guna meningkatkan transparansi pengelolaan bantuan.",
+        fitur: ["Fitur Login & Manajemen Hak Akses", "Dashboard Monitoring", "Fitur Data Laporan Ternak", "Fitur Verifikasi Laporan Ternak", "Fitur Manajemen Data Ternak", "Fitur Rekapitulasi Data"],
+        brosur: "pdf/brosur-silakban.pdf",
+        wa: "6281282251136"
+    },
+    
+    
+
+    
+    
+    
+    
+
+   
+];
+const cursor = document.getElementById('porto-cursor');
+const cursorImg = document.getElementById('cursor-img');
+
+function renderPorto(filter = "SEMUA") {
+    const grid = document.getElementById('porto-grid');
+    grid.innerHTML = "";
+    const filtered = filter === "SEMUA" ? portoData : portoData.filter(i => i.kategori === filter);
+    
+    filtered.forEach(item => {
+        grid.innerHTML += `
+            <div class="porto-item group relative cursor-pointer border-b border-slate-100 py-6 md:py-8 last:border-none transition-all duration-300" 
+                 onmouseenter="showCursor('${item.img}')" 
+                 onmouseleave="hideCursor()" 
+                 onclick="openDetail('${item.id}')">
+                 
+                 <div class="block md:hidden w-full h-56 rounded-2xl overflow-hidden mb-4 shadow-sm border border-slate-100">
+                     <img src="${item.img}" class="w-full h-full object-cover" alt="${item.nama}">
+                 </div>
+                 
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4">
+                    <div class="space-y-1">
+                        <span class="block text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">
+                            ${item.kategori}
+                        </span>
+                        
+                        <h3 class="text-2xl md:text-5xl font-black text-slate-800 leading-tight transition-all duration-500 md:group-hover:translate-x-2 group-hover:text-primary">
+                            ${item.nama}
+                        </h3>
+                    </div>
+
+                    <div class="hidden md:block opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+}
+
+// Mouse Follower (Hanya efektif di Desktop)
+window.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+function showCursor(img) {
+    cursorImg.src = img;
+    cursor.style.opacity = "1";
+}
+
+function hideCursor() {
+    cursor.style.opacity = "0";
+}
+
+function filterPorto(kat) {
+    document.querySelectorAll('.porto-tab').forEach(btn => {
+        // 1. Reset semua tombol jadi abu-abu (Inactive)
+        btn.classList.remove('text-primary', 'border-primary');
+        btn.classList.add('text-slate-400', 'border-transparent');
+        
+        // 2. Jika tombol ini yang diklik, ubah warnanya (Active)
+        if(btn.getAttribute('onclick').includes(`'${kat}'`)) {
+            btn.classList.remove('text-slate-400', 'border-transparent');
+            btn.classList.add('text-primary', 'border-primary');
+        }
+    });
+    
+    // Render ulang portofolio sesuai kategori
+    renderPorto(kat);
+}
+
+// Detail Logic
+function openDetail(id) {
+    const item = portoData.find(p => p.id === id);
+    const content = document.getElementById('detail-content');
+    const detailModal = document.getElementById('porto-detail');
+    
+    let htmlContent = `
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+            <div class="relative lg:sticky lg:top-12">
+                <img src="${item.img}" class="rounded-3xl lg:rounded-[3rem] shadow-xl lg:shadow-2xl w-full border border-slate-100" alt="${item.nama}">
+            </div>
+            <div>
+                <span class="text-primary font-bold tracking-[0.3em] text-[10px] md:text-xs uppercase">${item.kategori}</span>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-slate-900 mt-2 md:mt-4 mb-4 md:mb-8 leading-tight">${item.nama}</h1>
+                <p class="text-base md:text-lg text-slate-500 mb-8 md:mb-10 leading-relaxed">${item.deskripsi}</p>
+    `;
+
+    if(item.isBuku) {
+        htmlContent += `
+            <h4 class="font-black text-slate-900 mb-4 md:mb-6 uppercase tracking-widest text-xs border-b pb-2">Koleksi Judul:</h4>
+            <div class="grid grid-cols-1 gap-4 mb-10 md:mb-12">
+                ${item.listBuku.map(b => `
+                    <div class="group flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-slate-50 p-4 md:p-5 rounded-2xl border border-slate-100 transition-all hover:border-primary/30 hover:shadow-md">
+                        
+                        <div class="w-full sm:w-28 md:w-36 flex-shrink-0 rounded-xl overflow-hidden bg-white shadow-sm border border-slate-100">
+                            <img src="${b.imgBuku}" class="w-full h-auto object-cover" alt="${b.judul}">
+                        </div>
+                        
+                        <div class="flex-1 w-full">
+                            <p class="font-bold text-slate-800 text-sm md:text-base leading-tight mb-2">${b.judul}</p>
+                            <p class="text-[11px] md:text-xs text-slate-500 mb-4 leading-relaxed">${b.ket}</p>
+                            <a href="https://wa.me/${item.wa}?text=Assalamu'alaikum, saya ingin pesan buku: ${b.judul}" 
+                               target="_blank" 
+                               class="inline-block text-[10px] md:text-xs font-bold text-primary border border-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition-all">
+                                Pesan Buku Ini
+                            </a>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+            
+            <h4 class="font-black text-slate-900 mb-4 md:mb-6 uppercase tracking-widest text-xs border-b pb-2">Pilihan Paket Hemat:</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-10 md:mb-12">
+                ${item.paket.map(pk => `
+                    <div class="p-4 md:p-6 border-2 border-amber-100 rounded-2xl bg-amber-50/20 hover:border-primary transition-all">
+                        <p class="font-black text-amber-600 mb-1 md:mb-2 text-sm md:text-base">${pk.nama}</p>
+                        <p class="text-[10px] md:text-xs text-slate-500 mb-3 md:mb-4">${pk.detail}</p>
+                        <a href="https://wa.me/${item.wa}?text=Saya berminat dengan ${pk.nama}" 
+                           target="_blank" class="text-[10px] md:text-xs font-bold bg-primary text-white px-4 py-2 rounded-lg inline-block w-full text-center hover:bg-slate-900 transition-colors">
+                           Pesan Paket
+                        </a>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    } else {
+        htmlContent += `
+            <h4 class="font-black text-slate-900 mb-4 md:mb-6 uppercase tracking-widest text-xs border-b pb-2">Fitur Unggulan:</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-10 md:mb-12">
+                ${item.fitur.map(f => `
+                    <div class="flex items-center gap-3 md:gap-4 bg-slate-50 p-4 md:p-5 rounded-xl md:rounded-2xl border border-slate-100">
+                        <i class="fas fa-check-circle text-primary"></i>
+                        <span class="font-bold text-slate-700 text-xs">${f}</span>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    htmlContent += `
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4 pt-6 md:pt-8 border-t border-slate-100">
+                    <a href="https://wa.me/${item.wa}" target="_blank" class="flex-1 bg-slate-900 text-white px-4 md:px-8 py-4 md:py-5 rounded-xl md:rounded-2xl font-black text-center shadow-lg hover:bg-primary transition-all flex items-center justify-center gap-2 md:gap-3 text-sm md:text-base">
+                        <i class="fab fa-whatsapp"></i> Chat Admin
+                    </a>
+                    <a href="${item.brosur}" download class="flex-1 bg-white text-slate-500 border border-slate-200 px-4 md:px-8 py-4 md:py-5 rounded-xl md:rounded-2xl font-black text-center hover:bg-slate-50 transition-all flex items-center justify-center gap-2 md:gap-3 text-sm md:text-base">
+                        <i class="fas fa-download"></i> Katalog PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    content.innerHTML = htmlContent;
+    detailModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeDetail() {
+    document.getElementById('porto-detail').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+document.addEventListener('DOMContentLoaded', () => renderPorto());
+
     // Reveal Animation
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
